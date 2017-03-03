@@ -21,6 +21,7 @@ graph = {
 param = 0.5
 minRadius = 0.5
 maxRadius = 3.0
+alpha = 0.1
 
 def lines2graph(lines):
 
@@ -55,7 +56,7 @@ def computeModel(model):
 	return results
 
 # function to mutate graph based on results
-def computeGraph(graph, param, minRadius, maxRadius):
+def computeGraph(graph, param, minRadius, maxRadius, alpha):
 
 	for node1 in graph["edges"].keys():
 		for node2 in graph["edges"][node1].keys():
@@ -65,9 +66,9 @@ def computeGraph(graph, param, minRadius, maxRadius):
 				continue
 
 			if edge["stress"] < param:
-				# shrink radius
+				edge["radius"] -= alpha * (abs(edge["stress"] - param))
 			else:
-				# grow radius
+				edge["radius"] += alpha * (abs(edge["stress"] - param))
 
 			if edge["radius"] < minRadius:
 				edge["active"] = False
@@ -93,7 +94,7 @@ while not terminated:
 	# 3. write Nastran results to graph
 	graph = nas2graph(graph, results)
 
-	graph, termination = computeGraph(graph, param, minRadius, maxRadius)
+	graph, termination = computeGraph(graph, param, minRadius, maxRadius, alpha)
 
 	step += 1
 
