@@ -1,0 +1,160 @@
+
+FATAL ERROR S1051: FILE: .\nastran\truss_TE.nas.nas NOT FOUND                   
+
+VIRTUAL MEMORY =  3073970176 WORDS     23452.5 MEGABYTES                        
+REAL MEMORY    =  1263716864 WORDS      9641.4 MEGABYTES                        
+
+DRIVE C: DISK SPACE =   8247015424 WORDS     62919.7 MEGABYTES                  
+
+DATABASE STORAGE STATISTICS                                                     
+
+STORAGE METHOD                                                                  
+                                                                                
+MODEL TRANSLATION DATA        = MEMORY                                          
+GRID POINT COORDINATE DATA    = DISK                                            
+ELEMENT DIRECTION COSINE DATA = DISK                                            
+ELEMENT POSITION DATA         = DISK                                            
+ELEMENT SHAPE DATA            = DISK                                            
+GRID POINT LOAD DATA          = DISK                                            
+ELEMENT LOAD DATA             = DISK                                            
+ELEMENT RESULTS DATA          = DISK                                            
+NEUTRAL RESULTS DATA          = MEMORY                                          
+
+STORAGE SPACE REQUIRED                                                          
+                                                                                
+MODEL TRANSLATION DATA        =          0 WORDS        0.0 MEGABYTES           
+GRID POINT COORDINATE DATA    =          0 WORDS        0.0 MEGABYTES           
+ELEMENT DIRECTION COSINE DATA =          0 WORDS        0.0 MEGABYTES           
+ELEMENT POSITION DATA         =          0 WORDS        0.0 MEGABYTES           
+ELEMENT SHAPE DATA            =          0 WORDS        0.0 MEGABYTES           
+GRID POINT LOAD DATA          =         11 WORDS        0.0 MEGABYTES           
+ELEMENT LOAD DATA             =         22 WORDS        0.0 MEGABYTES           
+ELEMENT RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+NEUTRAL RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+                                                                                
+TOTAL                         =            WORDS        0.0 MEGABYTES           
+
+EXECUTION TERMINATED DUE TO A SYSTEM ERROR                                      
+                                                                                
+TOTAL WARNINGS     = 0                                                          
+TOTAL FATAL ERRORS = 1                                                          
+
+FATAL ERROR S1051: FILE: .\nastran\truss_TE.nas.nas NOT FOUND                   
+
+VIRTUAL MEMORY =  3074319360 WORDS     23455.2 MEGABYTES                        
+REAL MEMORY    =  1264459264 WORDS      9647.1 MEGABYTES                        
+
+DRIVE C: DISK SPACE =   8247013376 WORDS     62919.7 MEGABYTES                  
+
+DATABASE STORAGE STATISTICS                                                     
+
+STORAGE METHOD                                                                  
+                                                                                
+MODEL TRANSLATION DATA        = MEMORY                                          
+GRID POINT COORDINATE DATA    = DISK                                            
+ELEMENT DIRECTION COSINE DATA = DISK                                            
+ELEMENT POSITION DATA         = DISK                                            
+ELEMENT SHAPE DATA            = DISK                                            
+GRID POINT LOAD DATA          = DISK                                            
+ELEMENT LOAD DATA             = DISK                                            
+ELEMENT RESULTS DATA          = DISK                                            
+NEUTRAL RESULTS DATA          = MEMORY                                          
+
+STORAGE SPACE REQUIRED                                                          
+                                                                                
+MODEL TRANSLATION DATA        =          0 WORDS        0.0 MEGABYTES           
+GRID POINT COORDINATE DATA    =          0 WORDS        0.0 MEGABYTES           
+ELEMENT DIRECTION COSINE DATA =          0 WORDS        0.0 MEGABYTES           
+ELEMENT POSITION DATA         =          0 WORDS        0.0 MEGABYTES           
+ELEMENT SHAPE DATA            =          0 WORDS        0.0 MEGABYTES           
+GRID POINT LOAD DATA          =         11 WORDS        0.0 MEGABYTES           
+ELEMENT LOAD DATA             =         22 WORDS        0.0 MEGABYTES           
+ELEMENT RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+NEUTRAL RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+                                                                                
+TOTAL                         =            WORDS        0.0 MEGABYTES           
+
+EXECUTION TERMINATED DUE TO A SYSTEM ERROR                                      
+                                                                                
+TOTAL WARNINGS     = 0                                                          
+TOTAL FATAL ERRORS = 1                                                          
+
+FATAL ERROR S1051: FILE: .\nastran\truss_TE.nas.nas NOT FOUND                   
+
+VIRTUAL MEMORY =  3082747904 WORDS     23519.5 MEGABYTES                        
+REAL MEMORY    =  1264471552 WORDS      9647.2 MEGABYTES                        
+
+DRIVE C: DISK SPACE =   8246382592 WORDS     62914.9 MEGABYTES                  
+
+DATABASE STORAGE STATISTICS                                                     
+
+STORAGE METHOD                                                                  
+                                                                                
+MODEL TRANSLATION DATA        = MEMORY                                          
+GRID POINT COORDINATE DATA    = DISK                                            
+ELEMENT DIRECTION COSINE DATA = DISK                                            
+ELEMENT POSITION DATA         = DISK                                            
+ELEMENT SHAPE DATA            = DISK                                            
+GRID POINT LOAD DATA          = DISK                                            
+ELEMENT LOAD DATA             = DISK                                            
+ELEMENT RESULTS DATA          = DISK                                            
+NEUTRAL RESULTS DATA          = MEMORY                                          
+
+STORAGE SPACE REQUIRED                                                          
+                                                                                
+MODEL TRANSLATION DATA        =          0 WORDS        0.0 MEGABYTES           
+GRID POINT COORDINATE DATA    =          0 WORDS        0.0 MEGABYTES           
+ELEMENT DIRECTION COSINE DATA =          0 WORDS        0.0 MEGABYTES           
+ELEMENT POSITION DATA         =          0 WORDS        0.0 MEGABYTES           
+ELEMENT SHAPE DATA            =          0 WORDS        0.0 MEGABYTES           
+GRID POINT LOAD DATA          =         11 WORDS        0.0 MEGABYTES           
+ELEMENT LOAD DATA             =         22 WORDS        0.0 MEGABYTES           
+ELEMENT RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+NEUTRAL RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+                                                                                
+TOTAL                         =            WORDS        0.0 MEGABYTES           
+
+EXECUTION TERMINATED DUE TO A SYSTEM ERROR                                      
+                                                                                
+TOTAL WARNINGS     = 0                                                          
+TOTAL FATAL ERRORS = 1                                                          
+
+FATAL ERROR S1051: FILE: .\nastran\truss_TE.nas.nas NOT FOUND                   
+
+VIRTUAL MEMORY =  3082512384 WORDS     23517.7 MEGABYTES                        
+REAL MEMORY    =  1264328192 WORDS      9646.1 MEGABYTES                        
+
+DRIVE C: DISK SPACE =   8246381568 WORDS     62914.9 MEGABYTES                  
+
+DATABASE STORAGE STATISTICS                                                     
+
+STORAGE METHOD                                                                  
+                                                                                
+MODEL TRANSLATION DATA        = MEMORY                                          
+GRID POINT COORDINATE DATA    = DISK                                            
+ELEMENT DIRECTION COSINE DATA = DISK                                            
+ELEMENT POSITION DATA         = DISK                                            
+ELEMENT SHAPE DATA            = DISK                                            
+GRID POINT LOAD DATA          = DISK                                            
+ELEMENT LOAD DATA             = DISK                                            
+ELEMENT RESULTS DATA          = DISK                                            
+NEUTRAL RESULTS DATA          = MEMORY                                          
+
+STORAGE SPACE REQUIRED                                                          
+                                                                                
+MODEL TRANSLATION DATA        =          0 WORDS        0.0 MEGABYTES           
+GRID POINT COORDINATE DATA    =          0 WORDS        0.0 MEGABYTES           
+ELEMENT DIRECTION COSINE DATA =          0 WORDS        0.0 MEGABYTES           
+ELEMENT POSITION DATA         =          0 WORDS        0.0 MEGABYTES           
+ELEMENT SHAPE DATA            =          0 WORDS        0.0 MEGABYTES           
+GRID POINT LOAD DATA          =         11 WORDS        0.0 MEGABYTES           
+ELEMENT LOAD DATA             =         22 WORDS        0.0 MEGABYTES           
+ELEMENT RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+NEUTRAL RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+                                                                                
+TOTAL                         =            WORDS        0.0 MEGABYTES           
+
+EXECUTION TERMINATED DUE TO A SYSTEM ERROR                                      
+                                                                                
+TOTAL WARNINGS     = 0                                                          
+TOTAL FATAL ERRORS = 1                                                          
