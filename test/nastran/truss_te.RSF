@@ -1,5 +1,5 @@
                                                                                 
-ADS NASTRAN VERSION 10.3.0.716  17:56  03/08/17                                 
+ADS NASTRAN VERSION 10.3.0.716  18:15  03/08/17                                 
                                                                                 
 TOTAL MASS = 7.453587E-07                                                       
                                                                                 
@@ -43,5 +43,5 @@ SHELL ELEMENT RELATIVE STRESS ERROR =  0.000000E+00
 MAXIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
 MINIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
                                                                                 
-TOTAL CPU TIME = 1.3 SECONDS                                                    
+TOTAL CPU TIME = 1.5 SECONDS                                                    
 WALLCLOCK TIME = 2.3 SECONDS                                                    

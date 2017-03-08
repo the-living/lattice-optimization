@@ -11,12 +11,14 @@ import json
 
 from latoptim.graph import Graph
 
-fp_existing_grid = os.path.join(os.curdir, 'nastran', 'existing_grid.json')
-fp_existing_lookup = os.path.join(os.curdir, 'nastran', 'lookup.json')
+basedir = os.curdir
 
-fp_old_nas = os.path.join(os.curdir, 'nastran', 'truss_0.nas')
-fp_new_nas = os.path.join(os.curdir, 'nastran', 'truss_TE.nas')
-fp_neu = os.path.join(os.curdir, 'nastran', 'truss_TE.neu')
+fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid.json')
+fp_existing_lookup = os.path.join(basedir, 'nastran', 'lookup.json')
+
+fp_old_nas = os.path.join(basedir, 'nastran', 'truss_0.nas')
+fp_new_nas = os.path.join(basedir, 'nastran', 'truss_TE.nas')
+fp_neu = os.path.join(basedir, 'nastran', 'truss_TE.neu')
 
 
 grid_D = {}
@@ -116,10 +118,10 @@ def pt_string(new_pt):
 	return coord
 
 
-last = 50000001             # base number for CBAR
-lookup_fresh = {}
 
 def find_grid_hash(a):
+	last = 50000001             # base number for CBAR
+	lookup_fresh = {}
 
 	x = a[0]
 	y = a[1]
@@ -141,16 +143,17 @@ def find_grid_hash(a):
 		return last_count
 
 
-s1 = 'TOTAL TRANSLATION'
-s2 = '-1,0.,'
-s3 = 'T1 TRANSLATION'
-s4 = 'BAR EQV STRESS'
-s5 = 'BAR SA-AXIAL'
-s6 = 'BAR SA-C'
-
-safety_factor = 435
 
 def stress_finder(st):
+
+	s1 = 'TOTAL TRANSLATION'
+	s2 = '-1,0.,'
+	s3 = 'T1 TRANSLATION'
+	s4 = 'BAR EQV STRESS'
+	s5 = 'BAR SA-AXIAL'
+	s6 = 'BAR SA-C'
+
+	safety_factor = 435
 
 	f3 = csv_string.find(st)
 
@@ -169,6 +172,36 @@ def stress_finder(st):
 		except:
 			pass
 	return s4b_list_num
+
+def pbarMaker(start,end,inc):
+
+	rad = []
+	bar_dict = {}	
+
+	r = start
+	i = 0
+	while r < end:
+		rad.append(round(r,3))
+		r = r + inc
+		bar_dict[i] = 0
+		i+=1
+
+	strF = "PBAR    "  
+	pbarList = "\n\n"
+	strE = "        0.      0.      0.      0.      0.      0.      0.      0.\n"
+	strE1 = "        0.      0.\n"		
+					
+	for i, a in enumerate(rad):
+		#circles
+		area = float(3.14159*a**2)
+		i1 = (3.14159/4)*a**4
+		i2 = (3.14159/4)*a**4
+		j = (3.14159*(a*2)**4)/32
+
+		newPBAR =  "$pbar r = {}\n{}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}\n{}{} \n".format(a, strF, 1000+i, mat, str(area)[0:7],str(i1)[0:7], str(i2)[0:7], str(j)[0:7], strE, strE1 )
+		pbarList = pbarList + newPBAR
+
+	return pbarList, rad, bar_dict 
 
 
 
@@ -230,7 +263,7 @@ def get_nastran_model(graph):
 
 
 # function to simulate model in Nastran
-def compute_nastran_model(nas_model, edge):
+def compute_nastran_model(nas_model):
 
     # RUN NASTRAN
 
@@ -238,20 +271,15 @@ def compute_nastran_model(nas_model, edge):
 
 	simPath = r'"C:\Program Files\Autodesk\Nastran 2016\NASTRAN.EXE"'
 	# initPath = r'C:\test\Nastrynamo\init.ini'
-	initPath = os.path.join(os.curdir, 'nastran', 'init.ini')
+	initPath = os.path.join(basedir, 'nastran', 'init.ini')
 
 	# run Nastran SIM
 	print('calling file: \n\n', '{} {} {}'.format(simPath, initPath, nas_model ), '\n\n\n')
 	os.system('{} {} {}'.format(simPath, initPath, nas_model))
 
-	results = []
-
-
-	csv_list = []
-
 	print("opening .neu results file: ", fp_neu)
 
-	stress_list_vm = stress_finder(s4)
+	stress_list_vm = stress_finder('BAR EQV STRESS')
 	print("\nvon mises stress: ", stress_list_vm[2:])
 
 	line_stress = {}

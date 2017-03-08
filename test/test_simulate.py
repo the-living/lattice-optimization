@@ -33,7 +33,7 @@ print("graph edges:", graph.get_edge_data())
 nas_model = get_nastran_model(graph.get_edge_data())
 print("new nastran written!\n")
 
-results = compute_nastran_model(fp_new_nas, graph.get_edge_data())
+results = compute_nastran_model(fp_new_nas)
 
 # graph = optimize(graph, target, min_radius, max_radius, speed)
 
