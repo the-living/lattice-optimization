@@ -3,6 +3,7 @@
 graph = {
 	"nodes": [
 		"coords": [*x, *y, *z], 
+		"ave_stress": *stressValue
 	],
 	"edges": {
 		*node1_index: {
@@ -18,7 +19,7 @@ graph = {
 '''
 
 # parameters for graph computation
-param = 0.5
+target = 0.5
 minRadius = 0.5
 maxRadius = 3.0
 alpha = 0.1
@@ -56,7 +57,7 @@ def computeModel(model):
 	return results
 
 # function to mutate graph based on results
-def computeGraph(graph, param, minRadius, maxRadius, alpha):
+def computeGraph(graph, target, minRadius, maxRadius, speed):
 
 	for node1 in graph["edges"].keys():
 		for node2 in graph["edges"][node1].keys():
@@ -65,10 +66,9 @@ def computeGraph(graph, param, minRadius, maxRadius, alpha):
 			if not edge["active"]:
 				continue
 
-			if edge["stress"] < param:
-				edge["radius"] -= alpha * (abs(edge["stress"] - param))
-			else:
-				edge["radius"] += alpha * (abs(edge["stress"] - param))
+			edge["radius"] += speed * (edge["stress"] - target) * (maxRadius - minRadius)
+
+			edge["radius"] = min(edge["radius"], maxRadius)
 
 			if edge["radius"] < minRadius:
 				edge["active"] = False
@@ -93,8 +93,9 @@ while not terminated:
 
 	# 3. write Nastran results to graph
 	graph = nas2graph(graph, results)
+	graph = computeVertexStress(graph)
 
-	graph, termination = computeGraph(graph, param, minRadius, maxRadius, alpha)
+	graph, termination = computeGraph(graph, target, minRadius, maxRadius, speed)
 
 	step += 1
 
