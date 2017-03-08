@@ -1,13 +1,15 @@
 from latoptim.graph import Graph
 
-def getNastranModel(graph):
+
+def get_nastran_model(graph):
 
     nas_model = []
 
     return nas_model
 
+
 # function to simulate model in Nastran
-def computeModel(nas_model):
+def compute_nastran_model(nas_model):
 
     # RUN NASTRAN
     results = []

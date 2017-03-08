@@ -1,6 +1,7 @@
-from latoptim.simulate import computeModel, getNastranModel
+from latoptim.simulate import compute_nastran_model, get_nastran_model
 
-def optimize(graph, target, minRadius, maxRadius, speed):
+
+def optimize(graph, target, min_radius, max_radius, speed):
 
     step = 0
     terminated = False
@@ -8,16 +9,16 @@ def optimize(graph, target, minRadius, maxRadius, speed):
     while not terminated:
 
         # 1. convert graph to Natran model
-        nas_model = getNastranModel(graph)
+        nas_model = get_nastran_model(graph)
 
         # 2. run simulation in nastran and return results
-        results = computeModel(nas_model)
+        results = compute_nastran_model(nas_model)
 
         # 3. write Nastran results to graph
         graph.set_stress_values(results)
 
         # 4. compute optimization step
-        converged = compute(graph, target, minRadius, maxRadius, speed)
+        converged = compute(graph, target, min_radius, max_radius, speed)
 
         step += 1
 
@@ -27,7 +28,8 @@ def optimize(graph, target, minRadius, maxRadius, speed):
 
     return graph
 
-def compute(self, target, minRadius, maxRadius, speed):
+
+def compute(self, target, min_radius, max_radius, speed):
         # for node1 in graph["edges"].keys():
         #       for node2 in graph["edges"][node1].keys():
         #           edge = graph["edges"][node1][node1]
@@ -35,14 +37,14 @@ def compute(self, target, minRadius, maxRadius, speed):
         #           if not edge["active"]:
         #               continue
 
-        #           edge["radius"] += speed * (edge["stress"] - target) * (maxRadius - minRadius)
+        #           edge["radius"] += speed * (edge["stress"] - target) * (max_radius - min_radius)
 
-        #           edge["radius"] = min(edge["radius"], maxRadius)
+        #           edge["radius"] = min(edge["radius"], max_radius)
 
-        #           if edge["radius"] < minRadius:
+        #           if edge["radius"] < min_radius:
         #               edge["active"] = False
 
-        #           if edge["radius"] > maxRadius:
+        #           if edge["radius"] > max_radius:
         #               continue
         #               # add edge
         #   termination = True
