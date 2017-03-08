@@ -22,7 +22,7 @@ class Edge:
 		self.node1 = node1
 		self.node2 = node2
 
-	def getNodes(self):
+	def getNodeCoords(self):
 		return [self.node1.getCoords(), self.node2.getCoords()]
 
 class Graph:
@@ -30,9 +30,6 @@ class Graph:
 	def __init__(self):
 		self.nodes = []
 		self.edges = []
-
-	def dist(self):
-		math.sqrt((pt1[0] - pt2[0])**2 + (pt1[1] - pt2[1])**2 + (pt1[2] - pt2[2])**2)
 
 	def findClosestNode(self, p, epsilon):
 		for node in self.nodes:
@@ -64,8 +61,39 @@ class Graph:
 	def getEdges(self):
 		edges = []
 		for edge in self.edges:
-			edges.append( edge.getNodes() )
+			edges.append( edge.getNodeCoords() )
 		return edges
+
+	def getNastranModel(self):
+
+		model = []
+
+		return model
+
+	def bakeResults(self, results):
+
+		return None
+
+	def compute(self, target, minRadius, maxRadius, speed):
+		# for node1 in graph["edges"].keys():
+		# 		for node2 in graph["edges"][node1].keys():
+		# 			edge = graph["edges"][node1][node1]
+
+		# 			if not edge["active"]:
+		# 				continue
+
+		# 			edge["radius"] += speed * (edge["stress"] - target) * (maxRadius - minRadius)
+
+		# 			edge["radius"] = min(edge["radius"], maxRadius)
+
+		# 			if edge["radius"] < minRadius:
+		# 				edge["active"] = False
+
+		# 			if edge["radius"] > maxRadius:
+		# 				continue
+		# 				# add edge
+		# 	termination = True
+		return None
 
 
 
@@ -92,23 +120,6 @@ def lines2graph(lines, defRadius, epsilon):
 	return graph
 
 
-# function to translate graph design data to Nastran model
-def graph2nas(graph):
-
-	#
-	model = []
-
-	return model
-
-
-# function to write Nastran results to graph
-def nas2graph(graph, results):
-
-	#
-
-	return graph
-
-
 # function to simulate model in Nastran
 def computeModel(model):
 
@@ -117,66 +128,42 @@ def computeModel(model):
 
 	return results
 
-# function to mutate graph based on results
-def computeGraph(graph, target, minRadius, maxRadius, speed):
 
-	for node1 in graph["edges"].keys():
-		for node2 in graph["edges"][node1].keys():
-			edge = graph["edges"][node1][node1]
+def optimize(graph, target, minRadius, maxRadius, speed):
 
-			if not edge["active"]:
-				continue
+	step = 0
+	terminated = False
 
-			edge["radius"] += speed * (edge["stress"] - target) * (maxRadius - minRadius)
+	while not terminated:
 
-			edge["radius"] = min(edge["radius"], maxRadius)
+		# 1. convert graph to Natran model
+		model = graph.getNastranModel()
 
-			if edge["radius"] < minRadius:
-				edge["active"] = False
+		# 2. run simulation in nastran and return results
+		results = computeModel(model)
 
-			if edge["radius"] > maxRadius:
-				continue
-				# add edge
-	termination = True
+		# 3. write Nastran results to graph
+		graph.bakeResults(results)
 
-	return graph, termination
+		# 4. compute optimization step
+		termination = graph.compute(target, minRadius, maxRadius, speed)
+
+		step += 1
+
+		#termination criteria
+		if termination > 0.9 or step > 25:
+			terminated = True
 
 
-print "generating graph..."
+
+print("generating graph...")
 
 defRadius = 1.0
 
 graph = lines2graph(linesInput, defRadius, epsilon)
 
-print len( graph.getNodes() )
-print len( graph.getEdges() )
-
-step = 0
-terminated = False
-
-# def runOptimization(graph, target, minRadius, maxRadius, speed, term ):
+print("graph nodes:", len( graph.getNodes() ))
+print("graph edges:", graph.getEdges())
 
 
-# while not terminated:
-
-# 	# 1. convert graph to Natran model
-# 	model = graph2nas(graph)
-
-# 	# 2. run simulation in nastran and return results
-# 	results = computeModel(model)
-
-# 	# 3. write Nastran results to graph
-# 	graph = nas2graph(graph, results)
-# 	# graph = computeVertexStress(graph)
-
-# 	graph, termination = computeGraph(graph, target, minRadius, maxRadius, speed)
-
-# 	step += 1
-
-# 	#termination criteria
-# 	if termination > 0.9 or step > 25:
-# 		terminated = True
-
-
-
-
+graph = optimize(graph, target, minRadius, maxRadius, speed)
