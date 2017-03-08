@@ -13,5 +13,12 @@
                 "output"
             ]
         }
+    ],
+    "build_systems":
+    [
+        {
+            "name": "lattice",
+            "shell_cmd": "C:\\Users\\danil\\AppData\\Local\\Programs\\Python\\Launcher\\py -3 $file"
+        }
     ]
 }
