@@ -1,4 +1,4 @@
-from latoptim.simulate import computeModel
+from latoptim.simulate import computeModel, getNastranModel
 
 def optimize(graph, target, minRadius, maxRadius, speed):
 
@@ -8,13 +8,13 @@ def optimize(graph, target, minRadius, maxRadius, speed):
     while not terminated:
 
         # 1. convert graph to Natran model
-        model = graph.getNastranModel()
+        nas_model = getNastranModel(graph)
 
         # 2. run simulation in nastran and return results
-        results = computeModel(model)
+        results = computeModel(nas_model)
 
         # 3. write Nastran results to graph
-        graph.bakeResults(results)
+        graph.set_stress_values(results)
 
         # 4. compute optimization step
         converged = compute(graph, target, minRadius, maxRadius, speed)

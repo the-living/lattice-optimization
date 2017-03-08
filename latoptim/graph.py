@@ -66,7 +66,7 @@ class Graph:
             edges.append( edge.getNodeCoords() )
         return edges
 
-    def bakeResults(self, results):
+    def set_stress_values(self, results):
 
         return None
 
