@@ -1,24 +1,4 @@
-import os, json, math
-
-''' GRAPH DATA STRUCTURE
-
-graph = {
-	"nodes": [
-		"coords": [*x, *y, *z], 
-		"ave_stress": *stressValue
-	],
-	"edges": {
-		*node1_index: {
-			*node2_index: {
-				"stress": *stressValue,
-				"radius": *radiusValue,
-				"active": True
-			}
-		}, 
-	}
-}
-
-'''
+import os, json
 
 class Node:
 
@@ -28,6 +8,10 @@ class Node:
 
 	def getCoords(self):
 		return self.coords
+
+	def getDist(self, p):
+		p2 = self.getCoords()
+		return ((p[0] - p2[0])**2 + (p[1] - p2[1])**2 + (p[2] - p2[2])**2) ** .5
 
 class Edge:
 
@@ -47,10 +31,13 @@ class Graph:
 		self.nodes = []
 		self.edges = []
 
+	def dist(self):
+		math.sqrt((pt1[0] - pt2[0])**2 + (pt1[1] - pt2[1])**2 + (pt1[2] - pt2[2])**2)
+
 	def findClosestNode(self, p, epsilon):
-		for i, p2 in enumerate(self.nodes):
-			if dist(p, p2.getCoords()) < epsilon:
-				return p2
+		for node in self.nodes:
+			if node.getDist(p) < epsilon:
+				return node
 		return None
 
 	def addNode(self, p):
@@ -95,45 +82,12 @@ speed = 0.1
 epsilon = .01
 
 
-def dist(pt1, pt2):
-	return math.sqrt((pt1[0] - pt2[0])**2 + (pt1[1] - pt2[1])**2 + (pt1[2] - pt2[2])**2)
-
-# def findClosest(p1, cloud):
-# 	for i, p2 in enumerate(cloud):
-# 		if dist(p1, p2) < epsilon:
-# 			return i
-# 	return None
-
 def lines2graph(lines, defRadius, epsilon):
 
-	# graph = {}
 	graph = Graph()
-	# graph["nodes"] = []
-	# graph["edges"] = {}
 
 	for line in lines:
-
 		graph.addEdge(line, defRadius, epsilon)
-
-		# pos = []
-
-		# for i, p in enumerate(line):
-
-			# pos.append(findClosest(p, graph["nodes"]))
-			# if pos[-1] is None:
-			# 	pos[-1] = len(graph["nodes"])
-			# 	graph["nodes"].append(p)
-
-		# for ps in pos:
-		# 	if ps not in graph["edges"].keys():
-		# 		graph["edges"][ps] = {}
-
-		# if pos[1] in graph["edges"][pos[0]].keys():
-		# 	print "found duplicate line, skipping..."
-		# 	continue
-
-		# graph["edges"][pos[0]][pos[1]] = {"stress": 0, "radius": defRadius, "active": True}
-		# graph["edges"][pos[1]][pos[0]] = {"stress": 0, "radius": defRadius, "active": True}
 
 	return graph
 
@@ -194,8 +148,8 @@ defRadius = 1.0
 
 graph = lines2graph(linesInput, defRadius, epsilon)
 
-# print len( graph.getNodes() )
-# print graph.getEdges()
+print len( graph.getNodes() )
+print len( graph.getEdges() )
 
 step = 0
 terminated = False
