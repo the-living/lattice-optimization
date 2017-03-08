@@ -1,7 +1,7 @@
 from latoptim.simulate import compute_nastran_model, get_nastran_model
 
 
-def optimize(graph, target, min_radius, max_radius, speed):
+def optimize(graph, target, min_radius, max_radius, speed, maxSteps):
 
     step = 0
     terminated = False
@@ -27,7 +27,7 @@ def optimize(graph, target, min_radius, max_radius, speed):
         step += 1
 
         #termination criteria
-        if converged or step > 25:
+        if converged or step == maxSteps:
             terminated = True
 
     return graph
@@ -41,9 +41,22 @@ def compute(graph, target, min_radius, max_radius, speed):
         if not edge.get_active():
             continue
 
-        deviation = edge.get_stress() - target
+        print ("-----")
 
-        radius = edge.get_radius() + (speed * deviation * (max_radius - min_radius))
+        print ("start radius", edge.get_radius())
+
+        print ("stress", edge.get_stress())
+
+        deviation = edge.get_stress() - target
+        print ("deviation", deviation)
+
+        adjustment = speed * deviation * (max_radius - min_radius)
+
+        print ("adjustment", adjustment)
+
+        radius = edge.get_radius() + adjustment
+
+        print ("radius", radius)
         #clamp
         radius = max(min(radius, max_radius), min_radius)
 

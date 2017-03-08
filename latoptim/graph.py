@@ -88,10 +88,10 @@ class Graph:
         for i, edge in enumerate(self.edges):
             edge.set_stress(results[i])
 
-    def get_edge_endpoints(self):
+    def get_edge_data(self):
         output = []
         for edge in self.get_edges():
-            output.append([node.get_coords() for node in edge.get_nodes()])
+            output.append([node.get_coords() for node in edge.get_nodes()] + [edge.get_radius()])
         return output
 
 

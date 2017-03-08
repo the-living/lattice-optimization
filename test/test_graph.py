@@ -16,6 +16,7 @@ max_radius = 3.0
 def_radius = 1.0
 speed = 0.1
 epsilon = .01
+maxSteps = 1
 
 
 print("generating graph...")
@@ -26,6 +27,6 @@ graph = lines2graph(lines_input, def_radius, epsilon)
 print("graph nodes:", len( graph.get_nodes() ))
 print("graph edges:", len( graph.get_edges() ))
 
-graph = optimize(graph, target, min_radius, max_radius, speed)
+graph = optimize(graph, target, min_radius, max_radius, speed, maxSteps)
 
-print(graph.get_edge_endpoints())
+print(graph.get_edge_data())
