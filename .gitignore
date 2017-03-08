@@ -14,6 +14,7 @@ htmlcov
 .cache
 
 # Sublime Text.
+*.sublime-project
 *.sublime-workspace
 
 # Built documentation.
