@@ -24,8 +24,8 @@ print("generating graph...")
 graph = lines2graph(lines_input, def_radius, epsilon)
 
 print("graph nodes:", len( graph.get_nodes() ))
-print("graph edges:", graph.get_edges())
+print("graph edges:", len( graph.get_edges() ))
 
 graph = optimize(graph, target, min_radius, max_radius, speed)
 
-# validate graph
+print(graph.get_edge_endpoints())
