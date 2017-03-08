@@ -1,0 +1,25 @@
+# Python.
+__pycache__
+*.egg-info
+build
+dist
+
+# Virtualenv.
+.venv
+
+# Pytest.
+.coverage
+htmlcov
+.cache
+
+# Sublime Text.
+*.sublime-workspace
+
+# Built documentation.
+/docs/build
+
+# Generic output directories.
+output
+
+# Temporary directories.
+temp
