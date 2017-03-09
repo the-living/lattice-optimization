@@ -158,3 +158,43 @@ EXECUTION TERMINATED DUE TO A SYSTEM ERROR
                                                                                 
 TOTAL WARNINGS     = 0                                                          
 TOTAL FATAL ERRORS = 1                                                          
+
+FATAL ERROR S1051: FILE: .\nastran\truss_TE.nas NOT FOUND                       
+
+VIRTUAL MEMORY =  2590192128 WORDS     19761.6 MEGABYTES                        
+REAL MEMORY    =  1066795008 WORDS      8139.0 MEGABYTES                        
+
+DRIVE C: DISK SPACE =   8174813184 WORDS     62368.9 MEGABYTES                  
+
+DATABASE STORAGE STATISTICS                                                     
+
+STORAGE METHOD                                                                  
+                                                                                
+MODEL TRANSLATION DATA        = MEMORY                                          
+GRID POINT COORDINATE DATA    = DISK                                            
+ELEMENT DIRECTION COSINE DATA = DISK                                            
+ELEMENT POSITION DATA         = DISK                                            
+ELEMENT SHAPE DATA            = DISK                                            
+GRID POINT LOAD DATA          = DISK                                            
+ELEMENT LOAD DATA             = DISK                                            
+ELEMENT RESULTS DATA          = DISK                                            
+NEUTRAL RESULTS DATA          = MEMORY                                          
+
+STORAGE SPACE REQUIRED                                                          
+                                                                                
+MODEL TRANSLATION DATA        =          0 WORDS        0.0 MEGABYTES           
+GRID POINT COORDINATE DATA    =          0 WORDS        0.0 MEGABYTES           
+ELEMENT DIRECTION COSINE DATA =          0 WORDS        0.0 MEGABYTES           
+ELEMENT POSITION DATA         =          0 WORDS        0.0 MEGABYTES           
+ELEMENT SHAPE DATA            =          0 WORDS        0.0 MEGABYTES           
+GRID POINT LOAD DATA          =         11 WORDS        0.0 MEGABYTES           
+ELEMENT LOAD DATA             =         22 WORDS        0.0 MEGABYTES           
+ELEMENT RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+NEUTRAL RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+                                                                                
+TOTAL                         =            WORDS        0.0 MEGABYTES           
+
+EXECUTION TERMINATED DUE TO A SYSTEM ERROR                                      
+                                                                                
+TOTAL WARNINGS     = 0                                                          
+TOTAL FATAL ERRORS = 1                                                          

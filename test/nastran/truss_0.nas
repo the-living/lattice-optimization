@@ -47,7 +47,7 @@ PARAM,ELEMGEOMCHECKS,OFF
 
 
                                                                                                                 
-GRAV    99998           9814.56 0.      16.     -1.    
+$GRAV    99998           9814.56 0.      16.     -1.    
 
 
 
@@ -234,6 +234,7 @@ ENDDATA
 
 
                                                
+
 
 
 

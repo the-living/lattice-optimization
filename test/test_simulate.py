@@ -5,7 +5,7 @@ from latoptim.simulate import *
 import os, json, time
 
 path = "\\".join(os.path.dirname(os.path.realpath(__file__)).split("\\")[:]) + "\\"
-fp_new_nas = os.path.join(os.curdir, 'nastran', 'truss_TE.nas')
+fp_new_nas = os.path.join(os.curdir, 'nastran', 'truss_100.nas')
 
 start = time.time()
 

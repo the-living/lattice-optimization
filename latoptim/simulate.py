@@ -17,8 +17,8 @@ fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid.json')
 fp_existing_lookup = os.path.join(basedir, 'nastran', 'lookup.json')
 
 fp_old_nas = os.path.join(basedir, 'nastran', 'truss_0.nas')
-fp_new_nas = os.path.join(basedir, 'nastran', 'truss_TE.nas')
-fp_neu = os.path.join(basedir, 'nastran', 'truss_TE.neu')
+fp_new_nas = os.path.join(basedir, 'nastran', 'truss_100.nas')
+fp_neu = os.path.join(basedir, 'nastran', 'truss_100.neu')
 
 
 grid_D = {}
@@ -29,9 +29,6 @@ data_grid_j = json.load(d)
 
 d = open(fp_existing_lookup)
 data_lookup = json.load(d) 		
-
-with open(fp_neu) as csvfile:
-	csv_string = csvfile.read()
 
 
 def rsf_reader(name, output_fp):
@@ -144,34 +141,7 @@ def find_grid_hash(a):
 
 
 
-def stress_finder(st):
 
-	s1 = 'TOTAL TRANSLATION'
-	s2 = '-1,0.,'
-	s3 = 'T1 TRANSLATION'
-	s4 = 'BAR EQV STRESS'
-	s5 = 'BAR SA-AXIAL'
-	s6 = 'BAR SA-C'
-
-	safety_factor = 435
-
-	f3 = csv_string.find(st)
-
-	s4a = csv_string[f3+len(st):]
-	s4b = s4a[:s4a.find(s2)]
-
-	s4b_list = s4b.split('\n')
-	s4b_list_num = []
-
-	for i in s4b_list[4:]:
-		try:
-			a = i.split(',')
-			b = int(a[0])
-			c = float(a[1])
-			s4b_list_num.append([b,c/435])
-		except:
-			pass
-	return s4b_list_num
 
 def pbarMaker(start,end,inc):
 
@@ -205,6 +175,10 @@ def pbarMaker(start,end,inc):
 
 
 
+def stress_finder(st):
+
+
+	return s4b_list_num
 
 def get_nastran_model(graph):
 
@@ -264,7 +238,12 @@ def get_nastran_model(graph):
 	with open(fp_new_nas, "w") as f:
 		f.write( new_txt )
 
+	with open('edge_output.txt', "w") as f:
+		f.write( str(graph) )
+
+
 	return nas_model
+
 
 
 
@@ -276,16 +255,49 @@ def compute_nastran_model(nas_model):
 	print('\nsys arguments:', nas_model+'.nas')
 
 	simPath = r'"C:\Program Files\Autodesk\Nastran 2016\NASTRAN.EXE"'
-	# initPath = r'C:\test\Nastrynamo\init.ini'
-	initPath = os.path.join(basedir, 'nastran', 'init.ini')
+	initPath = r'C:\test\Nastrynamo\init.ini'
+	# initPath = os.path.join(basedir, 'nastran', 'init.ini')
 
 	# run Nastran SIM
 	print('calling file: \n\n', '{} {} {}'.format(simPath, initPath, nas_model ), '\n\n\n')
 	os.system('{} {} {}'.format(simPath, initPath, nas_model))
 
+
+																		#open results NEU file
 	print("opening .neu results file: ", fp_neu)
 
-	stress_list_vm = stress_finder('BAR EQV STRESS')
+	with open(fp_neu) as csvfile:
+		csv_string = csvfile.read()
+
+	s1 = 'TOTAL TRANSLATION'
+	s2 = '-1,0.,'
+	s3 = 'T1 TRANSLATION'
+	st = 'BAR EQV STRESS'
+	s5 = 'BAR SA-AXIAL'
+	s6 = 'BAR SA-C'
+
+	safety_factor = 1
+
+	f3 = csv_string.find(st)
+
+	s4a = csv_string[f3+len(st):]
+	s4b = s4a[:s4a.find(s2)]
+
+	s4b_list = s4b.split('\n')
+	s4b_list_num = []
+
+	for i in s4b_list[4:]:
+		try:
+			a = i.split(',')
+			b = int(a[0])
+			c = float(a[1])
+			s4b_list_num.append([b,c/safety_factor])
+		except:
+			pass
+
+
+
+	stress_list_vm = s4b_list_num
 	print("\nvon mises stress: ", stress_list_vm[2:])
 
 	line_stress = {}
