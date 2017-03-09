@@ -54,12 +54,11 @@ def compute(graph, target, min_radius, max_radius, speed):
         print ("adjustment", adjustment)
 
         radius = edge.get_radius() + adjustment
-
-        print ("radius", radius)
         #clamp
         radius = max(min(radius, max_radius), min_radius)
-
         radius = int(radius * 10) / 10.0
+
+        print ("radius", radius)
 
         edge.set_radius(radius)
         
