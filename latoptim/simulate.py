@@ -10,16 +10,16 @@ import json
 
 
 from latoptim.graph import Graph
-
+sim_name = 'truss_100'
 basedir = os.curdir
 
 fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid.json')
 fp_existing_lookup = os.path.join(basedir, 'nastran', 'lookup.json')
 
 fp_old_nas = os.path.join(basedir, 'nastran', 'truss_0.nas')
-fp_new_nas = os.path.join(basedir, 'nastran', 'truss_100.nas')
-fp_neu = os.path.join(basedir, 'nastran', 'truss_100.neu')
-
+fp_new_nas = os.path.join(basedir, 'nastran', '{}.nas'.format(sim_name))
+fp_neu = os.path.join(basedir, 'nastran', '{}.neu'.format(sim_name))
+fp_rsf = os.path.join(basedir, 'nastran', '{}.rsf'.format(sim_name))
 
 grid_D = {}
 data_grid_pt ={}	
@@ -31,18 +31,18 @@ d = open(fp_existing_lookup)
 data_lookup = json.load(d) 		
 
 
-def rsf_reader(name, output_fp):
+def rsf_reader(output_fp):
 	# read RSF
-	rsf_filename = name+'.rsf'
-	print(rsf_filename)
+
+	print(fp_rsf)
 
 	str1 = "MAXIMUM DISPLACEMENT MAGNITUDE ="
 	str2 = "TOTAL MASS = "
 	str4 = "MAXIMUM BAR ELEMENT VON MISES STRESS ="
 	str5 = "BAR EQV STRESS "
 
-	print("opening results file: ", rsf_filename)
-	f = open(rsf_filename, 'r+')
+	print("opening results file: ", fp_rsf)
+	f = open(fp_rsf, 'r+')
 	rsf = f.read() 	
 
 	mass1 = rsf[rsf.find(str2, 40)+13:rsf.find(str2, 40)+25]
@@ -52,13 +52,17 @@ def rsf_reader(name, output_fp):
 	stress1 = rsf[rsf.find(str4, 70)+40:rsf.find(str4, 70)+53]
 	stress1 = '{:40.6E}'.format(float(stress1)).strip()
 
-	design1 = [ ((float(mass1)-1.489307)*1000), float(mass1), round(float(disp1),3), round(float(stress1),3)]
-	# design1 = [  float(disp1), float(stress1)]
+	# design1 = [ ((float(mass1)-1.489307)*1000), float(mass1), round(float(disp1),3), round(float(stress1),3)]
+	design1 = []
+	design1.append(['mass','displacement','stress'])
+	design1.append([float(mass1)*1000, round(float(disp1),3), round(float(stress1),3)])
 
 	with open(output_fp, "w") as csv:
 		csv.write(str(design1))	
+
 	print( "csv write done: ", output_fp ,"\n\n")
-	print("rsf reader:  [mass, mass, disp, stress]")
+	print("rsf reader:  [mass, disp, stress]")
+
 	return design1
 
 
@@ -301,5 +305,7 @@ def compute_nastran_model(nas_model):
 	print("\nvon mises stress: ", stress_list_vm[2:])
 
 	line_stress = {}
+
+	rsf_reader('simmary.csv')
 
 	return stress_list_vm[2:]
