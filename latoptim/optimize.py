@@ -59,6 +59,8 @@ def compute(graph, target, min_radius, max_radius, speed):
         #clamp
         radius = max(min(radius, max_radius), min_radius)
 
+        radius = int(radius * 10) / 10.0
+
         edge.set_radius(radius)
         
         #           if edge["radius"] < min_radius:

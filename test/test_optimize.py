@@ -13,11 +13,11 @@ with open(path + "model.txt") as f:
 # parameters for graph computation
 target = 0.5
 min_radius = 0.5
-max_radius = 3.0
+max_radius = 2.9
 def_radius = 1.0
 speed = 0.2
 epsilon = .01
-maxSteps = 20
+maxSteps = 10
 
 
 print("generating graph...")
