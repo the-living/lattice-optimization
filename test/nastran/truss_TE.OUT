@@ -1,5 +1,5 @@
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      1
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      1
  
  
  
@@ -40,7 +40,7 @@
  
  
  
-                                          SERIAL NUMBER:    AIX-IX86-01100-01132
+                                          SERIAL NUMBER:    AIX-IX86-01100-01121
  
                                           PROGRAM VERSION:  10.3.0.716
  
@@ -74,7 +74,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      2
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      2
  
  
  
@@ -87,9 +87,9 @@
  [FILE MANAGEMENT DIRECTIVES]
  
  DATABASE         = .\nastran\truss_TE.NDB
- FILESIGNATURE    = 5635
+ FILESIGNATURE    = A80I
  FILEBUFFERSIZE   = 10
- FILESPEC         = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\
+ FILESPEC         = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
  NFILEBUFFER      = 1
  PURGE            = ON
  RSLTFILEPURGE    = ON
@@ -149,7 +149,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      3
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      3
  
  
  
@@ -181,7 +181,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      4
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      4
  
  
  
@@ -199,7 +199,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      5
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      5
  
  
  
@@ -217,7 +217,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      6
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      6
  
  
  
@@ -235,7 +235,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      7
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      7
  
  
  
@@ -253,7 +253,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      8
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      8
  
  
  
@@ -271,7 +271,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE      9
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      9
  
  
  
@@ -289,7 +289,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     10
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     10
  
  
  
@@ -307,7 +307,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     11
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     11
  
  
  
@@ -325,7 +325,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     12
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     12
  
  
  
@@ -343,7 +343,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     13
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     13
  
  
  
@@ -361,7 +361,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     14
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     14
  
  
  
@@ -379,7 +379,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     15
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     15
  
  
  
@@ -419,7 +419,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     16
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     16
  
  
  
@@ -449,7 +449,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     17
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     17
  
  
  
@@ -480,7 +480,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     18
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     18
  
  
  
@@ -500,7 +500,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     19
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     19
  
  
  
@@ -557,7 +557,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     20
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     20
  
  
  AUTODESK NASTRAN CASE 1                                             SUBCASE 1
@@ -579,7 +579,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     21
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     21
  
  
  AUTODESK NASTRAN CASE 1                                             SUBCASE 1
@@ -608,7 +608,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     22
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     22
  
  
  
@@ -625,7 +625,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     23
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     23
  
  
  
@@ -642,7 +642,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     24
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     24
  
  
  
@@ -659,7 +659,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     25
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     25
  
  
  
@@ -676,7 +676,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     26
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     26
  
  
  
@@ -693,7 +693,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     27
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     27
  
  
  
@@ -710,7 +710,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     28
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     28
  
  
  
@@ -727,7 +727,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     29
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     29
  
  
  
@@ -751,11 +751,11 @@
  FILEBUFFERSIZE2  = 10
  FILEBUFFERSIZE3  = 10
  FILEBUFFERSIZE4  = 10
- FILESIGNATURE    = 5635
- FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\
- FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\
- FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\
- FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\
+ FILESIGNATURE    = A80I
+ FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
+ FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
+ FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
+ FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
  GPWEIGHTMETHOD   = VECTOR
  INCRRSLTOUT      = OFF
  LEFTMARGIN       = 1
@@ -802,7 +802,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     30
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     30
  
  
  
@@ -837,7 +837,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     31
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     31
  
  
  
@@ -912,7 +912,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     32
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     32
  
  
  
@@ -987,7 +987,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     33
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     33
  
  
  
@@ -1062,7 +1062,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     34
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     34
  
  
  
@@ -1137,7 +1137,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     35
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     35
  
  
  
@@ -1212,7 +1212,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     36
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     36
  
  
  
@@ -1239,7 +1239,7 @@
  
  
  
-                                                                        03/08/17  18:15  ADS NASTRAN VERSION 10.3.0.716  PAGE     37
+                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     37
  
  
  
@@ -1251,8 +1251,8 @@
  
  MODEL ANALYSIS TIME SUMMARY
  
- TOTAL CPU TIME = 1.5 SECONDS
- WALLCLOCK TIME = 2.3 SECONDS
+ TOTAL CPU TIME = 1.4 SECONDS
+ WALLCLOCK TIME = 2.4 SECONDS
  
  EXECUTION TERMINATED NORMALLY
  

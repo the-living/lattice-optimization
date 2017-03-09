@@ -1,6 +1,6 @@
 
-ADS NASTRAN VERSION 10.3.0.716  18:15  03/08/17                                 
-MODEL DATABASE IDENTIFICATION NUMBER: 015635                                    
+ADS NASTRAN VERSION 10.3.0.716  10:30  03/09/17                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 01A80I                                    
 
 NUMBER OF PROCESSOR THREADS REQUESTED =    2                                    
 NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
@@ -34,7 +34,7 @@ AVAILABLE ANALYSIS SOLUTIONS = LINEAR STATIC
                                NONLINEAR TRANSIENT HEAT TRANSFER       
                                MATRIX REDUCTION                        
                                                                                 
-REMAINING SOLUTION LICENSE TIME = 455 DAYS                                      
+REMAINING SOLUTION LICENSE TIME = 454 DAYS                                      
                                                                                 
                                                                                 
 AVAILABLE RESULTS TRANSLATORS = NORAN BINARY                                    
@@ -45,7 +45,7 @@ AVAILABLE RESULTS TRANSLATORS = NORAN BINARY
                                 FEMAP ASCII                             
                                 NASTRAN BINARY                          
                                                                                 
-REMAINING TRANSLATOR LICENSE TIME = 455 DAYS                                    
+REMAINING TRANSLATOR LICENSE TIME = 454 DAYS                                    
                                                                                 
                                                                                 
 AVAILABLE ANALYSIS FEATURES = MULTIAXIAL FATIGUE                                
@@ -56,16 +56,16 @@ AVAILABLE ANALYSIS FEATURES = MULTIAXIAL FATIGUE
                               BOUNDARY ACOUSTIC ANALYSIS              
                               TOPOLOGY OPTIMIZATION                   
                                                                                 
-REMAINING FEATURE LICENSE TIME = 455 DAYS                                       
+REMAINING FEATURE LICENSE TIME = 454 DAYS                                       
                                                                                 
                                                                                 
 MAXIMUM MODEL SIZE = NO LIMITS                                                  
                                                                                 
 
-VIRTUAL MEMORY =  3013502976 WORDS     22991.2 MEGABYTES                        
-REAL MEMORY    =  1297980928 WORDS      9902.8 MEGABYTES                        
+VIRTUAL MEMORY =  2646310400 WORDS     20189.7 MEGABYTES                        
+REAL MEMORY    =  1153971712 WORDS      8804.1 MEGABYTES                        
 
-DRIVE C: DISK SPACE =   8245596160 WORDS     62908.9 MEGABYTES                  
+DRIVE C: DISK SPACE =   8223082496 WORDS     62737.1 MEGABYTES                  
 
 GENERATING DATABASE:  truss_TE.NDB                                              
 
@@ -93,10 +93,10 @@ MODEL SIZE    =         174 DEGREES OF FREEDOM
 MATRIX SIZE   =      103489 WORDS        0.8 MEGABYTES                          
 SEMIBANDWIDTH =          41 WORDS                                               
 
-AVAILABLE VIRTUAL MEMORY  =  3010108928 WORDS     22965.3 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =  1296772608 WORDS      9893.6 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2642915840 WORDS     20163.8 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =  1154681344 WORDS      8809.5 MEGABYTES             
 
-DRIVE C: DISK SPACE =   8244319232 WORDS     62899.2 MEGABYTES                  
+DRIVE C: DISK SPACE =   8221805568 WORDS     62727.4 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
 
@@ -131,10 +131,10 @@ SOLUTION SEQUENCE FOR SUBCASE 1
 MAXIMUM STIFFNESS MATRIX DIAGONAL =  1.3279E+06  AT GRID 50000021 COMPONENT 3   
 MINIMUM STIFFNESS MATRIX DIAGONAL =  2.0375E+05  AT GRID 50000015 COMPONENT 6   
 
-AVAILABLE VIRTUAL MEMORY  =  3010121728 WORDS     22965.4 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =  1296658432 WORDS      9892.7 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2642848768 WORDS     20163.3 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =  1154570752 WORDS      8808.7 MEGABYTES             
 
-DRIVE C: DISK SPACE =   8245306368 WORDS     62906.7 MEGABYTES                  
+DRIVE C: DISK SPACE =   8222792704 WORDS     62734.9 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
 
@@ -209,11 +209,11 @@ FILEBUFFERSIZE1  = 10
 FILEBUFFERSIZE2  = 10                                                           
 FILEBUFFERSIZE3  = 10                                                           
 FILEBUFFERSIZE4  = 10                                                           
-FILESIGNATURE    = 5635                                                         
-FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\       
-FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\       
-FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\       
-FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB5635.TMP\       
+FILESIGNATURE    = A80I                                                         
+FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\       
+FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\       
+FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\       
+FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\       
 GPWEIGHTMETHOD   = VECTOR                                                       
 LEFTMARGIN       = 1                                                            
 LICENSEMANAGER   = ADLM                                                         
@@ -613,8 +613,8 @@ TOTAL                         =       1238 WORDS        0.9 MEGABYTES
 
 MODEL ANALYSIS TIME SUMMARY                                                     
                                                                                 
-TOTAL CPU TIME = 1.5 SECONDS                                                    
-WALLCLOCK TIME = 2.3 SECONDS                                                    
+TOTAL CPU TIME = 1.4 SECONDS                                                    
+WALLCLOCK TIME = 2.4 SECONDS                                                    
 
 EXECUTION TERMINATED NORMALLY                                                   
                                                                                 

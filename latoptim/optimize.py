@@ -18,7 +18,7 @@ def optimize(graph, target, min_radius, max_radius, speed, maxSteps, fp_new_nas)
 
 
         nas_model = get_nastran_model(graph.get_edge_data())
-        results = compute_nastran_model(fp_new_nas, graph.get_edge_data())
+        results = compute_nastran_model(fp_new_nas)
 
         # results = [0.1] * 74
 

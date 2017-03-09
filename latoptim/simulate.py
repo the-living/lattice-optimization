@@ -198,7 +198,7 @@ def pbarMaker(start,end,inc):
 		i2 = (3.14159/4)*a**4
 		j = (3.14159*(a*2)**4)/32
 
-		newPBAR =  "$pbar r = {}\n{}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}\n{}{} \n".format(a, strF, 1000+i, mat, str(area)[0:7],str(i1)[0:7], str(i2)[0:7], str(j)[0:7], strE, strE1 )
+		newPBAR =  "$pbar r = {}\n{}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}\n{}{} \n".format(a, strF, 1000+i, "101", str(area)[0:7],str(i1)[0:7], str(i2)[0:7], str(j)[0:7], strE, strE1 )
 		pbarList = pbarList + newPBAR
 
 	return pbarList, rad, bar_dict 
@@ -231,8 +231,10 @@ def get_nastran_model(graph):
 
 	print("GRID:\n", nas_grid)
 
-	strB4 = "1.      1.      1."
 
+	pbar_txt = pbarMaker(1.0,3.0,0.1)
+
+	strB4 = "1.      1.      1."
 	nas_cbar = ""
 	pbar = "101"
 	cbar_num = 60000000
@@ -253,7 +255,7 @@ def get_nastran_model(graph):
 	cbar_start = nas_txt.find("$cbar")
 	grid_start = nas_txt.find("$end Grid")
 
-	new_txt = "{}{}\n{}{}\n{}".format(nas_txt[:cbar_start], nas_cbar, nas_txt[cbar_start:grid_start], nas_grid, nas_txt[grid_start:])
+	new_txt = "{}\n{}\n{}\n{}{}\n{}".format(nas_txt[:cbar_start], nas_cbar, nas_txt[cbar_start:grid_start], "$pbar_txt", nas_grid, nas_txt[grid_start:])
 
 	with open(fp_new_nas, "w") as f:
 		f.write( new_txt )
