@@ -15,9 +15,9 @@ target = 0.5
 min_radius = 0.5
 max_radius = 3.0
 def_radius = 1.0
-speed = 0.1
+speed = 0.2
 epsilon = .01
-maxSteps = 1
+maxSteps = 20
 
 
 print("generating graph...")
