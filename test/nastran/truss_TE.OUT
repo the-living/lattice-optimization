@@ -1,5 +1,5 @@
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      1
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      1
  
  
  
@@ -40,7 +40,7 @@
  
  
  
-                                          SERIAL NUMBER:    AIX-IX86-01100-01121
+                                          SERIAL NUMBER:    AIX-IX86-01100-01151
  
                                           PROGRAM VERSION:  10.3.0.716
  
@@ -74,7 +74,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      2
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      2
  
  
  
@@ -86,10 +86,10 @@
  
  [FILE MANAGEMENT DIRECTIVES]
  
- DATABASE         = .\nastran\truss_TE.NDB
- FILESIGNATURE    = A80I
+ DATABASE         = c:\users\damon\documents\github\lattice-optimization\test\nas
+ FILESIGNATURE    = EM7E
  FILEBUFFERSIZE   = 10
- FILESPEC         = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
+ FILESPEC         = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBEM7E.TMP\
  NFILEBUFFER      = 1
  PURGE            = ON
  RSLTFILEPURGE    = ON
@@ -101,7 +101,7 @@
  DISKSTATUS       = ON
  ELAPSEDTIME      = OFF
  FEMAPRSLTVECTID  = ON
- INCRRSLTOUT      = OFF
+ INCRRSLTOUT      = ON
  LEFTMARGIN       = 1
  LINE             = 75
  MEMORYSTATUS     = ON
@@ -149,7 +149,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      3
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      3
  
  
  
@@ -181,7 +181,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      4
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      4
  
  
  
@@ -199,7 +199,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      5
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      5
  
  
  
@@ -209,6 +209,26 @@
    PROPERTY     MATERIAL         AREA          I1           I2          I12            J           K1           K2           NSM
       ID           ID
       101          101         3.142E+00    7.854E-01    7.854E-01    0.000E+00    1.571E+00    2.785E+00    2.785E+00    0.000E+00
+     1000          101         3.142E+00    7.854E-01    7.854E-01    0.000E+00    1.571E+00    0.000E+00    0.000E+00    0.000E+00
+     1001          101         3.801E+00    1.150E+00    1.150E+00    0.000E+00    2.300E+00    0.000E+00    0.000E+00    0.000E+00
+     1002          101         4.524E+00    1.629E+00    1.629E+00    0.000E+00    3.257E+00    0.000E+00    0.000E+00    0.000E+00
+     1003          101         5.309E+00    2.243E+00    2.243E+00    0.000E+00    4.486E+00    0.000E+00    0.000E+00    0.000E+00
+     1004          101         6.158E+00    3.017E+00    3.017E+00    0.000E+00    6.034E+00    0.000E+00    0.000E+00    0.000E+00
+     1005          101         7.069E+00    3.976E+00    3.976E+00    0.000E+00    7.952E+00    0.000E+00    0.000E+00    0.000E+00
+     1006          101         8.042E+00    5.147E+00    5.147E+00    0.000E+00    1.029E+01    0.000E+00    0.000E+00    0.000E+00
+     1007          101         9.079E+00    6.560E+00    6.560E+00    0.000E+00    1.312E+01    0.000E+00    0.000E+00    0.000E+00
+     1008          101         1.018E+01    8.245E+00    8.245E+00    0.000E+00    1.649E+01    0.000E+00    0.000E+00    0.000E+00
+     1009          101         1.134E+01    1.024E+01    1.024E+01    0.000E+00    2.047E+01    0.000E+00    0.000E+00    0.000E+00
+     1010          101         1.257E+01    1.257E+01    1.257E+01    0.000E+00    2.513E+01    0.000E+00    0.000E+00    0.000E+00
+     1011          101         1.385E+01    1.527E+01    1.527E+01    0.000E+00    3.055E+01    0.000E+00    0.000E+00    0.000E+00
+     1012          101         1.521E+01    1.840E+01    1.840E+01    0.000E+00    3.680E+01    0.000E+00    0.000E+00    0.000E+00
+     1013          101         1.662E+01    2.198E+01    2.198E+01    0.000E+00    4.396E+01    0.000E+00    0.000E+00    0.000E+00
+     1014          101         1.810E+01    2.606E+01    2.606E+01    0.000E+00    5.212E+01    0.000E+00    0.000E+00    0.000E+00
+     1015          101         1.963E+01    3.068E+01    3.068E+01    0.000E+00    6.136E+01    0.000E+00    0.000E+00    0.000E+00
+     1016          101         2.124E+01    3.589E+01    3.589E+01    0.000E+00    7.178E+01    0.000E+00    0.000E+00    0.000E+00
+     1017          101         2.290E+01    4.174E+01    4.174E+01    0.000E+00    8.348E+01    0.000E+00    0.000E+00    0.000E+00
+     1018          101         2.463E+01    4.827E+01    4.827E+01    0.000E+00    9.655E+01    0.000E+00    0.000E+00    0.000E+00
+     1019          101         2.642E+01    5.555E+01    5.555E+01    0.000E+00    1.111E+02    0.000E+00    0.000E+00    0.000E+00
  
  
  
@@ -217,7 +237,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      6
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      6
  
  
  
@@ -235,7 +255,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      7
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      7
  
  
  
@@ -253,7 +273,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      8
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      8
  
  
  
@@ -271,7 +291,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE      9
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE      9
  
  
  
@@ -289,7 +309,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     10
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     10
  
  
  
@@ -307,7 +327,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     11
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     11
  
  
  
@@ -325,7 +345,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     12
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     12
  
  
  
@@ -343,7 +363,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     13
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     13
  
  
  
@@ -353,6 +373,26 @@
    PROPERTY          C1           C2           D1           D2           E1           E2           F1           F2
       ID
       101         0.000E+00    0.000E+00    0.000E+00    1.000E+00    1.000E+00    0.000E+00    1.000E+00    1.000E+00
+     1000         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1001         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1002         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1003         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1004         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1005         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1006         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1007         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1008         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1009         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1010         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1011         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1012         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1013         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1014         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1015         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1016         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1017         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1018         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
+     1019         0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00    0.000E+00
  
  
  
@@ -361,7 +401,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     14
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     14
  
  
  
@@ -379,7 +419,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     15
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     15
  
  
  
@@ -419,7 +459,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     16
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     16
  
  
  
@@ -434,7 +474,7 @@
  SUBCASES                     =        1
  GRID POINTS                  =       29
  ELEMENTS                     =       75
- ELEMENT PROPERTIES           =        2
+ ELEMENT PROPERTIES           =       22
  MATERIAL PROPERTIES          =        1
  SINGLE POINT CONSTRAINTS     =        4
  GRID POINT FORCES            =        1
@@ -449,7 +489,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     17
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     17
  
  
  
@@ -472,7 +512,7 @@
  MINIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00
  REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  2.07 PERCENT
  
- ASSEMBLY TIME FOR 75 ELEMENTS = 0.0 SECONDS
+ ASSEMBLY TIME FOR 75 ELEMENTS = 0.1 SECONDS
  
  
  
@@ -480,7 +520,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     18
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     18
  
  
  
@@ -492,7 +532,7 @@
  
  DIAGONAL MASS MATRIX FORMULATION USED
  
- ASSEMBLY TIME FOR 75 ELEMENTS = 0.0 SECONDS
+ ASSEMBLY TIME FOR 75 ELEMENTS = 0.1 SECONDS
  
  
  
@@ -500,7 +540,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     19
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     19
  
  
  
@@ -557,7 +597,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     20
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     20
  
  
  AUTODESK NASTRAN CASE 1                                             SUBCASE 1
@@ -579,7 +619,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     21
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     21
  
  
  AUTODESK NASTRAN CASE 1                                             SUBCASE 1
@@ -600,7 +640,7 @@
  FACTORED SPARSE MATRIX SIZE =     104007 WORDS        0.8 MEGABYTES
  ADDITIONAL MEMORY ALLOCATED =     262873 WORDS        2.0 MEGABYTES
  
- FACTORIZATION TIME FOR 104007 WORDS = 0.0 SECONDS
+ FACTORIZATION TIME FOR 104007 WORDS = 0.1 SECONDS
  
  
  
@@ -608,7 +648,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     22
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     22
  
  
  
@@ -625,7 +665,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     23
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     23
  
  
  
@@ -642,7 +682,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     24
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     24
  
  
  
@@ -659,7 +699,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     25
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     25
  
  
  
@@ -676,7 +716,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     26
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     26
  
  
  
@@ -693,7 +733,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     27
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     27
  
  
  
@@ -710,7 +750,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     28
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     28
  
  
  
@@ -727,7 +767,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     29
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     29
  
  
  
@@ -738,7 +778,7 @@
  
  BULKDATAOUT      = OFF
  BULKDATASORT     = ON
- DATABASE         = .\nastran\truss_TE.NDB
+ DATABASE         = c:\users\damon\documents\github\lattice-optimization\test\nas
  DECOMPAUTOSIZE   = 50000
  DECOMPMETHOD     = VSS
  DISKSTATUS       = ON
@@ -751,11 +791,11 @@
  FILEBUFFERSIZE2  = 10
  FILEBUFFERSIZE3  = 10
  FILEBUFFERSIZE4  = 10
- FILESIGNATURE    = A80I
- FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
- FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
- FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
- FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBA80I.TMP\
+ FILESIGNATURE    = EM7E
+ FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBEM7E.TMP\
+ FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBEM7E.TMP\
+ FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBEM7E.TMP\
+ FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBEM7E.TMP\
  GPWEIGHTMETHOD   = VECTOR
  INCRRSLTOUT      = OFF
  LEFTMARGIN       = 1
@@ -802,7 +842,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     30
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     30
  
  
  
@@ -837,7 +877,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     31
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     31
  
  
  
@@ -912,7 +952,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     32
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     32
  
  
  
@@ -987,7 +1027,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     33
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     33
  
  
  
@@ -1062,7 +1102,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     34
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     34
  
  
  
@@ -1137,7 +1177,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     35
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     35
  
  
  
@@ -1212,7 +1252,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     36
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     36
  
  
  
@@ -1239,7 +1279,7 @@
  
  
  
-                                                                        03/09/17  10:30  ADS NASTRAN VERSION 10.3.0.716  PAGE     37
+                                                                        03/09/17  10:35  ADS NASTRAN VERSION 10.3.0.716  PAGE     37
  
  
  
@@ -1251,8 +1291,8 @@
  
  MODEL ANALYSIS TIME SUMMARY
  
- TOTAL CPU TIME = 1.4 SECONDS
- WALLCLOCK TIME = 2.4 SECONDS
+ TOTAL CPU TIME = 1.6 SECONDS
+ WALLCLOCK TIME = 3.5 SECONDS
  
  EXECUTION TERMINATED NORMALLY
  
