@@ -1,7 +1,7 @@
 from latoptim.simulate import compute_nastran_model, get_nastran_model
 
 
-def optimize(graph, target, min_radius, max_radius, speed, maxSteps):
+def optimize(graph, target, min_radius, max_radius, speed, maxSteps, fp_new_nas):
 
     step = 0
     terminated = False
@@ -11,12 +11,16 @@ def optimize(graph, target, min_radius, max_radius, speed, maxSteps):
         print("starting step", step)
 
         # 1. convert graph to Natran model
-        nas_model = get_nastran_model(graph)
+        # nas_model = get_nastran_model(graph)
 
         # 2. run simulation in nastran and return results
-        results = compute_nastran_model(nas_model)
+        # results = compute_nastran_model(nas_model)
 
-        results = [0.1] * 74
+
+        nas_model = get_nastran_model(graph.get_edge_data())
+        results = compute_nastran_model(fp_new_nas, graph.get_edge_data())
+
+        # results = [0.1] * 74
 
         # 3. write Nastran results to graph
         graph.set_stress_values(results)
