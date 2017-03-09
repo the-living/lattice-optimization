@@ -219,7 +219,7 @@ def get_nastran_model(graph):
 																		
 	cbar_ind = []																		
 	for n, i in enumerate(graph):
-		print("graph edges radius: ", i[2])
+		# print("graph edges radius: ", i[2])
 		# print("graph object: ", i[1], i[0])
 		radius = 1000 + (i[2] - 0.5) * 10
 		pair = [ find_grid_hash(i[0]), find_grid_hash(i[1]), radius ]	
@@ -232,7 +232,7 @@ def get_nastran_model(graph):
 		output = "GRID    {:<8}        {:<8}{:<8}{:<8}  ".format(key, value[0], value[1], value[2] )
 		nas_grid = nas_grid + '\n' + output
 
-	print("GRID:\n", nas_grid)
+	print("GRID:\n", nas_grid[:500])
 
 																				#write new PBAR elem
 
@@ -247,11 +247,11 @@ def get_nastran_model(graph):
 	cbar_list = {}
 	for n, i in enumerate(cbar_ind):
 		cbar_id = str(n + cbar_num)
-		connT = "CBAR    {:<8}{:<8}{:<8}{:<8}{}  ".format( cbar_id, str(i[2]), str(i[0]), str(i[1]), strB4 )
+		connT = "CBAR    {:<8}{:<8}{:<8}{:<8}{}  ".format( cbar_id, str(int(i[2])), str(i[0]), str(i[1]), strB4 )
 		cbar_list[cbar_id] = [str(i[0]), str(i[1])]
 		nas_cbar = nas_cbar + "\n" + connT 
 
-	# print(nas_cbar)
+	print(nas_cbar[:500])
 																				#splice new data with old Nas file
 	old_nas = open(fp_old_nas)
 	nas_txt = old_nas.read()
@@ -281,7 +281,7 @@ def compute_nastran_model(nas_model):
 
 	# run Nastran SIM
 	print('calling file: \n\n', '{} {} {}'.format(simPath, initPath, nas_model ), '\n\n\n')
-	# os.system('{} {} {}'.format(simPath, initPath, nas_model))
+	os.system('{} {} {}'.format(simPath, initPath, nas_model))
 
 	print("opening .neu results file: ", fp_neu)
 
