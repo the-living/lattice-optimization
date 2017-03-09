@@ -1,32 +1,32 @@
                                                                                 
-ADS NASTRAN VERSION 10.3.0.716  10:51  03/09/17                                 
+ADS NASTRAN VERSION 10.3.0.716  11:50  03/09/17                                 
                                                                                 
-TOTAL MASS = 7.453587E-07                                                       
+TOTAL MASS = 3.182290E-06                                                       
                                                                                 
-MAXIMUM STIFFNESS MATRIX DIAGONAL =  3.6941E+06  AT GRID 50000021 COMPONENT 2   
-MINIMUM STIFFNESS MATRIX DIAGONAL =  3.6570E+05  AT GRID 50000015 COMPONENT 6   
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  1.3068E+08  AT GRID 50000022 COMPONENT 2   
+MINIMUM STIFFNESS MATRIX DIAGONAL =  2.2854E+04  AT GRID 50000015 COMPONENT 4   
                                                                                 
 NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
-MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.338E+02 AT GRID 50000012 COMPONENT 2   
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.028E+02 AT GRID 50000013 COMPONENT 2   
                                                                                 
-FACTORED SPARSE MATRIX SIZE =     104007 WORDS        0.8 MEGABYTES             
-ADDITIONAL MEMORY ALLOCATED =     262873 WORDS        2.0 MEGABYTES             
+FACTORED SPARSE MATRIX SIZE =     103925 WORDS        0.8 MEGABYTES             
+ADDITIONAL MEMORY ALLOCATED =     263422 WORDS        2.0 MEGABYTES             
                                                                                 
-MAXIMUM APPLIED FORCE MAGNITUDE  =  9.989999E+02  AT GRID 20000005              
+MAXIMUM APPLIED FORCE MAGNITUDE  =  9.989996E+02  AT GRID 20000005              
 MAXIMUM APPLIED MOMENT MAGNITUDE =  0.000000E+00  AT GRID 50000025              
                                                                                 
-MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  3.648126E+03  AT GRID 200000
-MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  3.822246E+02  AT GRID 200000
+MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  2.244791E+03  AT GRID 200000
+MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  1.956151E+03  AT GRID 200000
                                                                                 
-MAXIMUM DISPLACEMENT MAGNITUDE =  1.881370E-01  AT GRID 20000005                
-MAXIMUM ROTATION MAGNITUDE     =  3.470421E-02  AT GRID 20000005                
+MAXIMUM DISPLACEMENT MAGNITUDE =  1.927366E-02  AT GRID 20000005                
+MAXIMUM ROTATION MAGNITUDE     =  7.492804E-03  AT GRID 50000008                
                                                                                 
-EPSILON       =  5.334247E-14                                                   
-STRAIN ENERGY =  9.247489E+01                                                   
+EPSILON       =  2.710495E-14                                                   
+STRAIN ENERGY =  8.980791E+00                                                   
                                                                                 
-MAXIMUM BAR ELEMENT TOTAL STRESS     =  5.991252E+02  AT ELEMENT 60000072       
-MAXIMUM BAR ELEMENT VON MISES STRESS =  5.991266E+02  AT ELEMENT 60000038       
-MINIMUM BAR ELEMENT TOTAL STRESS     = -5.991266E+02  AT ELEMENT 60000038       
+MAXIMUM BAR ELEMENT TOTAL STRESS     =  2.961305E+02  AT ELEMENT 60000006       
+MAXIMUM BAR ELEMENT VON MISES STRESS =  2.961305E+02  AT ELEMENT 60000006       
+MINIMUM BAR ELEMENT TOTAL STRESS     = -2.131799E+02  AT ELEMENT 60000027       
                                                                                 
 MAXIMUM QUAD ELEMENT PRINCIPAL STRESS =  0.000000E+00  AT ELEMENT 10000000      
 MAXIMUM QUAD ELEMENT SHEAR STRESS     =  0.000000E+00  AT ELEMENT 10000000      
@@ -43,5 +43,5 @@ SHELL ELEMENT RELATIVE STRESS ERROR =  0.000000E+00
 MAXIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
 MINIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
                                                                                 
-TOTAL CPU TIME = 1.4 SECONDS                                                    
-WALLCLOCK TIME = 2.4 SECONDS                                                    
+TOTAL CPU TIME = 1.8 SECONDS                                                    
+WALLCLOCK TIME = 2.5 SECONDS                                                    
