@@ -11,13 +11,13 @@ with open(path + "model.txt") as f:
     lines_input = json.loads(f.read())
 
 # parameters for graph computation
-target = 435
+target = 300
 min_radius = 0.5
-max_radius = 2.9
+max_radius = 3.0
 def_radius = 1.0
-speed = 0.0001
+speed = 0.0005
 epsilon = .01
-maxSteps = 5
+maxSteps = 6
 
 
 print("generating graph...")

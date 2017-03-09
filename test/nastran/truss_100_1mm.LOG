@@ -1,6 +1,6 @@
 
-ADS NASTRAN VERSION 10.3.0.716  13:55  03/09/17                                 
-MODEL DATABASE IDENTIFICATION NUMBER: 01G78G                                    
+ADS NASTRAN VERSION 10.3.0.716  15:19  03/09/17                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 014Y64                                    
 
 NUMBER OF PROCESSOR THREADS REQUESTED =    2                                    
 NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
@@ -62,10 +62,10 @@ REMAINING FEATURE LICENSE TIME = 454 DAYS
 MAXIMUM MODEL SIZE = NO LIMITS                                                  
                                                                                 
 
-VIRTUAL MEMORY =  2565238272 WORDS     19571.2 MEGABYTES                        
-REAL MEMORY    =  1044315136 WORDS      7967.5 MEGABYTES                        
+VIRTUAL MEMORY =  2335720960 WORDS     17820.1 MEGABYTES                        
+REAL MEMORY    =   976414720 WORDS      7449.5 MEGABYTES                        
 
-DRIVE c: DISK SPACE =   8175465472 WORDS     62373.9 MEGABYTES                  
+DRIVE c: DISK SPACE =   8165208064 WORDS     62295.6 MEGABYTES                  
 
 GENERATING DATABASE:  truss_100_1mm.NDB                                         
 
@@ -92,10 +92,10 @@ MODEL SIZE    =         174 DEGREES OF FREEDOM
 MATRIX SIZE   =      101287 WORDS        0.8 MEGABYTES                          
 SEMIBANDWIDTH =          23 WORDS                                               
 
-AVAILABLE VIRTUAL MEMORY  =  2559681024 WORDS     19528.8 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =  1040747520 WORDS      7940.3 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2332639744 WORDS     17796.6 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   975467520 WORDS      7442.2 MEGABYTES             
 
-DRIVE c: DISK SPACE =   8174192640 WORDS     62364.1 MEGABYTES                  
+DRIVE c: DISK SPACE =   8163935232 WORDS     62285.9 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
 
@@ -128,10 +128,10 @@ SOLUTION SEQUENCE FOR SUBCASE 1
 MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.0469E+06  AT GRID 50000014 COMPONENT 2   
 MINIMUM STIFFNESS MATRIX DIAGONAL =  4.2750E+04  AT GRID 50000016 COMPONENT 6   
 
-AVAILABLE VIRTUAL MEMORY  =  2550808576 WORDS     19461.1 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =  1037981696 WORDS      7919.2 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2332465152 WORDS     17795.3 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   975671296 WORDS      7443.8 MEGABYTES             
 
-DRIVE c: DISK SPACE =   8175187968 WORDS     62371.7 MEGABYTES                  
+DRIVE c: DISK SPACE =   8164930560 WORDS     62293.5 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
 
@@ -146,31 +146,31 @@ ADDITIONAL MEMORY ALLOCATED =     253762 WORDS        1.9 MEGABYTES
 
 FACTORIZATION TIME FOR 101221 WORDS = 0.1 SECONDS                               
 
-MAXIMUM APPLIED FORCE MAGNITUDE  =  9.990000E+02  AT GRID 20000005              
+MAXIMUM APPLIED FORCE MAGNITUDE  =  1.411387E+06  AT GRID 20000005              
 MAXIMUM APPLIED MOMENT MAGNITUDE =  0.000000E+00  AT GRID 50000025              
 
-MAXIMUM DISPLACEMENT MAGNITUDE =  3.165337E+00  AT GRID 20000005                
-MAXIMUM ROTATION MAGNITUDE     =  5.400736E-01  AT GRID 50000015                
+MAXIMUM DISPLACEMENT MAGNITUDE =  3.795736E+03  AT GRID 20000005                
+MAXIMUM ROTATION MAGNITUDE     =  6.826827E+02  AT GRID 20000005                
 
-EPSILON       =  2.725975E-13                                                   
-STRAIN ENERGY =  1.487124E+03                                                   
+EPSILON       =  9.131606E-13                                                   
+STRAIN ENERGY =  2.039838E+09                                                   
 
 SOLUTION TIME FOR 174 DEGREES OF FREEDOM = 0.1 SECONDS                          
 
-MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  9.990000E+02  AT GRID 200000
-MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  7.992000E+03  AT GRID 200000
+MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  1.411387E+06  AT GRID 200000
+MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  8.470207E+06  AT GRID 200000
 
 CALCULATING RESULTS FOR SUBCASE 1                                               
 
-MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  4.167034E-10  AT GRID 20000005     
-MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  1.527951E-10  AT GRID 20000005     
+MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  5.123053E-07  AT GRID 20000005     
+MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  3.875063E-07  AT GRID 50000014     
 
-MAXIMUM BAR ELEMENT TOTAL STRESS     =  1.357511E+02  AT ELEMENT 60000006       
-MINIMUM BAR ELEMENT TOTAL STRESS     = -1.733860E+02  AT ELEMENT 60000028       
-MAXIMUM BAR ELEMENT VON MISES STRESS =  1.733860E+02  AT ELEMENT 60000028       
+MAXIMUM BAR ELEMENT TOTAL STRESS     =  3.176738E+05  AT ELEMENT 60000043       
+MINIMUM BAR ELEMENT TOTAL STRESS     = -8.303797E+04  AT ELEMENT 60000031       
+MAXIMUM BAR ELEMENT VON MISES STRESS =  3.176738E+05  AT ELEMENT 60000043       
 
-MAXIMUM BAR ELEMENT TOTAL STRAIN =  1.875171E-03  AT ELEMENT 60000006           
-MINIMUM BAR ELEMENT TOTAL STRAIN = -2.395032E-03  AT ELEMENT 60000028           
+MAXIMUM BAR ELEMENT TOTAL STRAIN =  4.388124E+00  AT ELEMENT 60000043           
+MINIMUM BAR ELEMENT TOTAL STRAIN = -1.147028E+00  AT ELEMENT 60000031           
 
 CALCULATING QUAD ELEMENT RESULTS ON SURFACE 0 FOR SUBCASE 1                     
 
@@ -206,11 +206,11 @@ FILEBUFFERSIZE1  = 10
 FILEBUFFERSIZE2  = 10                                                           
 FILEBUFFERSIZE3  = 10                                                           
 FILEBUFFERSIZE4  = 10                                                           
-FILESIGNATURE    = G78G                                                         
-FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBG78G.TMP\       
-FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBG78G.TMP\       
-FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBG78G.TMP\       
-FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBG78G.TMP\       
+FILESIGNATURE    = 4Y64                                                         
+FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB4Y64.TMP\       
+FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB4Y64.TMP\       
+FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB4Y64.TMP\       
+FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB4Y64.TMP\       
 GPWEIGHTMETHOD   = VECTOR                                                       
 LEFTMARGIN       = 1                                                            
 LICENSEMANAGER   = ADLM                                                         
@@ -610,7 +610,7 @@ TOTAL                         =       1103 WORDS        0.8 MEGABYTES
 
 MODEL ANALYSIS TIME SUMMARY                                                     
                                                                                 
-TOTAL CPU TIME = 1.5 SECONDS                                                    
+TOTAL CPU TIME = 1.7 SECONDS                                                    
 WALLCLOCK TIME = 3.4 SECONDS                                                    
 
 EXECUTION TERMINATED NORMALLY                                                   
