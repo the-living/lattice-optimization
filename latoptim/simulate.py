@@ -236,7 +236,7 @@ def get_nastran_model(graph):
 
 																				#write new PBAR elem
 
-	pbar_data = pbarMaker(0.5,3.0,0.1)
+	pbar_data = pbarMaker(0.5,3.1,0.1)
 	pbar_txt = pbar_data[0]
 
 	strB4 = "1.      1.      1."
@@ -259,7 +259,7 @@ def get_nastran_model(graph):
 	cbar_start = nas_txt.find("$cbar")
 	grid_start = nas_txt.find("$end Grid")
 
-	new_txt = "{}\n{}\n{}\n{}\n{}\n{}".format(nas_txt[:cbar_start], nas_cbar, nas_txt[cbar_start:grid_start], "$pbar_txt", nas_grid, nas_txt[grid_start:])
+	new_txt = "{}\n{}\n{}\n{}\n{}\n{}".format(nas_txt[:cbar_start], nas_cbar, nas_txt[cbar_start:grid_start], pbar_txt, nas_grid, nas_txt[grid_start:])
 
 	with open(fp_new_nas, "w") as f:
 		f.write( new_txt )
