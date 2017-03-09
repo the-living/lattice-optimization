@@ -1,30 +1,30 @@
                                                                                 
-TOTAL MASS = 3.291735E-07                                                       
+TOTAL MASS = 3.232989E-07                                                       
                                                                                 
-MAXIMUM STIFFNESS MATRIX DIAGONAL =  5.3544E+06  AT GRID 50000023 COMPONENT 3   
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  4.6989E+06  AT GRID 50000023 COMPONENT 3   
 MINIMUM STIFFNESS MATRIX DIAGONAL =  2.2854E+04  AT GRID 50000015 COMPONENT 4   
                                                                                 
 NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
-MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 8.173E+01 AT GRID 50000012 COMPONENT 2   
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 2.336E+01 AT GRID 50000011 COMPONENT 2   
                                                                                 
-FACTORED SPARSE MATRIX SIZE =     103997 WORDS        0.8 MEGABYTES             
-ADDITIONAL MEMORY ALLOCATED =     263064 WORDS        2.0 MEGABYTES             
+FACTORED SPARSE MATRIX SIZE =     103969 WORDS        0.8 MEGABYTES             
+ADDITIONAL MEMORY ALLOCATED =     263200 WORDS        2.0 MEGABYTES             
                                                                                 
 MAXIMUM APPLIED FORCE MAGNITUDE  =  9.990000E+02  AT GRID 20000005              
 MAXIMUM APPLIED MOMENT MAGNITUDE =  0.000000E+00  AT GRID 50000025              
                                                                                 
-MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  2.331366E+03  AT GRID 200000
-MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  1.719643E+03  AT GRID 200000
+MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  2.411489E+03  AT GRID 200000
+MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  1.637449E+03  AT GRID 200000
                                                                                 
-MAXIMUM DISPLACEMENT MAGNITUDE =  1.894606E-01  AT GRID 20000005                
-MAXIMUM ROTATION MAGNITUDE     =  4.118201E-02  AT GRID 20000005                
+MAXIMUM DISPLACEMENT MAGNITUDE =  2.038511E-01  AT GRID 20000005                
+MAXIMUM ROTATION MAGNITUDE     =  4.458060E-02  AT GRID 20000005                
                                                                                 
-EPSILON       =  1.651642E-14                                                   
-STRAIN ENERGY =  9.280101E+01                                                   
+EPSILON       =  4.269355E-14                                                   
+STRAIN ENERGY =  9.980347E+01                                                   
                                                                                 
-MAXIMUM BAR ELEMENT TOTAL STRESS     =  3.733323E+02  AT ELEMENT 60000005       
-MAXIMUM BAR ELEMENT VON MISES STRESS =  3.773828E+02  AT ELEMENT 60000010       
-MINIMUM BAR ELEMENT TOTAL STRESS     = -3.773828E+02  AT ELEMENT 60000010       
+MAXIMUM BAR ELEMENT TOTAL STRESS     =  3.992469E+02  AT ELEMENT 60000066       
+MAXIMUM BAR ELEMENT VON MISES STRESS =  4.532337E+02  AT ELEMENT 60000030       
+MINIMUM BAR ELEMENT TOTAL STRESS     = -4.532337E+02  AT ELEMENT 60000030       
                                                                                 
 MAXIMUM QUAD ELEMENT PRINCIPAL STRESS =  0.000000E+00  AT ELEMENT 10000000      
 MAXIMUM QUAD ELEMENT SHEAR STRESS     =  0.000000E+00  AT ELEMENT 10000000      
@@ -36,5 +36,5 @@ MAXIMUM QUAD ELEMENT SHEAR STRAIN     =  0.000000E+00  AT ELEMENT 10000000
 MAXIMUM QUAD ELEMENT VON MISES STRAIN =  0.000000E+00  AT ELEMENT 10000000      
 MINIMUM QUAD ELEMENT PRINCIPAL STRAIN =  0.000000E+00  AT ELEMENT 10000000      
                                                                                 
-TOTAL CPU TIME = 1.9 SECONDS                                                    
-WALLCLOCK TIME = 3.4 SECONDS                                                    
+TOTAL CPU TIME = 1.3 SECONDS                                                    
+WALLCLOCK TIME = 2.4 SECONDS                                                    
