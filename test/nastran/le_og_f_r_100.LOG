@@ -1,6 +1,6 @@
 
-ADS NASTRAN VERSION 10.3.0.716  11:44  03/10/17                                 
-MODEL DATABASE IDENTIFICATION NUMBER: 016646                                    
+ADS NASTRAN VERSION 10.3.0.716  12:43  03/10/17                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 01BA4B                                    
 
 NUMBER OF PROCESSOR THREADS REQUESTED =    2                                    
 NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
@@ -62,155 +62,111 @@ REMAINING FEATURE LICENSE TIME = 453 DAYS
 MAXIMUM MODEL SIZE = NO LIMITS                                                  
                                                                                 
 
-VIRTUAL MEMORY =  2176356864 WORDS     16604.3 MEGABYTES                        
-REAL MEMORY    =   921788928 WORDS      7032.7 MEGABYTES                        
+VIRTUAL MEMORY =  2306692096 WORDS     17598.7 MEGABYTES                        
+REAL MEMORY    =  1001461760 WORDS      7640.5 MEGABYTES                        
 
-DRIVE C: DISK SPACE =   7922483200 WORDS     60443.8 MEGABYTES                  
+DRIVE C: DISK SPACE =   8229484544 WORDS     62786.0 MEGABYTES                  
 
-GENERATING DATABASE:  truss_100.NDB                                             
+GENERATING DATABASE:  le_og_f_r_100.NDB                                         
 
-15 CASE CONTROL COMMANDS WERE RECOGNIZED OF A TOTAL OF 15 READ IN               
+22 CASE CONTROL COMMANDS WERE RECOGNIZED OF A TOTAL OF 22 READ IN               
 
-201 BULK DATA ENTRIES WERE RECOGNIZED OF A TOTAL OF 201 READ IN                 
+39378 BULK DATA ENTRIES WERE RECOGNIZED OF A TOTAL OF 39378 READ IN             
                                                                                 
 MODEL DATABASE SIZE                                                             
                                                                                 
-SUBCASES                     =        1                                         
-GRID POINTS                  =       29                                         
-ELEMENTS                     =       75                                         
-ELEMENT PROPERTIES           =       28                                         
-MATERIAL PROPERTIES          =        1                                         
-SINGLE POINT CONSTRAINTS     =        4                                         
-GRID POINT FORCES            =        1                                         
+SUBCASES                     =        2                                         
+COORDINATE SYSTEMS           =        1                                         
+GRID POINTS                  =    10783                                         
+ELEMENTS                     =     9818                                         
+ELEMENT PROPERTIES           =       32                                         
+MATERIAL PROPERTIES          =       14                                         
+SINGLE POINT CONSTRAINTS     =      119                                         
+MULTIPOINT CONSTRAINTS       =    42805                                         
+ELEMENT PRESSURES            =    16200                                         
 SETS                         =        1                                         
 SURFACES                     =        1                                         
-VOLUMES                      =        1                                         
 
 MODULE SEQUENCE FOR SOLUTION: LINEAR STATIC                                     
 
-MODEL SIZE    =         174 DEGREES OF FREEDOM                                  
-MATRIX SIZE   =      103489 WORDS        0.8 MEGABYTES                          
-SEMIBANDWIDTH =          41 WORDS                                               
+MODEL SIZE    =       64698 DEGREES OF FREEDOM                                  
+MATRIX SIZE   =     1729368 WORDS       13.2 MEGABYTES                          
+SEMIBANDWIDTH =          53 WORDS                                               
 
-AVAILABLE VIRTUAL MEMORY  =  2173868032 WORDS     16585.3 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   921134592 WORDS      7027.7 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2296581120 WORDS     17521.5 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   989293056 WORDS      7547.7 MEGABYTES             
 
-DRIVE C: DISK SPACE =   7921316864 WORDS     60434.9 MEGABYTES                  
+DRIVE C: DISK SPACE =   8222744576 WORDS     62734.6 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
 
-SPARSE MATRIX SIZE =     103489 WORDS        0.8 MEGABYTES                      
-MEMORY ALLOCATED   =     155233 WORDS        1.2 MEGABYTES                      
+SPARSE MATRIX SIZE =    2505744 WORDS       19.1 MEGABYTES                      
+MEMORY ALLOCATED   =    3758616 WORDS       28.7 MEGABYTES                      
 
-MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  2.2198E-17                       
-MINIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00                       
-REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  2.06 PERCENT                     
+ASSEMBLY TIME FOR 9818 ELEMENTS = 0.7 SECONDS                                   
 
-ASSEMBLY TIME FOR 75 ELEMENTS = 0.0 SECONDS                                     
-
-TOTAL MASS = 3.560163E-07                                                       
+TOTAL MASS = 1.489473E+00                                                       
 
 MASS DISTRIBUTION BY TYPE                                                       
 
-STRUCTURAL MASS    =  3.560163E-07                                              
+STRUCTURAL MASS    =  1.489473E+00                                              
 NONSTRUCTURAL MASS =  0.000000E+00                                              
 CONCENTRATED MASS  =  0.000000E+00                                              
 OTHER MASS         =  0.000000E+00                                              
 
 CENTER OF MASS RELATIVE TO ORIGIN OF BASIC SYSTEM                               
                                                                                 
-X-COORDINATE =  3.834150E+00                                                    
-Y-COORDINATE =  3.011098E-02                                                    
-Z-COORDINATE =  9.924323E-01                                                    
+X-COORDINATE =  3.145362E+03                                                    
+Y-COORDINATE =  3.426716E-05                                                    
+Z-COORDINATE =  3.249598E+03                                                    
 
 SOLUTION SEQUENCE FOR SUBCASE 1                                                 
 
-MAXIMUM STIFFNESS MATRIX DIAGONAL =  1.5356E+06  AT GRID 50000022 COMPONENT 3   
-MINIMUM STIFFNESS MATRIX DIAGONAL =  4.7392E+04  AT GRID 50000015 COMPONENT 6   
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.7070E+07  AT GRID 21506688 COMPONENT 5   
+MINIMUM STIFFNESS MATRIX DIAGONAL =  9.7232E+02  AT GRID 40000113 COMPONENT 5   
 
-AVAILABLE VIRTUAL MEMORY  =  2173989888 WORDS     16586.2 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   920700416 WORDS      7024.4 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2301983232 WORDS     17562.7 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   985188352 WORDS      7516.4 MEGABYTES             
 
-DRIVE C: DISK SPACE =   7922306048 WORDS     60442.4 MEGABYTES                  
+DRIVE C: DISK SPACE =   8215204864 WORDS     62677.0 MEGABYTES                  
 
-GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
+GLOBAL STIFFNESS MATRIX ITERATIVE SOLUTION STATISTICS                           
 
-NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
-MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.685E+02 AT GRID 50000012 COMPONENT 2   
+MEMORY ALLOCATED    =            0 WORDS         0.0 MEGABYTES                  
+DISK SPACE ACCESSED =            0 WORDS         0.0 MEGABYTES                  
 
-REORDERING METHOD REQUESTED = AUTO                                              
-REORDERING METHOD USED      = VRM1                                              
+NUMBER OF SOLUTION ITERATIONS = 0                                               
+FINAL CONVERGENCE FACTOR      = 1.000E-06                                       
 
-FACTORED SPARSE MATRIX SIZE =     104001 WORDS        0.8 MEGABYTES             
-ADDITIONAL MEMORY ALLOCATED =     262918 WORDS        2.0 MEGABYTES             
+FATAL ERROR E5004: STIFFNESS MATRIX SINGULAR OR NON-POSITIVE DEFINITE           
 
-FACTORIZATION TIME FOR 104001 WORDS = 0.0 SECONDS                               
+VIRTUAL MEMORY =  2297469952 WORDS     17528.3 MEGABYTES                        
+REAL MEMORY    =   989548544 WORDS      7549.7 MEGABYTES                        
 
-MAXIMUM APPLIED FORCE MAGNITUDE  =  9.990000E+02  AT GRID 20000005              
-MAXIMUM APPLIED MOMENT MAGNITUDE =  0.000000E+00  AT GRID 50000025              
-
-MAXIMUM DISPLACEMENT MAGNITUDE =  2.949967E-01  AT GRID 20000005                
-MAXIMUM ROTATION MAGNITUDE     =  5.310402E-02  AT GRID 20000005                
-
-EPSILON       =  1.834885E-14                                                   
-STRAIN ENERGY =  1.450718E+02                                                   
-
-SOLUTION TIME FOR 174 DEGREES OF FREEDOM = 0.0 SECONDS                          
-
-MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  3.103860E+03  AT GRID 200000
-MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  9.328138E+02  AT GRID 200000
-
-CALCULATING RESULTS FOR SUBCASE 1                                               
-
-MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  8.572741E-11  AT GRID 50000007     
-MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  3.069545E-11  AT GRID 50000003     
-
-MAXIMUM BAR ELEMENT TOTAL STRESS     =  8.296921E+02  AT ELEMENT 60000072       
-MINIMUM BAR ELEMENT TOTAL STRESS     = -8.297070E+02  AT ELEMENT 60000038       
-MAXIMUM BAR ELEMENT VON MISES STRESS =  8.297070E+02  AT ELEMENT 60000038       
-
-MAXIMUM BAR ELEMENT TOTAL STRAIN =  1.146079E-02  AT ELEMENT 60000072           
-MINIMUM BAR ELEMENT TOTAL STRAIN = -1.146099E-02  AT ELEMENT 60000038           
-
-CALCULATING QUAD ELEMENT RESULTS ON SURFACE 0 FOR SUBCASE 1                     
-
-MAXIMUM QUAD ELEMENT PRINCIPAL STRESS =  0.000000E+00  AT ELEMENT 10000000      
-MINIMUM QUAD ELEMENT PRINCIPAL STRESS =  0.000000E+00  AT ELEMENT 10000000      
-MAXIMUM QUAD ELEMENT SHEAR STRESS     =  0.000000E+00  AT ELEMENT 10000000      
-MAXIMUM QUAD ELEMENT VON MISES STRESS =  0.000000E+00  AT ELEMENT 10000000      
-
-MAXIMUM QUAD ELEMENT PRINCIPAL STRAIN =  0.000000E+00  AT ELEMENT 10000000      
-MINIMUM QUAD ELEMENT PRINCIPAL STRAIN =  0.000000E+00  AT ELEMENT 10000000      
-MAXIMUM QUAD ELEMENT SHEAR STRAIN     =  0.000000E+00  AT ELEMENT 10000000      
-MAXIMUM QUAD ELEMENT VON MISES STRAIN =  0.000000E+00  AT ELEMENT 10000000      
-
-MAXIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
-MINIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
-
-SHELL ELEMENT RELATIVE STRESS ERROR =  0.000000E+00                             
+DRIVE C: DISK SPACE =   8214829056 WORDS     62674.2 MEGABYTES                  
 
 ANALYSIS DIRECTIVE DEFINITION                                                   
                                                                                 
 BULKDATAOUT      = OFF                                                          
 BULKDATASORT     = ON                                                           
-DATABASE         = .\nastran\truss_100.NDB                                      
+DATABASE         = .\nastran\le_og_f_r_100.NDB                                  
 DECOMPAUTOSIZE   = 50000                                                        
-DECOMPMETHOD     = VSS                                                          
+DECOMPMETHOD     = PCGLSS                                                       
 DISKSTATUS       = ON                                                           
 DYNRSLTMETHOD    = AUTO                                                         
 ELAPSEDTIME      = OFF                                                          
 EXTRACTAUTOSIZE  = 10000                                                        
-EXTRACTMETHOD    = SUBSPACE                                                     
+EXTRACTMETHOD    = LANCZOS                                                      
 FEMAPRSLTVECTID  = ON                                                           
 FILEBUFFERSIZE1  = 10                                                           
 FILEBUFFERSIZE2  = 10                                                           
 FILEBUFFERSIZE3  = 10                                                           
 FILEBUFFERSIZE4  = 10                                                           
-FILESIGNATURE    = 6646                                                         
-FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB6646.TMP\       
-FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB6646.TMP\       
-FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB6646.TMP\       
-FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB6646.TMP\       
+FILESIGNATURE    = BA4B                                                         
+FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBBA4B.TMP\       
+FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBBA4B.TMP\       
+FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBBA4B.TMP\       
+FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBBA4B.TMP\       
 GPWEIGHTMETHOD   = VECTOR                                                       
 LEFTMARGIN       = 1                                                            
 LICENSEMANAGER   = ADLM                                                         
@@ -287,7 +243,7 @@ AUTOCORDROTATE   = ON
 AUTOFIXELEMGEOM  = ON                                                           
 AUTOFIXRIGIDELEM = ON                                                           
 AUTOFIXRIGIDSPC  = OFF                                                          
-AUTOSPC          = ON                                                           
+AUTOSPC          = OFF                                                          
 BARDKMETHOD      = BOTH                                                         
 BAREQVLOAD       = ON                                                           
 BETA             = 0.000000E+00                                                 
@@ -381,7 +337,7 @@ INITSTRAINSFACT  = 1.000000E+00
 J4ROT            = AUTO                                                         
 KDAMP            = 1                                                            
 K6ROT            = 1.000000E+02                                                 
-KRIGIDELEM       = 6.142835E+06                                                 
+KRIGIDELEM       = 3.887883E+09                                                 
 LANCZOSVECT      = OFF                                                          
 LANGLE           = GIMBAL                                                       
 LARC02TSAITOL    = 2.000000E+00                                                 
@@ -394,7 +350,7 @@ M6ROT            = 0.000000E+00
 MAXADJEDGE       = 100                                                          
 MAXBISECTRESTART = OFF                                                          
 MAXEIGENRESTART  = 5                                                            
-MAXELEMGEOMMSG   = 10000                                                        
+MAXELEMGEOMMSG   = 39406                                                        
 MAXIMPACTSTEP    = 0                                                            
 MAXINCREFSTRAINP = AUTO                                                         
 MAXLNCONTACTITER = -1                                                           
@@ -416,7 +372,7 @@ NITERKSUPDATE    = 3
 NITERMUPDATE     = 3                                                            
 NITERPFUPDATE    = 1                                                            
 NITERSUPDATE     = 8                                                            
-NLAYERS          = 2                                                            
+NLAYERS          = 10                                                           
 NLCOMPPLYFAIL    = OFF                                                          
 NLINDATABASE     = DELETE                                                       
 NLINDATALOADSF   = AUTO                                                         
@@ -494,10 +450,10 @@ RIGIDBODYMODE    = AUTO
 RIGIDELEM2ELAS   = OFF                                                          
 RIGIDELEMCORD    = AUTO                                                         
 RIGIDELEMTYPE    = RBE                                                          
-ROTINERTIA       = ON                                                           
+ROTINERTIA       = OFF                                                          
 RSPECTRA         = OFF                                                          
 RSLTDATABASE     = DELETE                                                       
-RSLTFILECOMP     = OFF                                                          
+RSLTFILECOMP     = ON                                                           
 SCRSPEC          = OFF                                                          
 SHEARELEMTYPE    = NASTRAN                                                      
 SHELLTVSMATTYPE  = FLEXIBLE                                                     
@@ -589,31 +545,28 @@ STORAGE METHOD
 MODEL TRANSLATION DATA        = MEMORY                                          
 GRID POINT COORDINATE DATA    = MEMORY                                          
 ELEMENT DIRECTION COSINE DATA = MEMORY                                          
+ELEMENT POSITION DATA         = MEMORY                                          
 ELEMENT INTERNAL NODE DATA    = MEMORY                                          
 GRID POINT LOAD DATA          = MEMORY                                          
 ELEMENT LOAD DATA             = MEMORY                                          
-ELEMENT RESULTS DATA          = MEMORY                                          
+ELEMENT RESULTS DATA          = DISK                                            
 NEUTRAL RESULTS DATA          = MEMORY                                          
 
 STORAGE SPACE REQUIRED                                                          
                                                                                 
-MODEL TRANSLATION DATA        =     102180 WORDS        0.8 MEGABYTES           
-GRID POINT COORDINATE DATA    =         87 WORDS        0.0 MEGABYTES           
-ELEMENT DIRECTION COSINE DATA =        900 WORDS        0.0 MEGABYTES           
-ELEMENT INTERNAL NODE DATA    =        211 WORDS        0.0 MEGABYTES           
-GRID POINT LOAD DATA          =        957 WORDS        0.0 MEGABYTES           
-ELEMENT LOAD DATA             =       3375 WORDS        0.0 MEGABYTES           
-ELEMENT RESULTS DATA          =       1595 WORDS        0.0 MEGABYTES           
-NEUTRAL RESULTS DATA          =      15352 WORDS        0.1 MEGABYTES           
+MODEL TRANSLATION DATA        =     788120 WORDS        6.0 MEGABYTES           
+GRID POINT COORDINATE DATA    =      32349 WORDS        0.2 MEGABYTES           
+ELEMENT DIRECTION COSINE DATA =     117816 WORDS        0.9 MEGABYTES           
+ELEMENT POSITION DATA         =     255268 WORDS        1.9 MEGABYTES           
+ELEMENT INTERNAL NODE DATA    =    1412954 WORDS       10.8 MEGABYTES           
+GRID POINT LOAD DATA          =     237226 WORDS        1.8 MEGABYTES           
+ELEMENT LOAD DATA             =     883620 WORDS        6.7 MEGABYTES           
+ELEMENT RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
+NEUTRAL RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
                                                                                 
-TOTAL                         =       1246 WORDS        1.0 MEGABYTES           
+TOTAL                         =      37273 WORDS       28.4 MEGABYTES           
 
-MODEL ANALYSIS TIME SUMMARY                                                     
-                                                                                
-TOTAL CPU TIME = 1.6 SECONDS                                                    
-WALLCLOCK TIME = 2.5 SECONDS                                                    
-
-EXECUTION TERMINATED NORMALLY                                                   
+EXECUTION TERMINATED DUE TO DISPLAYED ERROR(S)                                  
                                                                                 
 TOTAL WARNINGS     = 0                                                          
-TOTAL FATAL ERRORS = 0                                                          
+TOTAL FATAL ERRORS = 1                                                          

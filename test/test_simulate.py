@@ -5,11 +5,10 @@ from latoptim.simulate import *
 import os, json, time
 
 path = "\\".join(os.path.dirname(os.path.realpath(__file__)).split("\\")[:]) + "\\"
-fp_new_nas = os.path.join(os.curdir, 'nastran', 'truss_100.nas')
 
 start = time.time()
 
-with open(path + "model.txt") as f:
+with open(path + "model_P.txt") as f:
     lines_input = json.loads(f.read())
 
 # parameters for graph computation
@@ -21,26 +20,20 @@ speed = 0.1
 epsilon = .01
 
 
-print("generating graph...\n\n")
+print("\n\ngenerating graph...\n\n")
+
 
 graph = lines2graph(lines_input, def_radius, epsilon)
-
-# print("graph nodes:", len( graph.get_nodes() ))
-print("graph edges:", graph.get_edge_data())
-
+print("graph edges:", graph.get_edge_data()[:20], "\n\n")
 
 
 nas_model = get_nastran_model(graph.get_edge_data())
 print("new nastran written!\n")
 
-results = compute_nastran_model(fp_new_nas)
 
+results = compute_nastran_model()
 # graph = optimize(graph, target, min_radius, max_radius, speed)
 
 # validate graph
-
-
-
-
 end = time.time()
 print("\ni have used up {} seconds of your time simulate'n".format( round(end-start,3) ), "\n" )

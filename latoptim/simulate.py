@@ -1,46 +1,48 @@
-import os
+import os, hashlib, json, sys, datetime, time
 import subprocess
-import time
-import datetime
-import shutil
-import re
-import sys
-import hashlib
-import json
-
+from subprocess import Popen
 
 from latoptim.graph import Graph
 
-# mode == 'vtp'
-
 basedir = os.curdir
 
-
-sim_name = 'truss_100'
-fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid.json')
-fp_existing_lookup = os.path.join(basedir, 'nastran', 'lookup.json')
-fp_old_nas = os.path.join(basedir, 'nastran', 'truss_0.nas')
-
-
-# sim_name = 'le_og_f_r_100'
-# fp_old_nas = os.path.join(basedir, 'nastran', 'le_og_f_r.nas')
-# fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid_list.json')
-# fp_existing_lookup = os.path.join(basedir, 'nastran', 'existing_grid_lookup.json')
-# fp_quad_lookup = os.path.join(basedir, 'nastran', 'grid_quad_lookup.json')
+											#	# test lattice 
+# sim_name = 'truss_100'
+# fp_new_nas = os.path.join(os.curdir, 'nastran', '{}.nas'.format(sim_name))
+# fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid.json')
+# fp_existing_lookup = os.path.join(basedir, 'nastran', 'lookup.json')
+# fp_old_nas = os.path.join(basedir, 'nastran', 'truss_0.nas')
 
 
-fp_new_nas = os.path.join(basedir, 'nastran', '{}.nas'.format(sim_name))
-fp_neu = os.path.join(basedir, 'nastran', '{}.neu'.format(sim_name))
-fp_rsf = os.path.join(basedir, 'nastran', '{}.rsf'.format(sim_name))
+											#	# comment for prototype lattice
+sim_name = 'le_og_f_r'
+fp_new_nas = os.path.join(os.curdir, 'nastran', 'data','{}_100.nas.nas'.format(sim_name))
+fp_old_nas = os.path.join(basedir, 'nastran','data', '{}.nas'.format(sim_name))
+fp_existing_grid = os.path.join(basedir, 'nastran', 'data', 'existing_grid_list.json')
+fp_existing_lookup = os.path.join(basedir, 'nastran', 'data', 'existing_grid_lookup.json')
+fp_quad_lookup = os.path.join(basedir, 'nastran', 'data', 'grid_quad_lookup.json')
+fp_lines = os.path.join(basedir, 'nastran', 'data', 'line_ONE.json')
+
+fp_new_nas = os.path.join(basedir, 'nastran', 'data', '{}_100.nas'.format(sim_name))
+fp_neu = os.path.join(basedir, 'nastran', 'data','{}_100.neu'.format(sim_name))
+fp_rsf = os.path.join(basedir, 'nastran', 'data', '{}_100.rsf'.format(sim_name))
 
 grid_D = {}
 data_grid_pt ={}	
 
 d = open(fp_existing_grid)
-data_grid_j = json.load(d) 		
+data_grid_j = json.load(d) 	
+
+
+d = open(fp_quad_lookup)
+data_quad_lookup = json.load(d) 		
 
 d = open(fp_existing_lookup)
 data_lookup = json.load(d) 		
+
+# print("existing data_grid_j: ", str(data_grid_j))		
+# print("existing data_lookup: ", str(data_lookup))	
+			
 
 
 def rsf_reader(output_fp):
@@ -88,45 +90,6 @@ def hashbrown(a):
     return h
 
 
-def grid_add(new_pt, existing):
-	x = new_pt[0]
-	y = new_pt[1]
-	z = new_pt[2]
-
-	coord = str(round(x,3)) + str(round(y,3)) + str(round(z,3))
-	key_H = hashbrown(coord)
-	try:
-		b = data_lookup[key_H]
-		# print("key", key_H)
-		return b
-	except:
-		try:
-			c = fp_quad_lookup[key_H]
-			# print("key", c)
-			return c
-		except:
-			last_count = len(grid_D) + last + 1
-			
-			data_lookup[key_H] = str(last_count)
-			grid_D[last_count] = (x, y, z)
-
-			# print("no match------------------------key", key_H, last_count)
-
-			return new_grid_list
-
-
-def new_hash_set():
-	hash_list = {}
-	for key, value in data_grid_j.items():
-		print(value, pt_string(value))
-		hash_list[hashbrown( pt_string(value) ) ] = key
-
-	print(hash_list[:20])
-
-	with open(r"nastran\lookup.json", "w") as outfile:
-		json.dump(hash_list, outfile)
-
-
 def pt_string(new_pt):
 	x = new_pt[0]
 	y = new_pt[1]
@@ -136,32 +99,35 @@ def pt_string(new_pt):
 	return coord
 
 
+lookup_fresh = {}
+def find_grid_hash(p):
 
-def find_grid_hash(a):
 	last = 50000001             # base number for CBAR
-	lookup_fresh = {}
 
-	x = a[0]
-	y = a[1]
-	z = a[2]
 
-	coord = str(round(x,3)) + str(round(y,3)) + str(round(z,3))
+	coord = pt_string(p)
+
 	key_H = hashbrown(coord)
+
+
 	try:										# if point already exists
 		b = data_lookup[key_H]
-		# print("key", key_H)
+		# print("match key", key_H)
 		return b
-
-	except:										#if new point
-		last_count = len(grid_D) + last + 1
-		data_lookup[key_H] = str(last_count)
-		lookup_fresh[key_H] = str(last_count)
-		grid_D[last_count] = (x, y, z)
-		# print("no match------------------------key", key_H, last_count)
-		return last_count
-
-
-
+	except Exception as e:
+		# print('no match 1: ', e)
+		try:
+			c = data_quad_lookup[key_H]
+			# print("..............................................quad match key", c, p)
+			return c
+		
+		except Exception as e:										#if new point
+			last_count = len(grid_D) + last + 1
+			data_lookup[key_H] = str(last_count)
+			lookup_fresh[key_H] = str(last_count)
+			grid_D[last_count] = p
+			# print("----------------------------no match-------key", key_H, last_count, p)
+			return last_count
 
 
 def pbarMaker(start,end,inc):
@@ -195,24 +161,17 @@ def pbarMaker(start,end,inc):
 	return pbarList, rad, bar_dict 
 
 
-
-def stress_finder(st):
-
-
-	return s4b_list_num
-
 def get_nastran_model(graph):
+		
 
-	nas_model = [graph]
-								
+	# d = open(fp_lines)
+	# data_lines = json.load(d) 	
+	# print('\n\ndata_j json: ', data_lines[0:10],'\n\n')	
 
-	print("existing data_grid_j: ", data_grid_j)		
-	print("existing data_lookup: ", data_lookup)	
-
-				
 																				#add new grid to master grid list
 																		
-	cbar_ind = []																		
+	cbar_ind = []	
+
 	for n, i in enumerate(graph):
 		# print("graph edges radius: ", i[2])
 		# print("graph object: ", i[1], i[0])
@@ -220,6 +179,7 @@ def get_nastran_model(graph):
 		pair = [ find_grid_hash(i[0]), find_grid_hash(i[1]), radius ]	
 		cbar_ind.append(pair)																		
 		# print(n, pair)
+
 																				#write new NASTRAN string for GRID
 
 	nas_grid = ""
@@ -231,8 +191,8 @@ def get_nastran_model(graph):
 
 																				#write new PBAR elem
 
-	pbar_data = pbarMaker(0.5,3.0,0.1)
-	pbar_txt = pbar_data[0]
+	# pbar_data = pbarMaker(0.5,6.1,0.1)
+	# pbar_txt = pbar_data[0]
 
 	strB4 = "1.      1.      1."
 	nas_cbar = ""
@@ -254,6 +214,8 @@ def get_nastran_model(graph):
 	cbar_start = nas_txt.find("$cbar")
 	grid_start = nas_txt.find("$end Grid")
 
+	print("NEW POINTS grid D: ", len(grid_D))
+
 	new_txt = "{}\n{}\n{}\n{}\n{}\n{}".format(nas_txt[:cbar_start], nas_cbar, nas_txt[cbar_start:grid_start], "$pbar_txt", nas_grid, nas_txt[grid_start:])
 
 	with open(fp_new_nas, "w") as f:
@@ -262,27 +224,21 @@ def get_nastran_model(graph):
 	with open('edge_output.txt', "w") as f:
 		f.write( str(graph) )
 
-
-	return nas_model
-
-
+	return graph
 
 
 # function to simulate model in Nastran
-def compute_nastran_model(nas_model):
+def compute_nastran_model():
 
     # RUN NASTRAN
 
-	print('\nsys arguments:', nas_model+'.nas')
-
 	simPath = r'"C:\Program Files\Autodesk\Nastran 2016\NASTRAN.EXE"'
-	# initPath = r'C:\test\Nastrynamo\init.ini'
-	initPath = os.path.join(basedir, 'nastran', 'init.ini')
-
+	# initPath = os.path.join(basedir, 'nastran', 'init.ini')
+	initPath = r'C:\test\Nastrynamo\init.ini'
+	
 	# run Nastran SIM
-	print('calling file: \n\n', '{} {} {}'.format(simPath, initPath, nas_model ), '\n\n\n')
-	os.system('{} {} {}'.format(simPath, initPath, nas_model))
-
+	print('calling file: \n\n', '{} {} {}'.format(simPath, initPath, fp_new_nas ), '\n\n\n')
+	os.system('{} {} {}'.format(simPath, initPath, fp_new_nas))
 
 																		#open results NEU file
 	print("opening .neu results file: ", fp_neu)
@@ -293,33 +249,28 @@ def compute_nastran_model(nas_model):
 	s1 = 'TOTAL TRANSLATION'
 	s2 = '-1,0.,'
 	s3 = 'T1 TRANSLATION'
-	st = 'BAR EQV STRESS'
+	s4 = 'BAR EQV STRESS'
 	s5 = 'BAR SA-AXIAL'
 	s6 = 'BAR SA-C'
 
-	safety_factor = 1
+	f3 = csv_string.find(s4)
 
-	f3 = csv_string.find(st)
-
-	s4a = csv_string[f3+len(st):]
+	s4a = csv_string[f3+len(s4):]
 	s4b = s4a[:s4a.find(s2)]
-
 	s4b_list = s4b.split('\n')
-	s4b_list_num = []
+	stress_list_vm = []
 
 	for i in s4b_list[4:]:
 		try:
 			a = i.split(',')
 			b = int(a[0])
 			c = float(a[1])
-			s4b_list_num.append([b,c/safety_factor])
-		except:
+			stress_list_vm.append([b,c])
+		except Exception as e:
+			print('exception stress finder: ', e)
 			pass
 
-
-
-	stress_list_vm = s4b_list_num
-	print("\nvon mises stress: ", stress_list_vm[2:])
+	print("\nvon mises stress: ", stress_list_vm[2:20])
 
 	line_stress = {}
 
