@@ -25,3 +25,5 @@ output
 
 # Temporary directories.
 temp
+/test/nastran/data
+/test/nastran/temp

@@ -10,13 +10,25 @@ import json
 
 
 from latoptim.graph import Graph
-sim_name = 'truss_100'
+
+# mode == 'vtp'
+
 basedir = os.curdir
 
+
+sim_name = 'truss_100'
 fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid.json')
 fp_existing_lookup = os.path.join(basedir, 'nastran', 'lookup.json')
-
 fp_old_nas = os.path.join(basedir, 'nastran', 'truss_0.nas')
+
+
+# sim_name = 'le_og_f_r_100'
+# fp_old_nas = os.path.join(basedir, 'nastran', 'le_og_f_r.nas')
+# fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid_list.json')
+# fp_existing_lookup = os.path.join(basedir, 'nastran', 'existing_grid_lookup.json')
+# fp_quad_lookup = os.path.join(basedir, 'nastran', 'grid_quad_lookup.json')
+
+
 fp_new_nas = os.path.join(basedir, 'nastran', '{}.nas'.format(sim_name))
 fp_neu = os.path.join(basedir, 'nastran', '{}.neu'.format(sim_name))
 fp_rsf = os.path.join(basedir, 'nastran', '{}.rsf'.format(sim_name))
@@ -88,14 +100,19 @@ def grid_add(new_pt, existing):
 		# print("key", key_H)
 		return b
 	except:
-		last_count = len(grid_D) + last + 1
-		
-		data_lookup[key_H] = str(last_count)
-		grid_D[last_count] = (x, y, z)
+		try:
+			c = fp_quad_lookup[key_H]
+			# print("key", c)
+			return c
+		except:
+			last_count = len(grid_D) + last + 1
+			
+			data_lookup[key_H] = str(last_count)
+			grid_D[last_count] = (x, y, z)
 
-		# print("no match------------------------key", key_H, last_count)
+			# print("no match------------------------key", key_H, last_count)
 
-		return new_grid_list
+			return new_grid_list
 
 
 def new_hash_set():
@@ -104,7 +121,7 @@ def new_hash_set():
 		print(value, pt_string(value))
 		hash_list[hashbrown( pt_string(value) ) ] = key
 
-	print(hash_list)
+	print(hash_list[:20])
 
 	with open(r"nastran\lookup.json", "w") as outfile:
 		json.dump(hash_list, outfile)
@@ -259,8 +276,8 @@ def compute_nastran_model(nas_model):
 	print('\nsys arguments:', nas_model+'.nas')
 
 	simPath = r'"C:\Program Files\Autodesk\Nastran 2016\NASTRAN.EXE"'
-	initPath = r'C:\test\Nastrynamo\init.ini'
-	# initPath = os.path.join(basedir, 'nastran', 'init.ini')
+	# initPath = r'C:\test\Nastrynamo\init.ini'
+	initPath = os.path.join(basedir, 'nastran', 'init.ini')
 
 	# run Nastran SIM
 	print('calling file: \n\n', '{} {} {}'.format(simPath, initPath, nas_model ), '\n\n\n')

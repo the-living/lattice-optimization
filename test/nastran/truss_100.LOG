@@ -1,6 +1,6 @@
 
-ADS NASTRAN VERSION 10.3.0.716  18:03  03/09/17                                 
-MODEL DATABASE IDENTIFICATION NUMBER: 01A73A                                    
+ADS NASTRAN VERSION 10.3.0.716  01:03  03/10/17                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 0124B2                                    
 
 NUMBER OF PROCESSOR THREADS REQUESTED =    2                                    
 NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
@@ -34,7 +34,7 @@ AVAILABLE ANALYSIS SOLUTIONS = LINEAR STATIC
                                NONLINEAR TRANSIENT HEAT TRANSFER       
                                MATRIX REDUCTION                        
                                                                                 
-REMAINING SOLUTION LICENSE TIME = 454 DAYS                                      
+REMAINING SOLUTION LICENSE TIME = 453 DAYS                                      
                                                                                 
                                                                                 
 AVAILABLE RESULTS TRANSLATORS = NORAN BINARY                                    
@@ -45,7 +45,7 @@ AVAILABLE RESULTS TRANSLATORS = NORAN BINARY
                                 FEMAP ASCII                             
                                 NASTRAN BINARY                          
                                                                                 
-REMAINING TRANSLATOR LICENSE TIME = 454 DAYS                                    
+REMAINING TRANSLATOR LICENSE TIME = 453 DAYS                                    
                                                                                 
                                                                                 
 AVAILABLE ANALYSIS FEATURES = MULTIAXIAL FATIGUE                                
@@ -56,16 +56,16 @@ AVAILABLE ANALYSIS FEATURES = MULTIAXIAL FATIGUE
                               BOUNDARY ACOUSTIC ANALYSIS              
                               TOPOLOGY OPTIMIZATION                   
                                                                                 
-REMAINING FEATURE LICENSE TIME = 454 DAYS                                       
+REMAINING FEATURE LICENSE TIME = 453 DAYS                                       
                                                                                 
                                                                                 
 MAXIMUM MODEL SIZE = NO LIMITS                                                  
                                                                                 
 
-VIRTUAL MEMORY =  2154637312 WORDS     16438.6 MEGABYTES                        
-REAL MEMORY    =   881547264 WORDS      6725.7 MEGABYTES                        
+VIRTUAL MEMORY =  2431831040 WORDS     18553.4 MEGABYTES                        
+REAL MEMORY    =  1050593280 WORDS      8015.4 MEGABYTES                        
 
-DRIVE C: DISK SPACE =   8056680448 WORDS     61467.6 MEGABYTES                  
+DRIVE C: DISK SPACE =   7967988736 WORDS     60790.9 MEGABYTES                  
 
 GENERATING DATABASE:  truss_100.NDB                                             
 
@@ -92,85 +92,85 @@ MODEL SIZE    =         174 DEGREES OF FREEDOM
 MATRIX SIZE   =      103489 WORDS        0.8 MEGABYTES                          
 SEMIBANDWIDTH =          41 WORDS                                               
 
-AVAILABLE VIRTUAL MEMORY  =  2150160896 WORDS     16404.4 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   880557568 WORDS      6718.1 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2427872256 WORDS     18523.2 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =  1048144384 WORDS      7996.7 MEGABYTES             
 
-DRIVE C: DISK SPACE =   8055514112 WORDS     61458.7 MEGABYTES                  
+DRIVE C: DISK SPACE =   7966710784 WORDS     60781.2 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
 
 SPARSE MATRIX SIZE =     103489 WORDS        0.8 MEGABYTES                      
 MEMORY ALLOCATED   =     155233 WORDS        1.2 MEGABYTES                      
 
-MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  6.9520E-17                       
+MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  2.2198E-17                       
 MINIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00                       
-REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  2.03 PERCENT                     
+REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  2.05 PERCENT                     
 
 ASSEMBLY TIME FOR 75 ELEMENTS = 0.0 SECONDS                                     
 
-TOTAL MASS = 3.044668E-07                                                       
+TOTAL MASS = 3.409453E-07                                                       
 
 MASS DISTRIBUTION BY TYPE                                                       
 
-STRUCTURAL MASS    =  3.044668E-07                                              
+STRUCTURAL MASS    =  3.409453E-07                                              
 NONSTRUCTURAL MASS =  0.000000E+00                                              
 CONCENTRATED MASS  =  0.000000E+00                                              
 OTHER MASS         =  0.000000E+00                                              
 
 CENTER OF MASS RELATIVE TO ORIGIN OF BASIC SYSTEM                               
                                                                                 
-X-COORDINATE =  3.506728E+00                                                    
-Y-COORDINATE =  3.520909E-02                                                    
-Z-COORDINATE =  9.895687E-01                                                    
+X-COORDINATE =  3.619878E+00                                                    
+Y-COORDINATE =  3.144200E-02                                                    
+Z-COORDINATE =  9.983949E-01                                                    
 
 SOLUTION SEQUENCE FOR SUBCASE 1                                                 
 
-MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.9418E+06  AT GRID 50000023 COMPONENT 3   
-MINIMUM STIFFNESS MATRIX DIAGONAL =  2.2854E+04  AT GRID 50000015 COMPONENT 4   
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.1689E+06  AT GRID 50000023 COMPONENT 3   
+MINIMUM STIFFNESS MATRIX DIAGONAL =  4.7392E+04  AT GRID 50000015 COMPONENT 6   
 
-AVAILABLE VIRTUAL MEMORY  =  2150282240 WORDS     16405.4 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   881540096 WORDS      6725.6 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2428243968 WORDS     18526.0 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =  1049582080 WORDS      8007.7 MEGABYTES             
 
-DRIVE C: DISK SPACE =   8056503296 WORDS     61466.2 MEGABYTES                  
+DRIVE C: DISK SPACE =   7967699968 WORDS     60788.7 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
 
 NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
-MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 8.225E+01 AT GRID 50000025 COMPONENT 2   
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.199E+01 AT GRID 50000024 COMPONENT 2   
 
 REORDERING METHOD REQUESTED = AUTO                                              
-REORDERING METHOD USED      = VRM1                                              
+REORDERING METHOD USED      = VRM7                                              
 
-FACTORED SPARSE MATRIX SIZE =     104001 WORDS        0.8 MEGABYTES             
-ADDITIONAL MEMORY ALLOCATED =     263173 WORDS        2.0 MEGABYTES             
+FACTORED SPARSE MATRIX SIZE =     103985 WORDS        0.8 MEGABYTES             
+ADDITIONAL MEMORY ALLOCATED =     263080 WORDS        2.0 MEGABYTES             
 
-FACTORIZATION TIME FOR 104001 WORDS = 0.0 SECONDS                               
+FACTORIZATION TIME FOR 103985 WORDS = 0.0 SECONDS                               
 
 MAXIMUM APPLIED FORCE MAGNITUDE  =  9.990000E+02  AT GRID 20000005              
 MAXIMUM APPLIED MOMENT MAGNITUDE =  0.000000E+00  AT GRID 50000025              
 
-MAXIMUM DISPLACEMENT MAGNITUDE =  2.512522E-01  AT GRID 20000005                
-MAXIMUM ROTATION MAGNITUDE     =  5.006457E-02  AT GRID 20000005                
+MAXIMUM DISPLACEMENT MAGNITUDE =  2.806227E-01  AT GRID 20000005                
+MAXIMUM ROTATION MAGNITUDE     =  5.734481E-02  AT GRID 20000005                
 
-EPSILON       =  1.533320E-14                                                   
-STRAIN ENERGY =  1.233008E+02                                                   
+EPSILON       =  3.840319E-14                                                   
+STRAIN ENERGY =  1.375819E+02                                                   
 
 SOLUTION TIME FOR 174 DEGREES OF FREEDOM = 0.0 SECONDS                          
 
-MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  2.667362E+03  AT GRID 200000
-MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  1.376722E+03  AT GRID 200000
+MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  2.935677E+03  AT GRID 200000
+MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  1.103356E+03  AT GRID 200000
 
 CALCULATING RESULTS FOR SUBCASE 1                                               
 
-MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  3.502279E-11  AT GRID 50000012     
-MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  1.034550E-11  AT GRID 50000007     
+MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  2.259624E-11  AT GRID 50000013     
+MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  1.256240E-11  AT GRID 50000003     
 
-MAXIMUM BAR ELEMENT TOTAL STRESS     =  5.401479E+02  AT ELEMENT 60000072       
-MINIMUM BAR ELEMENT TOTAL STRESS     = -5.401876E+02  AT ELEMENT 60000038       
-MAXIMUM BAR ELEMENT VON MISES STRESS =  5.401876E+02  AT ELEMENT 60000038       
+MAXIMUM BAR ELEMENT TOTAL STRESS     =  6.648934E+02  AT ELEMENT 60000072       
+MINIMUM BAR ELEMENT TOTAL STRESS     = -6.648898E+02  AT ELEMENT 60000038       
+MAXIMUM BAR ELEMENT VON MISES STRESS =  6.648934E+02  AT ELEMENT 60000072       
 
-MAXIMUM BAR ELEMENT TOTAL STRAIN =  7.461225E-03  AT ELEMENT 60000072           
-MINIMUM BAR ELEMENT TOTAL STRAIN = -7.461773E-03  AT ELEMENT 60000038           
+MAXIMUM BAR ELEMENT TOTAL STRAIN =  9.184371E-03  AT ELEMENT 60000072           
+MINIMUM BAR ELEMENT TOTAL STRAIN = -9.184322E-03  AT ELEMENT 60000038           
 
 CALCULATING QUAD ELEMENT RESULTS ON SURFACE 0 FOR SUBCASE 1                     
 
@@ -201,11 +201,11 @@ FILEBUFFERSIZE1  = 10
 FILEBUFFERSIZE2  = 10                                                           
 FILEBUFFERSIZE3  = 10                                                           
 FILEBUFFERSIZE4  = 10                                                           
-FILESIGNATURE    = A73A                                                         
-FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBA73A.TMP\       
-FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBA73A.TMP\       
-FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBA73A.TMP\       
-FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBA73A.TMP\       
+FILESIGNATURE    = 24B2                                                         
+FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDB24B2.TMP\       
+FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDB24B2.TMP\       
+FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDB24B2.TMP\       
+FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDB24B2.TMP\       
 GPWEIGHTMETHOD   = VECTOR                                                       
 LEFTMARGIN       = 1                                                            
 LICENSEMANAGER   = ADLM                                                         
@@ -605,8 +605,8 @@ TOTAL                         =       1093 WORDS        0.8 MEGABYTES
 
 MODEL ANALYSIS TIME SUMMARY                                                     
                                                                                 
-TOTAL CPU TIME = 2.2 SECONDS                                                    
-WALLCLOCK TIME = 3.8 SECONDS                                                    
+TOTAL CPU TIME = 1.6 SECONDS                                                    
+WALLCLOCK TIME = 2.3 SECONDS                                                    
 
 EXECUTION TERMINATED NORMALLY                                                   
                                                                                 
