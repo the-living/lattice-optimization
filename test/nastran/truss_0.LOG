@@ -1,6 +1,6 @@
 
-ADS NASTRAN VERSION 10.3.0.716  11:58  03/13/17                                 
-MODEL DATABASE IDENTIFICATION NUMBER: 017867                                    
+ADS NASTRAN VERSION 10.3.0.716  12:03  03/13/17                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 019609                                    
 
 NUMBER OF PROCESSOR THREADS REQUESTED =    2                                    
 NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
@@ -62,12 +62,12 @@ REMAINING FEATURE LICENSE TIME = 450 DAYS
 MAXIMUM MODEL SIZE = NO LIMITS                                                  
                                                                                 
 
-VIRTUAL MEMORY =  2154367488 WORDS     16436.5 MEGABYTES                        
-REAL MEMORY    =   929223680 WORDS      7089.4 MEGABYTES                        
+VIRTUAL MEMORY =  2175624192 WORDS     16598.7 MEGABYTES                        
+REAL MEMORY    =   928693248 WORDS      7085.4 MEGABYTES                        
 
-DRIVE c: DISK SPACE =   8283415552 WORDS     63197.4 MEGABYTES                  
+DRIVE C: DISK SPACE =   8288488448 WORDS     63236.1 MEGABYTES                  
 
-GENERATING DATABASE:  truss_100.NDB                                             
+GENERATING DATABASE:  truss_0.NDB                                               
 
 15 CASE CONTROL COMMANDS WERE RECOGNIZED OF A TOTAL OF 15 READ IN               
 
@@ -92,10 +92,10 @@ MODEL SIZE    =         174 DEGREES OF FREEDOM
 MATRIX SIZE   =      103489 WORDS        0.8 MEGABYTES                          
 SEMIBANDWIDTH =          41 WORDS                                               
 
-AVAILABLE VIRTUAL MEMORY  =  2150638592 WORDS     16408.1 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   928056832 WORDS      7080.5 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2172111872 WORDS     16571.9 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   926347776 WORDS      7067.5 MEGABYTES             
 
-DRIVE c: DISK SPACE =   8282135552 WORDS     63187.7 MEGABYTES                  
+DRIVE C: DISK SPACE =   8287209472 WORDS     63226.4 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
 
@@ -128,10 +128,10 @@ SOLUTION SEQUENCE FOR SUBCASE 1
 MAXIMUM STIFFNESS MATRIX DIAGONAL =  3.6941E+06  AT GRID 50000021 COMPONENT 2   
 MINIMUM STIFFNESS MATRIX DIAGONAL =  3.6570E+05  AT GRID 50000015 COMPONENT 6   
 
-AVAILABLE VIRTUAL MEMORY  =  2150802944 WORDS     16409.3 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   928044544 WORDS      7080.4 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2172405760 WORDS     16574.1 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   926693888 WORDS      7070.1 MEGABYTES             
 
-DRIVE c: DISK SPACE =   8283123712 WORDS     63195.2 MEGABYTES                  
+DRIVE C: DISK SPACE =   8288198656 WORDS     63233.9 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
 
@@ -184,16 +184,11 @@ MINIMUM QUAD ELEMENT PRINCIPAL STRAIN =  0.000000E+00  AT ELEMENT 10000000
 MAXIMUM QUAD ELEMENT SHEAR STRAIN     =  0.000000E+00  AT ELEMENT 10000000      
 MAXIMUM QUAD ELEMENT VON MISES STRAIN =  0.000000E+00  AT ELEMENT 10000000      
 
-MAXIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
-MINIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
-
-SHELL ELEMENT RELATIVE STRESS ERROR =  0.000000E+00                             
-
 ANALYSIS DIRECTIVE DEFINITION                                                   
                                                                                 
 BULKDATAOUT      = OFF                                                          
 BULKDATASORT     = ON                                                           
-DATABASE         = c:\users\damon\documents\github\lattice-optimization\test\nas
+DATABASE         = .\nastran\truss_0.NDB                                        
 DECOMPAUTOSIZE   = 50000                                                        
 DECOMPMETHOD     = VSS                                                          
 DISKSTATUS       = ON                                                           
@@ -206,11 +201,11 @@ FILEBUFFERSIZE1  = 10
 FILEBUFFERSIZE2  = 10                                                           
 FILEBUFFERSIZE3  = 10                                                           
 FILEBUFFERSIZE4  = 10                                                           
-FILESIGNATURE    = 7867                                                         
-FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\       
-FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\       
-FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\       
-FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\       
+FILESIGNATURE    = 9609                                                         
+FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDB9609.TMP\       
+FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDB9609.TMP\       
+FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDB9609.TMP\       
+FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDB9609.TMP\       
 GPWEIGHTMETHOD   = VECTOR                                                       
 LEFTMARGIN       = 1                                                            
 LICENSEMANAGER   = ADLM                                                         
@@ -247,7 +242,7 @@ RESTART          = ON
 RSLTFILEDBLEPRCS = OFF                                                          
 RSLTFILEFORMAT   = PLATFORM                                                     
 RSLTFILEPURGE    = ON                                                           
-RSLTFILETYPE     = FEMAP BINARY                                                 
+RSLTFILETYPE     = FEMAP ASCII   N                                              
 RSLTLABEL        = 1                                                            
 RSPECDISPMETHOD  = NODAL                                                        
 RSPECVECTMETHOD  = OFF                                                          
@@ -397,7 +392,7 @@ MAXEIGENRESTART  = 5
 MAXELEMGEOMMSG   = 10000                                                        
 MAXIMPACTSTEP    = 0                                                            
 MAXINCREFSTRAINP = AUTO                                                         
-MAXLNCONTACTITER = -1                                                           
+MAXLNCONTACTITER = 30                                                           
 MAXSPARSEITER    = AUTO                                                         
 MAXSRITER        = 100                                                          
 MAXTOPTITER      = 200                                                          
@@ -457,12 +452,12 @@ PENTREDORD       = ON
 PRGPST           = ON                                                           
 PYRARTOL         = 1.000000E+02                                                 
 PYREGRID         = OFF                                                          
-PYRFACEMAXIATOL  = 1.700000E+02                                                 
-PYRFACEMAXIATOL  = 1.700000E+02                                                 
-PYRFACEMINIATOL  = 5.000000E+00                                                 
-PYRFACESKEWTOL   = 8.000000E+01                                                 
+PYRFACEMAXIATOL  = 1.650000E+02                                                 
+PYRFACEMAXIATOL  = 1.650000E+02                                                 
+PYRFACEMINIATOL  = 2.500000E+01                                                 
+PYRFACESKEWTOL   = 6.500000E+01                                                 
 PYRFACETAPERTOL  = 7.500000E-01                                                 
-PYRFACEWARPTOL   = 4.500000E+01                                                 
+PYRFACEWARPTOL   = 5.000000E+01                                                 
 PYRMAXEPADTOL    = 3.000000E+01                                                 
 PYRMINEPLRTOL    = 5.000000E-01                                                 
 PYRREDORD        = ON                                                           
@@ -604,14 +599,14 @@ ELEMENT INTERNAL NODE DATA    =        211 WORDS        0.0 MEGABYTES
 GRID POINT LOAD DATA          =        957 WORDS        0.0 MEGABYTES           
 ELEMENT LOAD DATA             =       3375 WORDS        0.0 MEGABYTES           
 ELEMENT RESULTS DATA          =       1595 WORDS        0.0 MEGABYTES           
-NEUTRAL RESULTS DATA          =      15352 WORDS        0.1 MEGABYTES           
+NEUTRAL RESULTS DATA          =          0 WORDS        0.0 MEGABYTES           
                                                                                 
-TOTAL                         =       1246 WORDS        1.0 MEGABYTES           
+TOTAL                         =       1093 WORDS        0.8 MEGABYTES           
 
 MODEL ANALYSIS TIME SUMMARY                                                     
                                                                                 
-TOTAL CPU TIME = 1.7 SECONDS                                                    
-WALLCLOCK TIME = 3.4 SECONDS                                                    
+TOTAL CPU TIME = 1.6 SECONDS                                                    
+WALLCLOCK TIME = 2.4 SECONDS                                                    
 
 EXECUTION TERMINATED NORMALLY                                                   
                                                                                 

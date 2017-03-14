@@ -1,6 +1,4 @@
                                                                                 
-ADS NASTRAN VERSION 10.3.0.716  11:58  03/13/17                                 
-                                                                                
 TOTAL MASS = 7.453587E-07                                                       
                                                                                 
 MAXIMUM STIFFNESS MATRIX DIAGONAL =  3.6941E+06  AT GRID 50000021 COMPONENT 2   
@@ -38,10 +36,5 @@ MAXIMUM QUAD ELEMENT SHEAR STRAIN     =  0.000000E+00  AT ELEMENT 10000000
 MAXIMUM QUAD ELEMENT VON MISES STRAIN =  0.000000E+00  AT ELEMENT 10000000      
 MINIMUM QUAD ELEMENT PRINCIPAL STRAIN =  0.000000E+00  AT ELEMENT 10000000      
                                                                                 
-SHELL ELEMENT RELATIVE STRESS ERROR =  0.000000E+00                             
-                                                                                
-MAXIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
-MINIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000004 
-                                                                                
-TOTAL CPU TIME = 1.7 SECONDS                                                    
-WALLCLOCK TIME = 3.4 SECONDS                                                    
+TOTAL CPU TIME = 1.6 SECONDS                                                    
+WALLCLOCK TIME = 2.4 SECONDS                                                    

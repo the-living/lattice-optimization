@@ -1,7 +1,7 @@
 from latoptim.simulate import compute_nastran_model, get_nastran_model
 
 
-def optimize(graph, target, min_radius, max_radius, speed, maxSteps, fp_new_nas):
+def optimize(graph, target, min_radius, max_radius, speed, maxSteps):
 
     step = 0
     terminated = False

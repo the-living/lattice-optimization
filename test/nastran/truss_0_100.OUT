@@ -1,5 +1,5 @@
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      1
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      1
  
  
  
@@ -40,7 +40,7 @@
  
  
  
-                                          SERIAL NUMBER:    AIX-IX86-01100-01227
+                                          SERIAL NUMBER:    AIX-IX86-01100-01524
  
                                           PROGRAM VERSION:  10.3.0.716
  
@@ -74,7 +74,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      2
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      2
  
  
  
@@ -86,10 +86,10 @@
  
  [FILE MANAGEMENT DIRECTIVES]
  
- DATABASE         = c:\users\damon\documents\github\lattice-optimization\test\nas
- FILESIGNATURE    = 7867
+ DATABASE         = nastran\truss_0_100.NDB
+ FILESIGNATURE    = B82B
  FILEBUFFERSIZE   = 10
- FILESPEC         = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\
+ FILESPEC         = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBB82B.TMP\
  NFILEBUFFER      = 1
  PURGE            = ON
  RSLTFILEPURGE    = ON
@@ -101,7 +101,7 @@
  DISKSTATUS       = ON
  ELAPSEDTIME      = OFF
  FEMAPRSLTVECTID  = ON
- INCRRSLTOUT      = ON
+ INCRRSLTOUT      = OFF
  LEFTMARGIN       = 1
  LINE             = 75
  MEMORYSTATUS     = ON
@@ -123,7 +123,7 @@
  PCHFILETYPE      = NASTRAN
  RSLTFILECOMP     = AUTO
  RSLTFILEDBLEPRCS = OFF
- RSLTFILETYPE     = FEMAP BINARY
+ RSLTFILETYPE     = FEMAP ASCII   N
  SECONDS          = ON
  SYSTEMSTATUS     = OFF
  TRSLDISPDATA     = OFF
@@ -149,7 +149,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      3
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      3
  
  
  
@@ -181,7 +181,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      4
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      4
  
  
  
@@ -199,7 +199,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      5
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      5
  
  
  
@@ -243,7 +243,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      6
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      6
  
  
  
@@ -261,7 +261,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      7
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      7
  
  
  
@@ -279,7 +279,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      8
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      8
  
  
  
@@ -297,7 +297,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE      9
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE      9
  
  
  
@@ -315,7 +315,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     10
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     10
  
  
  
@@ -333,7 +333,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     11
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     11
  
  
  
@@ -351,7 +351,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     12
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     12
  
  
  
@@ -369,7 +369,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     13
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     13
  
  
  
@@ -413,7 +413,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     14
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     14
  
  
  
@@ -431,7 +431,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     15
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     15
  
  
  
@@ -471,7 +471,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     16
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     16
  
  
  
@@ -500,7 +500,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     17
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     17
  
  
  
@@ -519,9 +519,9 @@
  SPARSE MATRIX SIZE =     103489 WORDS        0.8 MEGABYTES
  MEMORY ALLOCATED   =     155233 WORDS        1.2 MEGABYTES
  
- MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  4.4373E-17
+ MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  2.2198E-17
  MINIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00
- REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  2.07 PERCENT
+ REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  2.05 PERCENT
  
  ASSEMBLY TIME FOR 75 ELEMENTS = 0.0 SECONDS
  
@@ -531,7 +531,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     18
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     18
  
  
  
@@ -544,12 +544,12 @@
                                                           REFERENCE POINT = 0
  
                                                                  M O
-                         7.453587E-07  0.000000E+00  0.000000E+00  0.000000E+00  7.453587E-07 -1.072000E-08
-                         0.000000E+00  7.453587E-07  0.000000E+00 -7.453587E-07  0.000000E+00  2.938555E-06
-                         0.000000E+00  0.000000E+00  7.453587E-07  1.072000E-08 -2.938555E-06  0.000000E+00
-                         0.000000E+00 -7.453587E-07  1.072000E-08  1.178516E-06  0.000000E+00 -2.938555E-06
-                         7.453587E-07  0.000000E+00 -2.938555E-06  0.000000E+00  1.712862E-05 -1.072000E-08
-                        -1.072000E-08  2.938555E-06  0.000000E+00 -2.938555E-06 -1.072000E-08  1.599298E-05
+                         3.409453E-07  0.000000E+00  0.000000E+00  0.000000E+00  3.403980E-07 -1.072000E-08
+                         0.000000E+00  3.409453E-07  0.000000E+00 -3.403980E-07  0.000000E+00  1.234180E-06
+                         0.000000E+00  0.000000E+00  3.409453E-07  1.072000E-08 -1.234180E-06  0.000000E+00
+                         0.000000E+00 -3.403980E-07  1.072000E-08  5.815781E-07  0.000000E+00 -1.229802E-06
+                         3.403980E-07  0.000000E+00 -1.234180E-06  0.000000E+00  7.019806E-06 -1.072000E-08
+                        -1.072000E-08  1.234180E-06  0.000000E+00 -1.229802E-06 -1.072000E-08  6.481107E-06
  
  
                                                                   S
@@ -560,27 +560,27 @@
  
                               DIRECTION                                        CENTER OF MASS
                          MASS AXIS SYSTEM (S)     MASS                 X             Y             Z
-                                  X           7.453587E-07        0.00000E+00   1.43823E-02   1.00000E+00
-                                  Y           7.453587E-07        3.94247E+00   0.00000E+00   1.00000E+00
-                                  Z           7.453587E-07        3.94247E+00   1.43823E-02   0.00000E+00
+                                  X           3.409453E-07        0.00000E+00   3.14420E-02   9.98395E-01
+                                  Y           3.409453E-07        3.61988E+00   0.00000E+00   9.98395E-01
+                                  Z           3.409453E-07        3.61988E+00   3.14420E-02   0.00000E+00
  
  
                                                                  I(S)
-                                              4.330030E-07 -4.226329E-08  0.000000E+00
-                                             -4.226329E-08  4.798092E-06  0.000000E+00
-                                              0.000000E+00  0.000000E+00  4.407660E-06
+                                              2.413894E-07 -3.880510E-08 -2.397048E-09
+                                             -3.880510E-08  2.212371E-06  1.720682E-11
+                                             -2.397048E-09  1.720682E-11  2.013187E-06
  
  
                                                                  I(Q)
-                                              4.798501E-06
-                                                            4.325939E-07
-                                                                          4.407660E-06
+                                              2.406224E-07
+                                                            2.013191E-06
+                                                                          2.213135E-06
  
  
                                                                   Q
-                                             -9.680752E-03  9.999531E-01  0.000000E+00
-                                             -9.999531E-01 -9.680752E-03  0.000000E+00
-                                              0.000000E+00  0.000000E+00  1.000000E+00
+                                             -9.998055E-01 -1.967671E-02 -1.351851E-03
+                                             -1.345254E-03 -3.484759E-04  9.999990E-01
+                                             -1.967716E-02  9.998063E-01  3.219379E-04
  
  
  
@@ -588,7 +588,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     19
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     19
  
  
  AUTODESK NASTRAN CASE 1                                             SUBCASE 1
@@ -601,8 +601,8 @@
  
  
  
- MAXIMUM STIFFNESS MATRIX DIAGONAL =  3.6941E+06  AT GRID 50000021 COMPONENT 2
- MINIMUM STIFFNESS MATRIX DIAGONAL =  3.6570E+05  AT GRID 50000015 COMPONENT 6
+ MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.1689E+06  AT GRID 50000023 COMPONENT 3
+ MINIMUM STIFFNESS MATRIX DIAGONAL =  4.7392E+04  AT GRID 50000015 COMPONENT 6
  
  
  
@@ -610,7 +610,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     20
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     20
  
  
  AUTODESK NASTRAN CASE 1                                             SUBCASE 1
@@ -623,23 +623,23 @@
  GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS
  
  NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0
- MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.338E+02 AT GRID 50000012 COMPONENT 2
+ MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.199E+01 AT GRID 50000024 COMPONENT 2
  
  REORDERING METHOD REQUESTED = AUTO
- REORDERING METHOD USED      = VRM1
+ REORDERING METHOD USED      = VRM7
  
- FACTORED SPARSE MATRIX SIZE =     104007 WORDS        0.8 MEGABYTES
- ADDITIONAL MEMORY ALLOCATED =     262873 WORDS        2.0 MEGABYTES
+ FACTORED SPARSE MATRIX SIZE =     103985 WORDS        0.8 MEGABYTES
+ ADDITIONAL MEMORY ALLOCATED =     263080 WORDS        2.0 MEGABYTES
  
- FACTORIZATION TIME FOR 104007 WORDS = 0.0 SECONDS
- 
- 
+ FACTORIZATION TIME FOR 103985 WORDS = 0.0 SECONDS
  
  
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     21
+ 
+ 
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     21
  
  
  
@@ -656,7 +656,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     22
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     22
  
  
  
@@ -665,7 +665,7 @@
  
     SUBCASE         T1            T2            T3            R1            R2            R3
       ID
-        1     -2.773959E-11  0.000000E+00 -9.990000E+02  0.000000E+00  7.992000E+03  0.000000E+00
+        1     -2.728484E-12  0.000000E+00 -9.990000E+02  0.000000E+00  7.992000E+03  0.000000E+00
  
  
  
@@ -673,7 +673,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     23
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     23
  
  
  
@@ -690,7 +690,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     24
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     24
  
  
  
@@ -707,7 +707,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     25
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     25
  
  
  
@@ -716,7 +716,7 @@
  
     SUBCASE         T1            T2            T3            R1            R2            R3
       ID
-        1      3.347223E-02  0.000000E+00  1.851359E-01  0.000000E+00  3.470429E-02  0.000000E+00
+        1      5.368752E-02  0.000000E+00  2.754392E-01  0.000000E+00  5.734480E-02  0.000000E+00
  
  
  
@@ -724,7 +724,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     26
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     26
  
  
  
@@ -733,7 +733,7 @@
  
     SUBCASE         T1            T2            T3            R1            R2            R3
       ID
-        1      3.613780E+03  0.000000E+00  4.995155E+02  0.000000E+00  3.822266E+02  0.000000E+00
+        1      2.892828E+03  0.000000E+00  4.997431E+02  0.000000E+00  1.103356E+03  0.000000E+00
  
  
  
@@ -741,7 +741,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     27
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     27
  
  
  
@@ -750,7 +750,7 @@
  
     SUBCASE         T1            T2            T3            R1            R2            R3
       ID
-        1     -3.175165E-11 -9.575382E-12 -1.477929E-11  9.174970E-12  2.680405E-10 -4.976058E-11
+        1     -2.392447E-12  0.000000E+00 -6.046719E-11  0.000000E+00  4.183057E-10  0.000000E+00
  
  
  
@@ -758,7 +758,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     28
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     28
  
  
  
@@ -769,7 +769,7 @@
  
  BULKDATAOUT      = OFF
  BULKDATASORT     = ON
- DATABASE         = c:\users\damon\documents\github\lattice-optimization\test\nas
+ DATABASE         = nastran\truss_0_100.NDB
  DECOMPAUTOSIZE   = 50000
  DECOMPMETHOD     = VSS
  DISKSTATUS       = ON
@@ -782,11 +782,11 @@
  FILEBUFFERSIZE2  = 10
  FILEBUFFERSIZE3  = 10
  FILEBUFFERSIZE4  = 10
- FILESIGNATURE    = 7867
- FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\
- FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\
- FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\
- FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB7867.TMP\
+ FILESIGNATURE    = B82B
+ FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBB82B.TMP\
+ FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBB82B.TMP\
+ FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBB82B.TMP\
+ FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBB82B.TMP\
  GPWEIGHTMETHOD   = VECTOR
  INCRRSLTOUT      = OFF
  LEFTMARGIN       = 1
@@ -824,7 +824,7 @@
  RSLTFILEDBLEPRCS = OFF
  RSLTFILEFORMAT   = PLATFORM
  RSLTFILEPURGE    = ON
- RSLTFILETYPE     = FEMAP BINARY
+ RSLTFILETYPE     = FEMAP ASCII   N
  RSLTLABEL        = 1
  RSPECDISPMETHOD  = NODAL
  
@@ -833,7 +833,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     29
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     29
  
  
  
@@ -868,7 +868,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     30
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     30
  
  
  
@@ -943,7 +943,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     31
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     31
  
  
  
@@ -1018,7 +1018,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     32
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     32
  
  
  
@@ -1035,7 +1035,7 @@
  MAXELEMGEOMMSG   = 10000
  MAXIMPACTSTEP    = 0
  MAXINCREFSTRAINP = AUTO
- MAXLNCONTACTITER = -1
+ MAXLNCONTACTITER = 30
  MAXSPARSEITER    = AUTO
  MAXSRITER        = 100
  MAXTOPTITER      = 200
@@ -1093,7 +1093,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     33
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     33
  
  
  
@@ -1109,11 +1109,11 @@
  PRGPST           = ON
  PYRARTOL         = 1.000000E+02
  PYREGRID         = OFF
- PYRFACEMAXIATOL  = 1.700000E+02
- PYRFACEMINIATOL  = 5.000000E+00
- PYRFACESKEWTOL   = 8.000000E+01
+ PYRFACEMAXIATOL  = 1.650000E+02
+ PYRFACEMINIATOL  = 2.500000E+01
+ PYRFACESKEWTOL   = 6.500000E+01
  PYRFACETAPERTOL  = 7.500000E-01
- PYRFACEWARPTOL   = 4.500000E+01
+ PYRFACEWARPTOL   = 5.000000E+01
  PYRMAXEPADTOL    = 3.000000E+01
  PYRMINEPLRTOL    = 5.000000E-01
  PYRREDORD        = ON
@@ -1168,7 +1168,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     34
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     34
  
  
  
@@ -1243,7 +1243,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     35
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     35
  
  
  
@@ -1270,7 +1270,7 @@
  
  
  
-                                                                        03/13/17  11:58  ADS NASTRAN VERSION 10.3.0.716  PAGE     36
+                                                                        03/13/17  12:44  ADS NASTRAN VERSION 10.3.0.716  PAGE     36
  
  
  
@@ -1282,8 +1282,8 @@
  
  MODEL ANALYSIS TIME SUMMARY
  
- TOTAL CPU TIME = 1.7 SECONDS
- WALLCLOCK TIME = 3.4 SECONDS
+ TOTAL CPU TIME = 1.6 SECONDS
+ WALLCLOCK TIME = 2.4 SECONDS
  
  EXECUTION TERMINATED NORMALLY
  

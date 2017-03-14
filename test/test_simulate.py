@@ -8,7 +8,10 @@ path = "\\".join(os.path.dirname(os.path.realpath(__file__)).split("\\")[:]) + "
 
 start = time.time()
 
-with open(path + "model_P.txt") as f:
+input_txt = "model_P.txt"			# full model
+# input_txt = "model.txt"            # sample truss
+
+with open(path + input_txt) as f:
     lines_input = json.loads(f.read())
 
 # parameters for graph computation
@@ -28,7 +31,7 @@ print("graph edges:", graph.get_edge_data()[:20], "\n\n")
 
 
 nas_model = get_nastran_model(graph.get_edge_data())
-print("new nastran written!\n")
+print("ts- new nastran written!\n")
 
 
 results = compute_nastran_model()

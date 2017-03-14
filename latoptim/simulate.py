@@ -7,25 +7,23 @@ from latoptim.graph import Graph
 basedir = os.curdir
 
 											#	# test lattice 
-# sim_name = 'truss_100'
-# fp_new_nas = os.path.join(os.curdir, 'nastran', '{}.nas'.format(sim_name))
+# sim_name = 'truss_0'
+# fp_new_nas = os.path.join('nastran', '{}_100.nas'.format(sim_name))
 # fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid.json')
 # fp_existing_lookup = os.path.join(basedir, 'nastran', 'lookup.json')
-# fp_old_nas = os.path.join(basedir, 'nastran', 'truss_0.nas')
-
+# fp_old_nas = os.path.join('nastran','{}.nas'.format(sim_name))
+# fp_neu = os.path.join('nastran','{}_100.neu'.format(sim_name))
+# fp_rsf = os.path.join('nastran', '{}_100.rsf'.format(sim_name))
 
 											#	# comment for prototype lattice
 sim_name = 'le_og_f_r'
-fp_new_nas = os.path.join(os.curdir, 'nastran', 'data','{}_100.nas.nas'.format(sim_name))
-fp_old_nas = os.path.join(basedir, 'nastran','data', '{}.nas'.format(sim_name))
-fp_existing_grid = os.path.join(basedir, 'nastran', 'data', 'existing_grid_list.json')
-fp_existing_lookup = os.path.join(basedir, 'nastran', 'data', 'existing_grid_lookup.json')
-fp_quad_lookup = os.path.join(basedir, 'nastran', 'data', 'grid_quad_lookup.json')
-fp_lines = os.path.join(basedir, 'nastran', 'data', 'line_ONE.json')
-
-fp_new_nas = os.path.join(basedir, 'nastran', 'data', '{}_100.nas'.format(sim_name))
-fp_neu = os.path.join(basedir, 'nastran', 'data','{}_100.neu'.format(sim_name))
-fp_rsf = os.path.join(basedir, 'nastran', 'data', '{}_100.rsf'.format(sim_name))
+fp_new_nas = os.path.join('nastran', 'data','{}_100.nas'.format(sim_name))
+fp_old_nas = os.path.join('nastran','data', '{}.nas'.format(sim_name))
+fp_existing_grid = os.path.join('nastran', 'data', 'existing_grid_list.json')
+fp_existing_lookup = os.path.join('nastran', 'data', 'existing_grid_lookup.json')
+fp_quad_lookup = os.path.join('nastran', 'data', 'grid_quad_lookup.json')
+fp_neu = os.path.join('nastran', 'data','{}_100.neu'.format(sim_name))
+fp_rsf = os.path.join('nastran', 'data', '{}_100.rsf'.format(sim_name))
 
 grid_D = {}
 data_grid_pt ={}	
@@ -33,9 +31,11 @@ data_grid_pt ={}
 d = open(fp_existing_grid)
 data_grid_j = json.load(d) 	
 
-
-d = open(fp_quad_lookup)
-data_quad_lookup = json.load(d) 		
+try:
+	d = open(fp_quad_lookup)		
+	data_quad_lookup = json.load(d) 		
+except:
+	pass
 
 d = open(fp_existing_lookup)
 data_lookup = json.load(d) 		
@@ -79,6 +79,24 @@ def rsf_reader(output_fp):
 
 	return design1
 
+def nas_run(name):
+
+	baseDir = os.path.join(os.curdir, r'nas')
+
+	print('\nsys arguments:', name+'.nas', '\nbase directory: ', baseDir, '\n')
+
+	simPath = r'"C:\Program Files\Autodesk\Nastran 2016\NASTRAN.EXE"'
+	initPath = r"nastran\init.ini"
+	# initPath = os.path.join('nastran', 'init.ini')
+	# initPath = r'C:\test\Nastrynamo\init.ini'
+
+
+	# run Nastran SIM
+	print('calling file: \n\n', simPath, initPath, name, '\n\n\n')
+	os.system('{} {} {}'.format(simPath, initPath, name))
+
+	return "nas written at: " + name + "\n\n"
+	
 
 def hashbrown(a):
     
@@ -162,11 +180,6 @@ def pbarMaker(start,end,inc):
 
 
 def get_nastran_model(graph):
-		
-
-	# d = open(fp_lines)
-	# data_lines = json.load(d) 	
-	# print('\n\ndata_j json: ', data_lines[0:10],'\n\n')	
 
 																				#add new grid to master grid list
 																		
@@ -187,7 +200,7 @@ def get_nastran_model(graph):
 		output = "GRID    {:<8}        {:<8}{:<8}{:<8}  ".format(key, value[0], value[1], value[2] )
 		nas_grid = nas_grid + '\n' + output
 
-	print("GRID:\n", nas_grid[:500])
+	print("s_gnm - GRID:\n", nas_grid[:500])
 
 																				#write new PBAR elem
 
@@ -206,7 +219,7 @@ def get_nastran_model(graph):
 		cbar_list[cbar_id] = [str(i[0]), str(i[1])]
 		nas_cbar = nas_cbar + "\n" + connT 
 
-	print(nas_cbar[:1000])
+	print("s_gnm - \n", nas_cbar[:1000])
 																				#splice new data with old Nas file
 	old_nas = open(fp_old_nas)
 	nas_txt = old_nas.read()
@@ -214,7 +227,7 @@ def get_nastran_model(graph):
 	cbar_start = nas_txt.find("$cbar")
 	grid_start = nas_txt.find("$end Grid")
 
-	print("NEW POINTS grid D: ", len(grid_D))
+	print("s_gnm - NEW POINTS grid D: ", len(grid_D), len(cbar_list) )
 
 	new_txt = "{}\n{}\n{}\n{}\n{}\n{}".format(nas_txt[:cbar_start], nas_cbar, nas_txt[cbar_start:grid_start], "$pbar_txt", nas_grid, nas_txt[grid_start:])
 
@@ -226,22 +239,15 @@ def get_nastran_model(graph):
 
 	return graph
 
-
+	
 # function to simulate model in Nastran
 def compute_nastran_model():
 
-    # RUN NASTRAN
-
-	simPath = r'"C:\Program Files\Autodesk\Nastran 2016\NASTRAN.EXE"'
-	# initPath = os.path.join(basedir, 'nastran', 'init.ini')
-	initPath = r'C:\test\Nastrynamo\init.ini'
-	
-	# run Nastran SIM
-	print('calling file: \n\n', '{} {} {}'.format(simPath, initPath, fp_new_nas ), '\n\n\n')
-	os.system('{} {} {}'.format(simPath, initPath, fp_new_nas))
+    																	# RUN NASTRAN
+	nas_run(fp_new_nas)
 
 																		#open results NEU file
-	print("opening .neu results file: ", fp_neu)
+	print("s_cnm - opening .neu results file: ", fp_neu)
 
 	with open(fp_neu) as csvfile:
 		csv_string = csvfile.read()
@@ -267,10 +273,10 @@ def compute_nastran_model():
 			c = float(a[1])
 			stress_list_vm.append([b,c])
 		except Exception as e:
-			print('exception stress finder: ', e)
+			print('s_cnm - exception stress finder: ', e)
 			pass
 
-	print("\nvon mises stress: ", stress_list_vm[2:20])
+	print("\ns_cnm - von mises stress: ", stress_list_vm[2:20])
 
 	line_stress = {}
 
