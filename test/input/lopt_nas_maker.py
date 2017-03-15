@@ -271,7 +271,7 @@ spc = ""
 #PC     1       20000001123456
 
 nas_sp = ""
-load_m = -2000.0
+load_m = -50.0
 print("special points ", data_sp_points)
 for n, i in enumerate(data_sp_points):
 	if i[0] >  92000000:

@@ -1,47 +1,40 @@
                                                                                 
-ADS NASTRAN VERSION 10.3.0.716  12:27  03/15/17                                 
+TOTAL MASS = 3.437600E-04                                                       
                                                                                 
-TOTAL MASS = 1.986546E-04                                                       
-                                                                                
-MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.8910E+06  AT GRID 20000128 COMPONENT 5   
-MINIMUM STIFFNESS MATRIX DIAGONAL =  1.7155E+03  AT GRID 50000022 COMPONENT 1   
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  3.1542E+06  AT GRID 20000128 COMPONENT 5   
+MINIMUM STIFFNESS MATRIX DIAGONAL =  3.6427E+02  AT GRID 50000017 COMPONENT 6   
                                                                                 
 NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
-MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 1.292E+02 AT GRID 20000227 COMPONENT 6   
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 3.034E+02 AT GRID 20000158 COMPONENT 4   
                                                                                 
-FACTORED SPARSE MATRIX SIZE =     531631 WORDS        8.1 MEGABYTES             
-ADDITIONAL MEMORY ALLOCATED =     813952 WORDS        6.2 MEGABYTES             
+FACTORED SPARSE MATRIX SIZE =     528915 WORDS        8.1 MEGABYTES             
+ADDITIONAL MEMORY ALLOCATED =     806400 WORDS        6.2 MEGABYTES             
                                                                                 
-MAXIMUM APPLIED FORCE MAGNITUDE  =  9.412470E+04  AT GRID 20000514              
+MAXIMUM APPLIED FORCE MAGNITUDE  =  2.353118E+03  AT GRID 20000018              
 MAXIMUM APPLIED MOMENT MAGNITUDE =  0.000000E+00  AT GRID 50000034              
                                                                                 
-MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  1.174951E+07  AT GRID 200005
+MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  2.286064E+05  AT GRID 200005
 MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  0.000000E+00  AT GRID 500000
                                                                                 
-MAXIMUM DISPLACEMENT MAGNITUDE =  2.043592E+04  AT GRID 20000388                
-MAXIMUM ROTATION MAGNITUDE     =  1.114268E+03  AT GRID 20000485                
+MAXIMUM DISPLACEMENT MAGNITUDE =  3.415317E+02  AT GRID 20000404                
+MAXIMUM ROTATION MAGNITUDE     =  2.186007E+01  AT GRID 20000566                
                                                                                 
-EPSILON       =  1.242395E-13                                                   
-STRAIN ENERGY =  2.357856E+11                                                   
+EPSILON       =  1.546230E-14                                                   
+STRAIN ENERGY =  6.723646E+07                                                   
                                                                                 
-MAXIMUM BAR ELEMENT TOTAL STRESS     =  1.784151E+06  AT ELEMENT 60000126       
-MAXIMUM BAR ELEMENT VON MISES STRESS =  1.784151E+06  AT ELEMENT 60000126       
-MINIMUM BAR ELEMENT TOTAL STRESS     = -1.774177E+06  AT ELEMENT 60000091       
+MAXIMUM BAR ELEMENT TOTAL STRESS     =  5.945315E+03  AT ELEMENT 60000208       
+MAXIMUM BAR ELEMENT VON MISES STRESS =  7.292341E+03  AT ELEMENT 60000130       
+MINIMUM BAR ELEMENT TOTAL STRESS     = -7.292341E+03  AT ELEMENT 60000130       
                                                                                 
-MAXIMUM QUAD ELEMENT PRINCIPAL STRESS =  4.874589E+06  AT ELEMENT 30000233      
-MAXIMUM QUAD ELEMENT SHEAR STRESS     =  1.495817E+06  AT ELEMENT 30000157      
-MAXIMUM QUAD ELEMENT VON MISES STRESS =  4.279122E+06  AT ELEMENT 30000340      
-MINIMUM QUAD ELEMENT PRINCIPAL STRESS = -4.917866E+06  AT ELEMENT 30000340      
+MAXIMUM QUAD ELEMENT PRINCIPAL STRESS =  6.733702E+04  AT ELEMENT 30000619      
+MAXIMUM QUAD ELEMENT SHEAR STRESS     =  2.234449E+04  AT ELEMENT 30000436      
+MAXIMUM QUAD ELEMENT VON MISES STRESS =  5.968361E+04  AT ELEMENT 30000024      
+MINIMUM QUAD ELEMENT PRINCIPAL STRESS = -6.669482E+04  AT ELEMENT 30000619      
                                                                                 
-MAXIMUM QUAD ELEMENT PRINCIPAL STRAIN =  5.449982E+01  AT ELEMENT 30000233      
-MAXIMUM QUAD ELEMENT SHEAR STRAIN     =  5.496138E+01  AT ELEMENT 30000157      
-MAXIMUM QUAD ELEMENT VON MISES STRAIN =  3.728622E+01  AT ELEMENT 30000340      
-MINIMUM QUAD ELEMENT PRINCIPAL STRAIN = -5.861277E+01  AT ELEMENT 30000340      
+MAXIMUM QUAD ELEMENT PRINCIPAL STRAIN =  7.883981E-01  AT ELEMENT 30000619      
+MAXIMUM QUAD ELEMENT SHEAR STRAIN     =  8.210119E-01  AT ELEMENT 30000436      
+MAXIMUM QUAD ELEMENT VON MISES STRAIN =  5.230413E-01  AT ELEMENT 30000436      
+MINIMUM QUAD ELEMENT PRINCIPAL STRAIN = -7.612795E-01  AT ELEMENT 30000619      
                                                                                 
-SHELL ELEMENT RELATIVE STRESS ERROR =  1.391480E-01                             
-                                                                                
-MAXIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  1.391480E-01  AT GRID 20000398 
-MINIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20000814 
-                                                                                
-TOTAL CPU TIME = 3.0 SECONDS                                                    
-WALLCLOCK TIME = 4.4 SECONDS                                                    
+TOTAL CPU TIME = 4.0 SECONDS                                                    
+WALLCLOCK TIME = 3.8 SECONDS                                                    

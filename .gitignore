@@ -13,6 +13,15 @@ dist
 htmlcov
 .cache
 
+# Nastran temp
+*.dmp
+*.LOG
+*.rsf
+*.FNO
+*.sta
+*.OUT
+fort.10
+
 # Sublime Text.
 *.sublime-project
 *.sublime-workspace
@@ -27,3 +36,4 @@ output
 temp
 /test/nastran/data
 /test/nastran/temp
+/test/input/ach
