@@ -18,13 +18,13 @@ basedir = os.curdir
 
 												# mini test lattice 
 sim_name = 'mini'
-fp_new_nas = os.path.join('nastran', 'data','{}_100.nas'.format(sim_name))
-fp_old_nas = os.path.join('nastran','data', '{}.nas'.format(sim_name))
+fp_new_nas = os.path.join('input','{}_100.nas'.format(sim_name))
+fp_old_nas = os.path.join('input', '{}.nas'.format(sim_name))
 fp_existing_grid = os.path.join('input', 'existing_grid.json')
 fp_existing_lookup = os.path.join('input', 'existing_grid_lookup.json')
 # fp_quad_lookup = os.path.join('nastran', 'data', 'grid_quad_lookup.json')
-fp_neu = os.path.join('nastran', 'data','{}_100.neu'.format(sim_name))
-fp_rsf = os.path.join('nastran', 'data', '{}_100.rsf'.format(sim_name))
+fp_neu = os.path.join('input','{}_100.neu'.format(sim_name))
+fp_rsf = os.path.join('input', '{}_100.rsf'.format(sim_name))
 
 
 
@@ -133,9 +133,8 @@ lookup_fresh = {}
 def find_grid_hash(p):
 
 	last = 50000001             # base number for CBAR
-
-
 	coord = pt_string(p)
+
 
 	key_H = hashbrown(coord)
 

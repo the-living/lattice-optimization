@@ -101,22 +101,19 @@ def find_grid_hash(p):
 		return b
 																			#if point is in quad grid list
 
-	except Exception as e:						#if new point
+	except:						#if new point
 		last_count = len(grid_D) + last + 1
-		print("no match------------------------key", key_H, last_count, e)
-
+		
 		data_grid_lookup[key_H] = str(last_count)
 		lookup_fresh[key_H] = str(last_count)
 
 		grid_D[last_count] = (x, y, z)
 
-		
+		print("no match------------------------key", key_H, last_count)
 
 		return last_count
 
 																#find CBAR end points
-
-pload_quads = []
 
 def cquad(fp_json, fp_json_lookup):
 	new_grid = []
@@ -133,41 +130,53 @@ def cquad(fp_json, fp_json_lookup):
 
 	for key, value in data_q.items():
 		# print('quad', key, value)
-		try:
-			vertex1 = data_q_lu[ hashbrown(pt_string(value['v0'])) ]
-			vertex2 = data_q_lu[ hashbrown(pt_string(value['v1'])) ]
-			vertex3 = data_q_lu[ hashbrown(pt_string(value['v2'])) ]
-			vertex4 = data_q_lu[ hashbrown(pt_string(value['v3'])) ]
+		vertex1 = data_q_lu[ hashbrown(pt_string(value['v0'])) ]
+		vertex2 = data_q_lu[ hashbrown(pt_string(value['v1'])) ]
+		vertex3 = data_q_lu[ hashbrown(pt_string(value['v2'])) ]
+		vertex4 = data_q_lu[ hashbrown(pt_string(value['v3'])) ]
 
-			if value['pload'] == 1:
-				pload_quads.append(start)
+		quad_unit = [vertex1, vertex2, vertex3, vertex4]
+		new_txt = "{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}".format("CQUAD4",start ,102 , vertex1, vertex2, vertex3, vertex4)
+		start += 1
+		quad_str = quad_str + "\n" + new_txt
 
-			quad_unit = [vertex1, vertex2, vertex3, vertex4]
-		
-			new_txt = "{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}".format("CQUAD4",start ,102 , vertex1, vertex2, vertex3, vertex4)
-			start += 1
-
-
-			quad_str = quad_str + "\n" + new_txt
-		except Exception as e:
-			print("exception CQUAD4",start ,102 , vertex1, vertex2, vertex3, vertex4, e)
 
 	return quad_str
 
 
 def rbe(RBE_c, RBE_s, points):
 
+	# points = IN[1]
+	# RBE_s = IN[2]
+	# RBE_c = IN[3]
+
+	# def findIndex(pt,pt_list):
+	# 	for c, j in enumerate(pt_list):
+	# 		if Geometry.DistanceTo(pt, j) < tol:
+	# 			return c+1 
+
 	spoke = []
+	for y in RBE_s:
+		s_unit = []
+		for z in y:
+			s_unit.append( findIndex( z , points) )
+		spoke.append(s_unit)
+
+	outputGRID = []
+	node = []
+	for c, i in enumerate(RBE_c):
+		node.append( findIndex(i, points) )	
+
 
 	eid = len(points) + 1
 	spokeList = []
 	outputGRID = "\n"
 	outputGRID_2 = "\n"
 
-	for c, i in enumerate(RBE_c):
+	for c, i in enumerate(node):
 		
-		outputT = "{:<9}{:<8}{:<8}{:<8}{:<7}{:<9}{:<8}".format('RBE3',eid+c, '', data_grid_lookup[i], '123456', '1.', '123')
-		outputR = "{:<9}{:<8}{:<8}{:<8}{:<7}".format('RBE2',eid+c, '', data_grid_lookup[i], '123456')
+		outputT = "{:<9}{:<8}{:<8}{:<8}{:<7}{:<9}{:<8}".format('RBE3',eid+c, '',findIndex(RBE_c[c],points), '123456', '1.', '123')
+		outputR = "{:<9}{:<8}{:<8}{:<8}{:<7}".format('RBE2',eid+c, '',findIndex(RBE_c[c],points), '123456')
 		
 		
 		for c1, j in enumerate(spoke[c]):
@@ -199,16 +208,21 @@ def rbe(RBE_c, RBE_s, points):
 	outputGRID_2 = outputGRID_2 +"\n\n\n$end RBE2"
 
 
+
+
+
+rbe_ind = []
+cbar_list = {}
+nas_rbe = ""
+
 print("\n\n grid len", len(data_grid_lookup))
 
 for key, value in data_grid_j.items():
 	a  = [ value[0], value[1], value[2] ]
 	pair = find_grid_hash(a)
-	# print("pair", a, pair, pair[0])
-	try:
-		grid_D[pair] = value
-	except Exception as e:
-		print(" grid error ", pair, value, e)
+	# print(a, pair)
+
+	grid_D[pair] = value
 
 
 # print(grid_base)
@@ -220,56 +234,59 @@ for key, value in grid_D.items():
 	output = "GRID    {:<8}        {:<8}{:<8}{:<8}  ".format(key, value[0], value[1], value[2] )
 	nas_grid = nas_grid + '\n' + output
 
+															# write CBAR lines
 
-rbe_ind = []
-cbar_list = {}
-nas_rbe = ""
+strB = "CBAR    15      1       "
+strB4 = "1.      1.      1."
 
+st5 = "$start Grid"
 
 d = open(fp_rbe)
 data_rbe = json.load(d) 
 
 															# make RBE elements
 
-# for n, i in enumerate(data_rbe):
-# 	mp  = ( i['mp'])
-# 	s1 = ( i['s1'] )  
-# 	s2 = ( i['s2'] )  
-# 	s3 = ( i['s3'] )  
-# 	s4 = ( i['s4'] )  
+for n, i in enumerate(data_rbe):
+	mp  = ( i['mp'])
+	s1 = ( i['s1'] )  
+	s2 = ( i['s2'] )  
+	s3 = ( i['s3'] )  
+	s4 = ( i['s4'] )  
 
 
-# 	sp_all = [find_grid_hash(mp), find_grid_hash(s1), find_grid_hash(s2), find_grid_hash(s3), find_grid_hash(s4)]
-# 	print("rbe ", mp, s1, pair)
+	sp_all = [find_grid_hash(mp), find_grid_hash(s1), find_grid_hash(s2), find_grid_hash(s3), find_grid_hash(s4)]
+	print("rbe ", mp, s1, pair)
 	
-# 	rbe_unit = rbe(mp, sp_all, data_grid_j)
-# 	print(rbe_unit)
+	rbe_unit = rbe(mp, sp_all, data_grid_j)
+	print(rbe_unit)
 
-# print("rbe ind ", rbe_ind)
+	
+print("rbe ind ", rbe_ind)
 
 
 rbe_num = 90000000
-for n, i in enumerate(data_rbe):
+for n, i in enumerate(rbe_ind):
 	cbar_id = str(n + rbe_num)
-	connT = "RBE3    {:<8}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}  ".format( cbar_id, "", find_grid_hash(i["point1"]), "123456", "1.", "123", find_grid_hash(i["point2"]) )
-
+	connT = "RBE3    {:<8}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}  ".format( cbar_id, "", str(i[0]), "123456", "1.", "123", str(i[1]) )
+	cbar_list[cbar_id] = [str(i[0]), str(i[1])]
 	nas_rbe = nas_rbe + "\n" + connT 
-
-print("RBE", nas_rbe)
 
 															# make CQUAD elements
 
 nas_quad = cquad(data_quad, data_grid_lookup)
+
 # print("CQUAD", nas_quad)
+
+
 
 
 															# make LOAD and SPC points
 load = ""
 spc = ""
-#LOAD4  1       300000011777.6  1777.6  1777.6  1777.6 
-#ORCE   1       20000005        999.    0.0     0.0     1.0
-#PC     1       20000001123456
 
+#ORCE   1       20000005        999.    0.0     0.0     1.0
+#LOAD4   14     210000001777.6  1777.6  1777.6  1777.6  
+#PC     1       20000001123456
 nas_sp = ""
 load_m = -2000.0
 print("special points ", data_sp_points)
@@ -277,7 +294,7 @@ for n, i in enumerate(data_sp_points):
 	if i[0] >  92000000:
 		id_pt = find_grid_hash([i[1], i[2], i[3]])
 
-		connT = "{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8} ".format("PLOAD", 1, id_pt, "",0.0, load_m, 0.0, 1.0)
+		connT = "FORCE   {:<8}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8} ".format(1, id_pt, "",0.0, load_m, 0.0, 1.0)
 		nas_sp = nas_sp + "\n" + connT 
 
 		# print('load element', n, i , id_pt)
@@ -287,10 +304,7 @@ for n, i in enumerate(data_sp_points):
 		connT = "SPC     {:<8}{:<8}{:<8} ".format(1, id_pt, 123)
 		nas_sp = nas_sp + "\n" + connT 
 
-for n, i in enumerate(pload_quads):
-	connT = "{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8} ".format("PLOAD4", 1, i, load_m, load_m, load_m, load_m )
-	nas_sp = nas_sp + "\n" + connT 
-
+		print('spc element', n, i , id_pt)
 
 # print("\nRBE lines: ", nas_rbe)
 															# new NASTRAN file
@@ -298,6 +312,7 @@ print('\nnas maker - opening ', fp_og_nas)
 
 old_nas = open(fp_og_nas)
 nas_txt = old_nas.read()
+
 cbar_start = nas_txt.find("$start Grid")
 grid_start = nas_txt.find("$end Grid")
 load_end = nas_txt.find("$load")
