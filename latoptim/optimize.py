@@ -1,5 +1,6 @@
 from latoptim.simulate import compute_nastran_model, get_nastran_model
 import math
+import random
 
 
 def optimize(graph, target, min_radius, max_radius, speed, maxSteps):
@@ -12,14 +13,18 @@ def optimize(graph, target, min_radius, max_radius, speed, maxSteps):
         print("starting step", step)
 
         # 1. convert graph to Natran model
-        nas_model = get_nastran_model(graph.get_edge_data())
+
+        edges, indx = graph.get_edge_data()
+        nas_model = get_nastran_model(edges)
 
         # 2. run simulation in nastran and return results
         results = compute_nastran_model()
         results = [x[1] for x in results]
 
+        print (indx)
+
         # 3. write Nastran results to graph
-        graph.set_stress_values(results)
+        graph.set_stress_values(results, indx)
 
         # 4. compute optimization step
         converged = compute(graph, target, min_radius, max_radius, speed)
@@ -52,29 +57,31 @@ def compute(graph, target, min_radius, max_radius, speed):
 
         adjustment = speed * deviation * (max_radius - min_radius)
 
-        #discretize
-        # adjustment = math.ceil(adjustment * 10) / 10.0
-
         print ("adjustment", adjustment)
 
         radius = edge.get_radius() + adjustment
+        
+        # deletion
+        if radius < min_radius and random.random() < 0.1:
+            edge.set_active(False)
 
-        #clamp
+        print ("EDGE DELETED!!")
+
+        # clamp
         radius = max(min(radius, max_radius), min_radius)
         # radius = int(radius * 10) / 10.0
 
         print ("radius", radius)
 
         edge.set_radius(radius)
-        
-        #           if edge["radius"] < min_radius:
-        #               edge["active"] = False
 
         #           if edge["radius"] > max_radius:
         #               continue
         #               # add edge
 
-        total_deviation += abs(deviation)
+        total_deviation += abs(deviation/target)
+
+        print ("total deviation:", total_deviation)
     
     if total_deviation < 5.0:
         return True

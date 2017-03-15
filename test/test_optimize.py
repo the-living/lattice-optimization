@@ -19,8 +19,8 @@ with open(path + input_txt) as f:
 target = 2000
 min_radius = 0.5
 max_radius = 3.0
-def_radius = 1.0
-speed = 0.00003
+start_radius = 1.0
+speed = 0.0001
 epsilon = .01
 maxSteps = 25
 
@@ -28,7 +28,7 @@ maxSteps = 25
 print("generating graph...")
 
 
-graph = lines2graph(lines_input, def_radius, epsilon)
+graph = lines2graph(lines_input, start_radius, epsilon)
 
 print("graph nodes:", len( graph.get_nodes() ))
 print("graph edges:", len( graph.get_edges() ))

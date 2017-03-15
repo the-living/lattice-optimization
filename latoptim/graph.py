@@ -84,15 +84,21 @@ class Graph:
     def get_edges(self):
         return self.edges
 
-    def set_stress_values(self, results):
-        for i, edge in enumerate(self.edges):
-            edge.set_stress(results[i])
+    def set_stress_values(self, results, indx):
+        edges = self.get_edges()
+        for i, index in enumerate(indx):
+            edges[index].set_stress(results[i])
+        # for i, edge in enumerate(self.edges):
+        #     edge.set_stress(results[i])
 
     def get_edge_data(self):
         output = []
-        for edge in self.get_edges():
-            output.append([node.get_coords() for node in edge.get_nodes()] + [edge.get_radius()])
-        return output
+        indx = []
+        for i, edge in enumerate(self.get_edges()):
+            if edge.get_active():
+                output.append([node.get_coords() for node in edge.get_nodes()] + [edge.get_radius()])
+                indx.append(i)
+        return output, indx
 
 
 def lines2graph(lines, def_radius, epsilon):
