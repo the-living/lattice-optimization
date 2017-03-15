@@ -207,7 +207,10 @@ def get_nastran_model(graph):
 	for n, i in enumerate(graph):
 		# print("graph edges radius: ", i[2])
 		# print("graph object: ", i[1], i[0])
-		radius = pbar_num + (i[2] - 0.5) * 10
+
+		r = int(i[2] * 10) / 10.0
+		
+		radius = pbar_num + (r - 0.5) * 10
 		pair = [ find_grid_hash(i[0]), find_grid_hash(i[1]), radius ]	
 		cbar_ind.append(pair)																		
 		# print(n, pair)

@@ -1,4 +1,5 @@
 from latoptim.simulate import compute_nastran_model, get_nastran_model
+import math
 
 
 def optimize(graph, target, min_radius, max_radius, speed, maxSteps):
@@ -51,12 +52,16 @@ def compute(graph, target, min_radius, max_radius, speed):
 
         adjustment = speed * deviation * (max_radius - min_radius)
 
+        #discretize
+        # adjustment = math.ceil(adjustment * 10) / 10.0
+
         print ("adjustment", adjustment)
 
         radius = edge.get_radius() + adjustment
+
         #clamp
         radius = max(min(radius, max_radius), min_radius)
-        radius = int(radius * 10) / 10.0
+        # radius = int(radius * 10) / 10.0
 
         print ("radius", radius)
 

@@ -16,13 +16,13 @@ with open(path + input_txt) as f:
     lines_input = json.loads(f.read())
 
 # parameters for graph computation
-target = 5000
+target = 2000
 min_radius = 0.5
-max_radius = 2.5
+max_radius = 3.0
 def_radius = 1.0
-speed = 0.00001
+speed = 0.00003
 epsilon = .01
-maxSteps = 10
+maxSteps = 25
 
 
 print("generating graph...")
