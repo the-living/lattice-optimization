@@ -37,3 +37,8 @@ temp
 /test/nastran/data
 /test/nastran/temp
 /test/input/ach
+*.OUT
+*.10
+*.TMP
+*.ELS
+*.10

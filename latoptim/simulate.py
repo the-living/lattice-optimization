@@ -1,6 +1,6 @@
-import os, hashlib, json, sys, datetime, time
-import subprocess
+import os, hashlib, json, sys, datetime, time, subprocess
 from subprocess import Popen
+from math import sqrt
 
 from latoptim.graph import Graph
 
@@ -55,8 +55,7 @@ data_lookup = json.load(d)
 
 # print("existing data_grid_j: ", str(data_grid_j))		
 # print("existing data_lookup: ", str(data_lookup))	
-			
-
+		
 
 def rsf_reader(output_fp):
 	# read RSF
@@ -68,7 +67,7 @@ def rsf_reader(output_fp):
 	str4 = "MAXIMUM BAR ELEMENT VON MISES STRESS ="
 	str5 = "BAR EQV STRESS "
 
-	print("opening results file: ", fp_rsf)
+	print("\nopening results file: ", fp_rsf)
 	f = open(fp_rsf, 'r+')
 	rsf = f.read() 	
 
@@ -87,7 +86,7 @@ def rsf_reader(output_fp):
 	with open(output_fp, "w") as csv:
 		csv.write(str(design1))	
 
-	print( "csv write done: ", output_fp ,"\n\n")
+	print( "\ncsv write done: ", output_fp ,"\n\n")
 	print("rsf reader:  [mass, disp, stress]")
 
 	return design1
@@ -108,7 +107,18 @@ def nas_run(name):
 	os.system('{} {} {}'.format(simPath, initPath, name))
 
 	return "nas written at: " + name + "\n\n"
-	
+
+
+def graph_stats(g):
+	for n, i in enumerate(g):
+		a = i[0] #data point 1
+		b = i[1] #data point 2
+		dist = sqrt(sum( (a - b)**2 for a, b in zip(a, b)))
+		vol = 3.14 * (dist/2)
+
+		print(i, dist)
+
+	return "done"
 
 def hashbrown(a):
     
@@ -129,7 +139,6 @@ def pt_string(new_pt):
 	return coord
 
 
-lookup_fresh = {}
 def find_grid_hash(p):
 
 	last = 50000001             # base number for CBAR
@@ -153,7 +162,6 @@ def find_grid_hash(p):
 		except Exception as e:										#if new point
 			last_count = len(grid_D) + last + 1
 			data_lookup[key_H] = str(last_count)
-			lookup_fresh[key_H] = str(last_count)
 			grid_D[last_count] = p
 			# print("----------------------------no match-------key", key_H, last_count, p)
 			return last_count
@@ -242,6 +250,9 @@ def get_nastran_model(graph):
 
 	new_txt = "{}\n{}\n{}\n{}\n{}\n{}".format(nas_txt[:cbar_start], nas_cbar, nas_txt[cbar_start:grid_start], "$pbar_txt", nas_grid, nas_txt[grid_start:])
 
+
+	graph_stats(graph)
+
 	with open(fp_new_nas, "w") as f:
 		f.write( new_txt )
 
@@ -287,10 +298,7 @@ def compute_nastran_model():
 			print('s_cnm - exception stress finder: ', e)
 			pass
 
-	print("\ns_cnm - von mises stress: ", stress_list_vm[2:20])
-
-	line_stress = {}
-
+	print("\ns_cnm - von mises stress: ", stress_list_vm[2:20], "\n")
 	rsf_reader('simmary.csv')
 
 	return stress_list_vm[2:]

@@ -1,14 +1,7 @@
 __author__ = 'Damon, TheLiving'
 __email__ = 'damon.lau@autodesk.com'
 
-import os
-import sys 
-import time
-import json
-import csv
-import hashlib
-
-# from vtf_funcs import hashbrown, cquad
+import os, sys, time, json, csv, hashlib
 
 start = time.time()
 mode = "grid"
@@ -271,7 +264,7 @@ spc = ""
 #PC     1       20000001123456
 
 nas_sp = ""
-load_m = -50.0
+load_m = -5.1  					#LOAD CASE FOR SHELL
 print("special points ", data_sp_points)
 for n, i in enumerate(data_sp_points):
 	if i[0] >  92000000:

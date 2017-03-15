@@ -1,6 +1,6 @@
 
-ADS NASTRAN VERSION 10.3.0.716  12:58  03/15/17                                 
-MODEL DATABASE IDENTIFICATION NUMBER: 01CMQC                                    
+ADS NASTRAN VERSION 10.3.0.716  14:02  03/15/17                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 01FP4F                                    
 
 NUMBER OF PROCESSOR THREADS REQUESTED =    2                                    
 NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
@@ -62,10 +62,10 @@ REMAINING FEATURE LICENSE TIME = 448 DAYS
 MAXIMUM MODEL SIZE = NO LIMITS                                                  
                                                                                 
 
-VIRTUAL MEMORY =  2566840320 WORDS     19583.4 MEGABYTES                        
-REAL MEMORY    =   844987904 WORDS      6446.7 MEGABYTES                        
+VIRTUAL MEMORY =  2472285696 WORDS     18862.0 MEGABYTES                        
+REAL MEMORY    =   835217408 WORDS      6372.2 MEGABYTES                        
 
-DRIVE C: DISK SPACE =   8020975616 WORDS     61195.2 MEGABYTES                  
+DRIVE C: DISK SPACE =   7779539968 WORDS     59353.2 MEGABYTES                  
 
 GENERATING DATABASE:  mini_100.NDB                                              
 
@@ -93,10 +93,10 @@ MODEL SIZE    =        5112 DEGREES OF FREEDOM
 MATRIX SIZE   =      224884 WORDS        1.7 MEGABYTES                          
 SEMIBANDWIDTH =          53 WORDS                                               
 
-AVAILABLE VIRTUAL MEMORY  =  2561222144 WORDS     19540.6 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   839188480 WORDS      6402.5 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2466157568 WORDS     18815.3 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   830351872 WORDS      6335.1 MEGABYTES             
 
-DRIVE C: DISK SPACE =   8019418112 WORDS     61183.3 MEGABYTES                  
+DRIVE C: DISK SPACE =   7778048000 WORDS     59341.8 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
 
@@ -105,90 +105,90 @@ MEMORY ALLOCATED   =     337326 WORDS        2.6 MEGABYTES
 
 ASSEMBLY TIME FOR 909 ELEMENTS = 0.1 SECONDS                                    
 
-TOTAL MASS = 3.437600E-04                                                       
+TOTAL MASS = 1.986546E-04                                                       
 
 MASS DISTRIBUTION BY TYPE                                                       
 
-STRUCTURAL MASS    =  3.437600E-04                                              
+STRUCTURAL MASS    =  1.986546E-04                                              
 NONSTRUCTURAL MASS =  0.000000E+00                                              
 CONCENTRATED MASS  =  0.000000E+00                                              
 OTHER MASS         =  0.000000E+00                                              
 
 CENTER OF MASS RELATIVE TO ORIGIN OF BASIC SYSTEM                               
                                                                                 
-X-COORDINATE =  2.113836E+02                                                    
-Y-COORDINATE = -1.289570E+01                                                    
-Z-COORDINATE =  2.498222E+02                                                    
+X-COORDINATE =  2.088743E+02                                                    
+Y-COORDINATE = -8.706549E+00                                                    
+Z-COORDINATE =  2.494929E+02                                                    
 
 SOLUTION SEQUENCE FOR SUBCASE 1                                                 
 
-MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  9.4652E-16                       
+MAXIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  9.2368E-16                       
 MINIMUM GLOBAL STIFFNESS MATRIX TERM ZEROED =  0.0000E+00                       
 REDUCTION IN GLOBAL STIFFNESS MATRIX SIZE   =  3.87 PERCENT                     
 
 MODIFICATION TIME FOR 4170 MULTIPOINT CONSTRAINTS = 0.1 SECONDS                 
 
-MAXIMUM STIFFNESS MATRIX DIAGONAL =  3.1542E+06  AT GRID 20000128 COMPONENT 5   
-MINIMUM STIFFNESS MATRIX DIAGONAL =  3.6427E+02  AT GRID 50000017 COMPONENT 6   
+MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.8910E+06  AT GRID 20000128 COMPONENT 5   
+MINIMUM STIFFNESS MATRIX DIAGONAL =  1.7155E+03  AT GRID 50000022 COMPONENT 1   
 
-AVAILABLE VIRTUAL MEMORY  =  2559920128 WORDS     19530.6 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   839063040 WORDS      6401.5 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2464888320 WORDS     18805.6 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   830182912 WORDS      6333.8 MEGABYTES             
 
-DRIVE C: DISK SPACE =   8019603456 WORDS     61184.7 MEGABYTES                  
+DRIVE C: DISK SPACE =   7778331648 WORDS     59344.0 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
 
 NUMBER OF NEGATIVE TERMS ON FACTOR DIAGONAL = 0                                 
-MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 3.034E+02 AT GRID 20000158 COMPONENT 4   
+MAXIMUM MATRIX FACTOR DIAGONAL RATIO = 2.657E+02 AT GRID 20000768 COMPONENT 4   
 
 REORDERING METHOD REQUESTED = AUTO                                              
 REORDERING METHOD USED      = VRM7                                              
 
-FACTORED SPARSE MATRIX SIZE =     528915 WORDS        8.1 MEGABYTES             
-ADDITIONAL MEMORY ALLOCATED =     806400 WORDS        6.2 MEGABYTES             
+FACTORED SPARSE MATRIX SIZE =     527516 WORDS        8.0 MEGABYTES             
+ADDITIONAL MEMORY ALLOCATED =     799104 WORDS        6.1 MEGABYTES             
 
-FACTORIZATION TIME FOR 528915 WORDS = 0.2 SECONDS                               
+FACTORIZATION TIME FOR 527516 WORDS = 0.2 SECONDS                               
 
-MAXIMUM APPLIED FORCE MAGNITUDE  =  2.353118E+03  AT GRID 20000018              
+MAXIMUM APPLIED FORCE MAGNITUDE  =  2.400180E+02  AT GRID 20000018              
 MAXIMUM APPLIED MOMENT MAGNITUDE =  0.000000E+00  AT GRID 50000034              
 
-MAXIMUM DISPLACEMENT MAGNITUDE =  3.415317E+02  AT GRID 20000404                
-MAXIMUM ROTATION MAGNITUDE     =  2.186007E+01  AT GRID 20000566                
+MAXIMUM DISPLACEMENT MAGNITUDE =  5.211160E+01  AT GRID 20000388                
+MAXIMUM ROTATION MAGNITUDE     =  2.841383E+00  AT GRID 20000485                
 
-EPSILON       =  1.546230E-14                                                   
-STRAIN ENERGY =  6.723646E+07                                                   
+EPSILON       =  7.681350E-14                                                   
+STRAIN ENERGY =  1.533196E+06                                                   
 
 SOLUTION TIME FOR 5112 DEGREES OF FREEDOM = 0.0 SECONDS                         
 
-MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  2.286064E+05  AT GRID 200005
+MAXIMUM SINGLE POINT CONSTRAINT FORCE MAGNITUDE  =  2.996125E+04  AT GRID 200005
 MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  0.000000E+00  AT GRID 500000
 
-MAXIMUM MULTIPOINT CONSTRAINT FORCE MAGNITUDE  =  1.741079E+05  AT GRID 20000116
-MAXIMUM MULTIPOINT CONSTRAINT MOMENT MAGNITUDE =  3.234890E+05  AT GRID 20000579
+MAXIMUM MULTIPOINT CONSTRAINT FORCE MAGNITUDE  =  2.182272E+04  AT GRID 20000524
+MAXIMUM MULTIPOINT CONSTRAINT MOMENT MAGNITUDE =  2.148690E+04  AT GRID 20000274
 
 CALCULATING RESULTS FOR SUBCASE 1                                               
 
-MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  6.426841E-09  AT GRID 20000758     
-MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  1.797433E-08  AT GRID 20000405     
+MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  2.563606E-09  AT GRID 20000743     
+MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  2.551358E-09  AT GRID 20000402     
 
-MAXIMUM BAR ELEMENT TOTAL STRESS     =  5.945315E+03  AT ELEMENT 60000208       
-MINIMUM BAR ELEMENT TOTAL STRESS     = -7.292341E+03  AT ELEMENT 60000130       
-MAXIMUM BAR ELEMENT VON MISES STRESS =  7.292341E+03  AT ELEMENT 60000130       
+MAXIMUM BAR ELEMENT TOTAL STRESS     =  4.549585E+03  AT ELEMENT 60000126       
+MINIMUM BAR ELEMENT TOTAL STRESS     = -4.524150E+03  AT ELEMENT 60000091       
+MAXIMUM BAR ELEMENT VON MISES STRESS =  4.549585E+03  AT ELEMENT 60000126       
 
-MAXIMUM BAR ELEMENT TOTAL STRAIN =  8.212443E-02  AT ELEMENT 60000208           
-MINIMUM BAR ELEMENT TOTAL STRAIN = -1.007313E-01  AT ELEMENT 60000130           
+MAXIMUM BAR ELEMENT TOTAL STRAIN =  6.284478E-02  AT ELEMENT 60000126           
+MINIMUM BAR ELEMENT TOTAL STRAIN = -6.249344E-02  AT ELEMENT 60000091           
 
 CALCULATING QUAD ELEMENT RESULTS ON SURFACE 0 FOR SUBCASE 1                     
 
-MAXIMUM QUAD ELEMENT PRINCIPAL STRESS =  6.733702E+04  AT ELEMENT 30000619      
-MINIMUM QUAD ELEMENT PRINCIPAL STRESS = -6.669482E+04  AT ELEMENT 30000619      
-MAXIMUM QUAD ELEMENT SHEAR STRESS     =  2.234449E+04  AT ELEMENT 30000436      
-MAXIMUM QUAD ELEMENT VON MISES STRESS =  5.968361E+04  AT ELEMENT 30000024      
+MAXIMUM QUAD ELEMENT PRINCIPAL STRESS =  6.306566E+03  AT ELEMENT 30000119      
+MINIMUM QUAD ELEMENT PRINCIPAL STRESS = -5.527666E+03  AT ELEMENT 30000434      
+MAXIMUM QUAD ELEMENT SHEAR STRESS     =  2.333588E+03  AT ELEMENT 30000119      
+MAXIMUM QUAD ELEMENT VON MISES STRESS =  5.667579E+03  AT ELEMENT 30000119      
 
-MAXIMUM QUAD ELEMENT PRINCIPAL STRAIN =  7.883981E-01  AT ELEMENT 30000619      
-MINIMUM QUAD ELEMENT PRINCIPAL STRAIN = -7.612795E-01  AT ELEMENT 30000619      
-MAXIMUM QUAD ELEMENT SHEAR STRAIN     =  8.210119E-01  AT ELEMENT 30000436      
-MAXIMUM QUAD ELEMENT VON MISES STRAIN =  5.230413E-01  AT ELEMENT 30000436      
+MAXIMUM QUAD ELEMENT PRINCIPAL STRAIN =  7.964151E-02  AT ELEMENT 30000119      
+MINIMUM QUAD ELEMENT PRINCIPAL STRAIN = -6.392749E-02  AT ELEMENT 30000328      
+MAXIMUM QUAD ELEMENT SHEAR STRAIN     =  8.574390E-02  AT ELEMENT 30000119      
+MAXIMUM QUAD ELEMENT VON MISES STRAIN =  5.524094E-02  AT ELEMENT 30000119      
 
 ANALYSIS DIRECTIVE DEFINITION                                                   
                                                                                 
@@ -207,11 +207,11 @@ FILEBUFFERSIZE1  = 10
 FILEBUFFERSIZE2  = 10                                                           
 FILEBUFFERSIZE3  = 10                                                           
 FILEBUFFERSIZE4  = 10                                                           
-FILESIGNATURE    = CMQC                                                         
-FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBCMQC.TMP\       
-FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBCMQC.TMP\       
-FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBCMQC.TMP\       
-FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBCMQC.TMP\       
+FILESIGNATURE    = FP4F                                                         
+FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBFP4F.TMP\       
+FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBFP4F.TMP\       
+FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBFP4F.TMP\       
+FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2015\Temp\NDBFP4F.TMP\       
 GPWEIGHTMETHOD   = VECTOR                                                       
 LEFTMARGIN       = 1                                                            
 LICENSEMANAGER   = ADLM                                                         
@@ -611,8 +611,8 @@ TOTAL                         =       3869 WORDS        3.0 MEGABYTES
 
 MODEL ANALYSIS TIME SUMMARY                                                     
                                                                                 
-TOTAL CPU TIME = 4.0 SECONDS                                                    
-WALLCLOCK TIME = 3.8 SECONDS                                                    
+TOTAL CPU TIME = 3.0 SECONDS                                                    
+WALLCLOCK TIME = 3.6 SECONDS                                                    
 
 EXECUTION TERMINATED NORMALLY                                                   
                                                                                 

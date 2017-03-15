@@ -1,7 +1,9 @@
-import os, json
+import os, json, time
 
 from latoptim.graph import lines2graph
 from latoptim.optimize import optimize
+
+start = time.time()
 
 path = "\\".join(os.path.dirname(os.path.realpath(__file__)).split("\\")[:]) + "\\"
 
@@ -14,11 +16,11 @@ with open(path + input_txt) as f:
     lines_input = json.loads(f.read())
 
 # parameters for graph computation
-target = 4000
+target = 5000
 min_radius = 0.5
-max_radius = 3.0
+max_radius = 2.5
 def_radius = 1.0
-speed = 0.0001
+speed = 0.00001
 epsilon = .01
 maxSteps = 10
 
@@ -34,3 +36,8 @@ print("graph edges:", len( graph.get_edges() ))
 graph = optimize(graph, target, min_radius, max_radius, speed, maxSteps)
 
 print(graph.get_edge_data())
+
+
+
+end = time.time()
+print("\ni have used up {} seconds of your time optimize'n".format( round(end-start,3) ), "\n" )

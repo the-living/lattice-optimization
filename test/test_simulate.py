@@ -41,4 +41,4 @@ results = compute_nastran_model()
 
 # validate graph
 end = time.time()
-print("\ni have used up {} seconds of your time simulate'n".format( round(end-start,3) ), "\n" )
+print("\ni have used up {} seconds of your time simulate'n".format( round(end-start,6) ), "\n" )
