@@ -1,5 +1,5 @@
                                                                                 
-ADS NASTRAN VERSION 10.3.0.716  16:18  03/15/17                                 
+ADS NASTRAN VERSION 10.3.0.716  16:20  03/15/17                                 
                                                                                 
 TOTAL MASS = 1.986546E-04                                                       
                                                                                 
@@ -21,7 +21,7 @@ MAXIMUM SINGLE POINT CONSTRAINT MOMENT MAGNITUDE =  0.000000E+00  AT GRID 500000
 MAXIMUM DISPLACEMENT MAGNITUDE =  9.277392E+01  AT GRID 20000344                
 MAXIMUM ROTATION MAGNITUDE     =  3.723619E+00  AT GRID 20000509                
                                                                                 
-EPSILON       =  6.802685E-14                                                   
+EPSILON       =  5.349526E-14                                                   
 STRAIN ENERGY =  2.174113E+06                                                   
                                                                                 
 MAXIMUM BAR ELEMENT TOTAL STRESS     =  5.264581E+03  AT ELEMENT 60000164       
@@ -43,5 +43,5 @@ SHELL ELEMENT RELATIVE STRESS ERROR =  1.451214E-01
 MAXIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  1.451214E-01  AT GRID 20000368 
 MINIMUM SHELL ELEMENT NORMALIZED STRESS ERROR =  0.000000E+00  AT GRID 20001604 
                                                                                 
-TOTAL CPU TIME = 2.9 SECONDS                                                    
-WALLCLOCK TIME = 3.6 SECONDS                                                    
+TOTAL CPU TIME = 3.4 SECONDS                                                    
+WALLCLOCK TIME = 3.5 SECONDS                                                    

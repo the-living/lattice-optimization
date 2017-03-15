@@ -1,6 +1,6 @@
 
-ADS NASTRAN VERSION 10.3.0.716  16:18  03/15/17                                 
-MODEL DATABASE IDENTIFICATION NUMBER: 019EA9                                    
+ADS NASTRAN VERSION 10.3.0.716  16:20  03/15/17                                 
+MODEL DATABASE IDENTIFICATION NUMBER: 01J33J                                    
 
 NUMBER OF PROCESSOR THREADS REQUESTED =    2                                    
 NUMBER OF PROCESSOR THREADS AVAILABLE =    8                                    
@@ -62,10 +62,10 @@ REMAINING FEATURE LICENSE TIME = 448 DAYS
 MAXIMUM MODEL SIZE = NO LIMITS                                                  
                                                                                 
 
-VIRTUAL MEMORY =  2333591040 WORDS     17803.9 MEGABYTES                        
-REAL MEMORY    =   984569856 WORDS      7511.7 MEGABYTES                        
+VIRTUAL MEMORY =  2380095488 WORDS     18158.7 MEGABYTES                        
+REAL MEMORY    =   989213184 WORDS      7547.1 MEGABYTES                        
 
-DRIVE c: DISK SPACE =   7684591616 WORDS     58628.8 MEGABYTES                  
+DRIVE c: DISK SPACE =   7684352000 WORDS     58627.0 MEGABYTES                  
 
 GENERATING DATABASE:  mini_100.NDB                                              
 
@@ -93,10 +93,10 @@ MODEL SIZE    =        9852 DEGREES OF FREEDOM
 MATRIX SIZE   =      257700 WORDS        2.0 MEGABYTES                          
 SEMIBANDWIDTH =          53 WORDS                                               
 
-AVAILABLE VIRTUAL MEMORY  =  2326868480 WORDS     17752.6 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   980284416 WORDS      7479.0 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2376193024 WORDS     18128.9 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   985044480 WORDS      7515.3 MEGABYTES             
 
-DRIVE c: DISK SPACE =   7683022848 WORDS     58616.8 MEGABYTES                  
+DRIVE c: DISK SPACE =   7682782208 WORDS     58615.0 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX ASSEMBLY STATISTICS                                     
 
@@ -131,10 +131,10 @@ MODIFICATION TIME FOR 5642 MULTIPOINT CONSTRAINTS = 0.1 SECONDS
 MAXIMUM STIFFNESS MATRIX DIAGONAL =  2.8910E+06  AT GRID 20000128 COMPONENT 5   
 MINIMUM STIFFNESS MATRIX DIAGONAL =  1.7155E+03  AT GRID 50000022 COMPONENT 1   
 
-AVAILABLE VIRTUAL MEMORY  =  2325563904 WORDS     17742.6 MEGABYTES             
-AVAILABLE PHYSICAL MEMORY =   978449920 WORDS      7465.0 MEGABYTES             
+AVAILABLE VIRTUAL MEMORY  =  2374651904 WORDS     18117.2 MEGABYTES             
+AVAILABLE PHYSICAL MEMORY =   982859264 WORDS      7498.6 MEGABYTES             
 
-DRIVE c: DISK SPACE =   7683287040 WORDS     58618.8 MEGABYTES                  
+DRIVE c: DISK SPACE =   7683046400 WORDS     58617.0 MEGABYTES                  
 
 GLOBAL STIFFNESS MATRIX FACTORIZATION STATISTICS                                
 
@@ -155,7 +155,7 @@ MAXIMUM APPLIED MOMENT MAGNITUDE =  0.000000E+00  AT GRID 50000034
 MAXIMUM DISPLACEMENT MAGNITUDE =  9.277392E+01  AT GRID 20000344                
 MAXIMUM ROTATION MAGNITUDE     =  3.723619E+00  AT GRID 20000509                
 
-EPSILON       =  6.802685E-14                                                   
+EPSILON       =  5.349526E-14                                                   
 STRAIN ENERGY =  2.174113E+06                                                   
 
 SOLUTION TIME FOR 9852 DEGREES OF FREEDOM = 0.0 SECONDS                         
@@ -168,8 +168,8 @@ MAXIMUM MULTIPOINT CONSTRAINT MOMENT MAGNITUDE =  3.050877E+04  AT GRID 20000379
 
 CALCULATING RESULTS FOR SUBCASE 1                                               
 
-MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  8.498092E-10  AT GRID 20000388     
-MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  4.005225E-09  AT GRID 20000405     
+MAXIMUM GRID POINT FORCE TOTAL MAGNITUDE  =  1.068885E-09  AT GRID 20000359     
+MAXIMUM GRID POINT MOMENT TOTAL MAGNITUDE =  3.792599E-09  AT GRID 20000402     
 
 MAXIMUM BAR ELEMENT TOTAL STRESS     =  5.264581E+03  AT ELEMENT 60000164       
 MINIMUM BAR ELEMENT TOTAL STRESS     = -4.951848E+03  AT ELEMENT 60000153       
@@ -212,11 +212,11 @@ FILEBUFFERSIZE1  = 10
 FILEBUFFERSIZE2  = 10                                                           
 FILEBUFFERSIZE3  = 10                                                           
 FILEBUFFERSIZE4  = 10                                                           
-FILESIGNATURE    = 9EA9                                                         
-FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB9EA9.TMP\       
-FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB9EA9.TMP\       
-FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB9EA9.TMP\       
-FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDB9EA9.TMP\       
+FILESIGNATURE    = J33J                                                         
+FILESPEC1        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBJ33J.TMP\       
+FILESPEC2        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBJ33J.TMP\       
+FILESPEC3        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBJ33J.TMP\       
+FILESPEC4        = C:\ProgramData\Autodesk\Nastran 2016\Temp\NDBJ33J.TMP\       
 GPWEIGHTMETHOD   = VECTOR                                                       
 LEFTMARGIN       = 1                                                            
 LICENSEMANAGER   = ADLM                                                         
@@ -616,8 +616,8 @@ TOTAL                         =       7467 WORDS        5.7 MEGABYTES
 
 MODEL ANALYSIS TIME SUMMARY                                                     
                                                                                 
-TOTAL CPU TIME = 2.9 SECONDS                                                    
-WALLCLOCK TIME = 3.6 SECONDS                                                    
+TOTAL CPU TIME = 3.4 SECONDS                                                    
+WALLCLOCK TIME = 3.5 SECONDS                                                    
 
 EXECUTION TERMINATED NORMALLY                                                   
                                                                                 
