@@ -6,7 +6,7 @@ from latoptim.graph import Graph
 
 basedir = os.curdir
 
-											#	# test lattice 
+											#	# sample lattice 
 # sim_name = 'truss_0'
 # fp_new_nas = os.path.join('nastran', '{}_100.nas'.format(sim_name))
 # fp_existing_grid = os.path.join(basedir, 'nastran', 'existing_grid.json')
@@ -15,15 +15,28 @@ basedir = os.curdir
 # fp_neu = os.path.join('nastran','{}_100.neu'.format(sim_name))
 # fp_rsf = os.path.join('nastran', '{}_100.rsf'.format(sim_name))
 
-											#	# comment for prototype lattice
-sim_name = 'le_og_f_r'
+
+												# mini test lattice 
+sim_name = 'mini'
 fp_new_nas = os.path.join('nastran', 'data','{}_100.nas'.format(sim_name))
 fp_old_nas = os.path.join('nastran','data', '{}.nas'.format(sim_name))
-fp_existing_grid = os.path.join('nastran', 'data', 'existing_grid_list.json')
-fp_existing_lookup = os.path.join('nastran', 'data', 'existing_grid_lookup.json')
-fp_quad_lookup = os.path.join('nastran', 'data', 'grid_quad_lookup.json')
+fp_existing_grid = os.path.join('input', 'existing_grid.json')
+fp_existing_lookup = os.path.join('input', 'existing_grid_lookup.json')
+# fp_quad_lookup = os.path.join('nastran', 'data', 'grid_quad_lookup.json')
 fp_neu = os.path.join('nastran', 'data','{}_100.neu'.format(sim_name))
 fp_rsf = os.path.join('nastran', 'data', '{}_100.rsf'.format(sim_name))
+
+
+
+											#	# comment for prototype lattice
+# sim_name = 'le_og_f_r'
+# fp_new_nas = os.path.join('nastran', 'data','{}_100.nas'.format(sim_name))
+# fp_old_nas = os.path.join('nastran','data', '{}.nas'.format(sim_name))
+# fp_existing_grid = os.path.join('nastran', 'data', 'existing_grid_list.json')
+# fp_existing_lookup = os.path.join('nastran', 'data', 'existing_grid_lookup.json')
+# fp_quad_lookup = os.path.join('nastran', 'data', 'grid_quad_lookup.json')
+# fp_neu = os.path.join('nastran', 'data','{}_100.neu'.format(sim_name))
+# fp_rsf = os.path.join('nastran', 'data', '{}_100.rsf'.format(sim_name))
 
 grid_D = {}
 data_grid_pt ={}	
@@ -90,7 +103,6 @@ def nas_run(name):
 	# initPath = os.path.join('nastran', 'init.ini')
 	# initPath = r'C:\test\Nastrynamo\init.ini'
 
-
 	# run Nastran SIM
 	print('calling file: \n\n', simPath, initPath, name, '\n\n\n')
 	os.system('{} {} {}'.format(simPath, initPath, name))
@@ -147,7 +159,7 @@ def find_grid_hash(p):
 			# print("----------------------------no match-------key", key_H, last_count, p)
 			return last_count
 
-
+pbar_num = 10000
 def pbarMaker(start,end,inc):
 
 	rad = []
@@ -173,7 +185,7 @@ def pbarMaker(start,end,inc):
 		i2 = (3.14159/4)*a**4
 		j = (3.14159*(a*2)**4)/32
 
-		newPBAR =  "$pbar r = {}\n{}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}\n{}{} \n".format(a, strF, 1000+i, "101", str(area)[0:7],str(i1)[0:7], str(i2)[0:7], str(j)[0:7], strE, strE1 )
+		newPBAR =  "$pbar r = {}\n{}{:<8}{:<8}{:<8}{:<8}{:<8}{:<8}\n{}{} \n".format(a, strF, pbar_num+i, "101", str(area)[0:7],str(i1)[0:7], str(i2)[0:7], str(j)[0:7], strE, strE1 )
 		pbarList = pbarList + newPBAR
 
 	return pbarList, rad, bar_dict 
@@ -188,7 +200,7 @@ def get_nastran_model(graph):
 	for n, i in enumerate(graph):
 		# print("graph edges radius: ", i[2])
 		# print("graph object: ", i[1], i[0])
-		radius = 1000 + (i[2] - 0.5) * 10
+		radius = pbar_num + (i[2] - 0.5) * 10
 		pair = [ find_grid_hash(i[0]), find_grid_hash(i[1]), radius ]	
 		cbar_ind.append(pair)																		
 		# print(n, pair)
@@ -204,8 +216,8 @@ def get_nastran_model(graph):
 
 																				#write new PBAR elem
 
-	# pbar_data = pbarMaker(0.5,6.1,0.1)
-	# pbar_txt = pbar_data[0]
+	pbar_data = pbarMaker(0.5,6.1,0.1)
+	pbar_txt = pbar_data[0]
 
 	strB4 = "1.      1.      1."
 	nas_cbar = ""
@@ -239,7 +251,7 @@ def get_nastran_model(graph):
 
 	return graph
 
-	
+
 # function to simulate model in Nastran
 def compute_nastran_model():
 

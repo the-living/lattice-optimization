@@ -8,8 +8,10 @@ path = "\\".join(os.path.dirname(os.path.realpath(__file__)).split("\\")[:]) + "
 
 start = time.time()
 
-input_txt = "model_P.txt"			# full model
+# input_txt = "model_P.txt"			# full model
+input_txt = "model_T.json"            # mini test truss
 # input_txt = "model.txt"            # sample truss
+
 
 with open(path + input_txt) as f:
     lines_input = json.loads(f.read())
