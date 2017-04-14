@@ -62,7 +62,7 @@ def compute(graph, target, min_radius, max_radius, speed):
         radius = edge.get_radius() + adjustment
         
         # deletion
-        if radius < min_radius and random.random() < 0.1:
+        if radius < min_radius and random.random() < 0.05:
             edge.set_active(False)
 
         print ("EDGE DELETED!!")
@@ -83,7 +83,7 @@ def compute(graph, target, min_radius, max_radius, speed):
 
         print ("total deviation:", total_deviation)
     
-    if total_deviation < 5.0:
+    if total_deviation < 50.0:
         return True
     else:
         return False
